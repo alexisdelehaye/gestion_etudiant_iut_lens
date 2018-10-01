@@ -6,5 +6,5 @@ Bienvenue dans le projet !
 
 * L'onglet wiki vous indique les tâches à réaliser 
 
-*  Le répertoire BaseDeDonnées sert à stocker le schéma de la base, le script de création de la bse
+*  Le répertoire BaseDeDonnées sert à stocker le schéma de la base, le script de création de la base
  
