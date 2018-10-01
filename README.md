@@ -7,4 +7,6 @@ Bienvenue dans le projet !
 * L'onglet wiki vous indique les tâches à réaliser 
 
 *  Le répertoire BaseDeDonnées sert à stocker le schéma de la base, le script de création de la base
+
+N'hésitez pas à poster des issues en cas de problème. 
  
