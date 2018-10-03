@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDecisionSemestresTable extends Migration
+class CreateUEsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,17 @@ class CreateDecisionSemestresTable extends Migration
      */
     public function up()
     {
-        Schema::create('decision_semestres', function (Blueprint $table) {
-            $table->increments('idDecisionSemestre');
-            $table->string('decision',45);
-            $table->integer('Etudiant_idEtudiant')->unsigned();
+        Schema::create('u_es', function (Blueprint $table) {
+            $table->increments('idUE');
+            $table->string('nomUE',45);
+            $table->date('debut');
+            $table->date('fin');
             $table->integer('Semestre_idSemestre')->unsigned();
             $table->timestamps();
         });
 
-
-        Schema::table('decision_semestres', function($table) {
-            $table->foreign('Etudiant_idEtudiant')->references('idEtudiant')->on('etudiants');
+        Schema::table('u_es', function($table) {
             $table->foreign('Semestre_idSemestre')->references('idSemestre')->on('semestres');
-
 
         });
     }
@@ -37,6 +35,6 @@ class CreateDecisionSemestresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('decision_semestres');
+        Schema::dropIfExists('u_es');
     }
 }

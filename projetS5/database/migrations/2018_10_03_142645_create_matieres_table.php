@@ -19,8 +19,13 @@ class CreateMatieresTable extends Migration
             $table->char('ref',5);
             $table->char('abreviation',10);
             $table->decimal('coefficient',2,1);
-            $table->integer('UE_idUE');
+            $table->integer('UE_idUE')->unsigned();
             $table->timestamps();
+        });
+
+        Schema::table('matieres', function($table) {
+            $table->foreign('UE_idUE')->references('idUE')->on('u_es');
+
         });
     }
 

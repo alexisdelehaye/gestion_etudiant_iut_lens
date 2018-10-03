@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUEsTable extends Migration
+class CreateSemestresTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,18 @@ class CreateUEsTable extends Migration
      */
     public function up()
     {
-        Schema::create('u_es', function (Blueprint $table) {
-            $table->increments('idUE');
-            $table->string('nomUE',45);
+        Schema::create('semestres', function (Blueprint $table) {
+            $table->increments('idSemestre');
+            $table->string('nom',45);
             $table->date('debut');
             $table->date('fin');
-            $table->integer('Semestre_idSemestre');
+            $table->integer('Formation_idFormation')->unsigned();
             $table->timestamps();
+        });
+
+        Schema::table('semestres', function($table) {
+            $table->foreign('Formation_idFormation')->references('idFormation')->on('formations');
+
         });
     }
 
@@ -30,6 +35,6 @@ class CreateUEsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('u_es');
+        Schema::dropIfExists('semestres');
     }
 }

@@ -16,10 +16,16 @@ class CreateAbsencesTable extends Migration
         Schema::create('absences', function (Blueprint $table) {
             $table->increments('idAbscence');
             $table->integer('heures');
-            $table->integer('Etudiant_idEtudiant');
-            $table->integer('UE_idUE');
+            $table->integer('Etudiant_idEtudiant')->unsigned();
+            $table->integer('UE_idUE')->unsigned();
             $table->timestamps();
         });
+
+        Schema::table('absences', function($table) {
+            $table->foreign('Etudiant_idEtudiant')->references('idEtudiant')->on('etudiants');
+            $table->foreign('UE_idUE')->references('idUE')->on('u_es');
+        });
+
     }
 
     /**

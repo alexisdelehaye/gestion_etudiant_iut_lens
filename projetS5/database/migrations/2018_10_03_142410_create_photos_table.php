@@ -17,8 +17,12 @@ class CreatePhotosTable extends Migration
             $table->increments('idPhoto');
             $table->string('chemin',45);
             $table->geometryCollection('image');
-            $table->integer('Etudiant_idEtudiant');
+            $table->integer('Etudiant_idEtudiant')->unsigned();
             $table->timestamps();
+        });
+
+        Schema::table('photos', function($table) {
+            $table->foreign('Etudiant_idEtudiant')->references('idEtudiant')->on('etudiants');
         });
     }
 

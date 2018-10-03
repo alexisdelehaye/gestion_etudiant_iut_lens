@@ -16,9 +16,17 @@ class CreateDecisionUEsTable extends Migration
         Schema::create('decision_u_es', function (Blueprint $table) {
             $table->increments('idDecisionUE');
             $table->string('decision',45);
-            $table->integer('Etudiant_idEtudiant');
-            $table->integer('UE_idUE');
+            $table->integer('Etudiant_idEtudiant')->unsigned();
+            $table->integer('UE_idUE')->unsigned();
             $table->timestamps();
+        });
+
+
+        Schema::table('decision_u_es', function($table) {
+            $table->foreign('Etudiant_idEtudiant')->references('idEtudiant')->on('etudiants');
+            $table->foreign('UE_idUE')->references('idUE')->on('u_es');
+
+
         });
     }
 
