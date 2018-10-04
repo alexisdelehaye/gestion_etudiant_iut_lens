@@ -22,10 +22,14 @@ class CreateSemestresTable extends Migration
             $table->timestamps();
         });
 
+
+    /*
         Schema::table('semestres', function($table) {
             $table->foreign('Formation_idFormation')->references('idFormation')->on('formations');
 
         });
+*/
+
     }
 
     /**

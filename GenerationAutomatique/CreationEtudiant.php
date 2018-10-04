@@ -49,7 +49,7 @@ function AddStudientsToDatabase()
        // echo "contenu du numero : ".$numeroEtudiantCourant . PHP_EOL;
         if ($numeroEtudiantCourant != null) {
 
-            // $numeroEtudiantCourant =intval($numeroEtudiantCourant);
+            // $numeroEtudiantCourant
 
             $sql = "insert into projets5.Etudiant(numeroEtudiant,nomEtudiant,prenomEtudiant,groupeEtudiant,dateNaissanceEtudiant,bacEtudiant,etablissementEtudiant) values('$numeroEtudiantCourant','$nomEtudiantCourant','$prenomEtudiantCourant','$groupeEtudiantCourant','$dateNaissanceEtudiantCourant','$bacEtudiantCourant','$etablissement')";
            // $test = "insert into projets5.test VALUES  ($numeroEtudiantCourant)";

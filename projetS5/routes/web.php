@@ -20,3 +20,9 @@ Route::get('users', function()
 {
     return 'Users!';
 });
+
+
+Route::get('testEtudiant', 'EtudiantController@insertStudiantInDatabase');
+
+
+Route::get('testMatiere', 'MatiereController@creationMatieresDansDatabase');

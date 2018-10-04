@@ -26,6 +26,7 @@ class CreateUEsTable extends Migration
             $table->foreign('Semestre_idSemestre')->references('idSemestre')->on('semestres');
 
         });
+
     }
 
     /**

@@ -23,6 +23,7 @@ class CreateMatieresTable extends Migration
             $table->timestamps();
         });
 
+
         Schema::table('matieres', function($table) {
             $table->foreign('UE_idUE')->references('idUE')->on('u_es');
 
