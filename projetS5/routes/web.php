@@ -26,3 +26,7 @@ Route::get('testEtudiant', 'EtudiantController@insertStudiantInDatabase');
 
 
 Route::get('testMatiere', 'MatiereController@creationMatieresDansDatabase');
+
+Route::get('testCreationExcelNotes', 'GenerationDocumentController@creationFicheNotesPourToutesLesMatieres');
+
+Route::get('testMiseAjourNotesEtudiant','NoteController@miseAjourNotesEtudiants');

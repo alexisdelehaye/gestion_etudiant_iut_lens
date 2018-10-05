@@ -26,13 +26,13 @@ class CreateEtudiantsTable extends Migration
             $table->timestamps();
 
         });
-/*
+
         //Schema::enableForeignKeyConstraints();
         Schema::table('etudiants', function($table) {
            $table->foreign('Formation_idFormation')->references('idFormation')->on('formations');
 
         });
-*/
+
     }
 
     /**
