@@ -37,25 +37,37 @@ class EtudiantController extends Controller
             $bacEtudiantCourant = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(5, 2 + $i)->getValue();
             $etablissementEtudiantPrécédant = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(6, 2 + $i)->getValue();
 
+            $formationCourante = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(6, 2 + $i)->getValue();
+            $getFormation = Formation::where('nom',$formationCourante)->first();
+
             $etablissement = str_replace("'"," ", $etablissementEtudiantPrécédant);
 
 
+            if (is_null($getFormation)){
+
+                $newFormation = new Formation;
+                $newFormation->nom = $formationCourante;
+                $newFormation->save();
+
+            }
+
             if ($numeroEtudiantCourant != null) {
+                $checkIfstudientExist = Etudiant::where('numEtu',$numeroEtudiantCourant)->first();
+                if (is_null($checkIfstudientExist)) {
 
-                $etudiant = new Etudiant;
+                    $etudiant = new Etudiant;
 
-               // $getFormation = Formation::where('nom',)
-                $formation = new Formation;
+                    $etudiant->nom = $nomEtudiantCourant;
+                    $etudiant->prenom = $prenomEtudiantCourant;
+                    $etudiant->numEtu = $numeroEtudiantCourant;
+                    $etudiant->groupe = $groupeEtudiantCourant;
 
+                    $getFormation = Formation::where('nom', $formationCourante)->first();
 
-                $etudiant->nom = $nomEtudiantCourant;
-                $etudiant->prenom = $prenomEtudiantCourant;
-                $etudiant->numEtu = $numeroEtudiantCourant;
-                $etudiant->groupe =$groupeEtudiantCourant;
-                $etudiant->Formation_idFormation = $i;
-                $etudiant->save();
+                    $etudiant->Formation_idFormation = $getFormation->idFormation;
+                    $etudiant->save();
 
-
+                }
             }
         }
     }
