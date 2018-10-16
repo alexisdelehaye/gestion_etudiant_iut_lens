@@ -22,11 +22,17 @@ Route::get('users', function()
 });
 
 
-Route::get('testEtudiant', 'EtudiantController@insertStudiantInDatabase');
+Route::get('testEtudiant', 'EtudiantController@test');
 
 
-Route::get('testMatiere', 'MatiereController@creationMatieresDansDatabase');
+Route::get('testMatiere', 'MatiereController@test');
 
-Route::get('testCreationExcelNotes', 'GenerationDocumentController@creationFicheNotesPourToutesLesMatieres');
+Route::get('testCreationExcelNotesAuBonneEndroit', 'GenerationDocumentController@test');
 
 Route::get('testMiseAjourNotesEtudiant','NoteController@miseAjourNotesEtudiants');
+
+
+Route::get('testCréationArborescence','EtudiantController@CreationArborescenceGenerale');
+
+Route::get('testCréationNotesDansBonRépertoire','GenerationDocumentController@test');
+

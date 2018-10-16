@@ -12,13 +12,13 @@ use PHPExcel_IOFactory;
 class MatiereController extends Controller
 {
 
-    public function creationMatieresDansDatabase()
+    public static function creationMatieresDansDatabase($SemestreVoulu, $AnneeVoulue)
     {
+        $AnneeCourante = $AnneeVoulue . '-' . ($AnneeVoulue + 1);
+        $excelFile = public_path() . '\INFO\\' . $AnneeCourante . '\ADMIN\MATIERES\INFO_' . $AnneeCourante . '_ADMIN_MATIERES_' . $SemestreVoulu . '.xlsx';
 
-        $excelFile = 'C:\Users\cdcde\Music\PROJET S5 LPDIOC GESTION ETUDIANT\GestionEtudiants2018\projetS5\public\fichierExcel\Bilan_INFO_S3_20162017.xls';
 
-
-        $sheetname = "Matieres";
+        $sheetname = "Matières";
 
         $inputFileType = PHPExcel_IOFactory::identify($excelFile);
 
@@ -31,7 +31,7 @@ class MatiereController extends Controller
         $objPHPExcel = $objReader->load($excelFile);
         $nombreLigneFeuille = $objPHPExcel->getActiveSheet()->getHighestRow();
         echo "nb ligne : " . $objPHPExcel->getActiveSheet()->getHighestRow() . PHP_EOL;
-        for ($i = 0; $i <= $nombreLigneFeuille; $i++) {
+        for ($i = 1; $i <= $nombreLigneFeuille; $i++) {
 
             $referenceMatiereCourante = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(0, 1 + $i)->getValue();
             $nomModuleCourant = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(1, 1 + $i)->getValue();
@@ -42,40 +42,50 @@ class MatiereController extends Controller
 
             echo 'contenu de la ligne :' . $referenceMatiereCourante . '/ ';
 
-            if ($referenceMatiereCourante != null and $referenceMatiereCourante[0] == 'M') {
 
+            $checkIfMatiereExists = Matiere::where('ref', $referenceMatiereCourante)->first();
 
-                $matiere = new Matiere;
-                $matiere->nom = $nomModuleCourant;
-                $matiere->ref = $referenceMatiereCourante;
-                $matiere->abreviation = $AbreviationMatiereCourante;
-                $matiere->coefficient = floatval($coefficientMatiereCourante);
+            if ($referenceMatiereCourante != null) {
 
-                $getUE = UE::where('nomUE', $UECourant)->first();
-                $getSemestre = Semestre::where('nom', $SemestreCourant)->first();
-                if (is_null($getSemestre)) {
-                    $newSemestre = new Semestre;
-                    $newSemestre->nom = $SemestreCourant;
-                    $newSemestre->debut = new Carbon('2016-01-23');
-                    $newSemestre->fin = new Carbon('2016-07-23');
-                    $newSemestre->Formation_idFormation = 1;
-                    $newSemestre->save();
-                }
+                if (is_null($checkIfMatiereExists)) {
+                    $matiere = new Matiere;
+                    $matiere->nom = $nomModuleCourant;
+                    $matiere->ref = $referenceMatiereCourante;
+                    $matiere->abreviation = $AbreviationMatiereCourante;
+                    $matiere->coefficient = floatval($coefficientMatiereCourante);
 
-                if (is_null($getUE)) {
+                    $getUE = UE::where('nomUE', $UECourant)->first();
                     $getSemestre = Semestre::where('nom', $SemestreCourant)->first();
-                    $newUE = new UE;
-                    $newUE->nomUE = $UECourant;
-                    $newUE->debut = new Carbon('2016-01-23');
-                    $newUE->fin = new Carbon('2016-07-23');
-                    $newUE->Semestre_idSemestre = $getSemestre->idSemestre;
-                    $newUE->save();
-                }
+                    if (is_null($getSemestre)) {
+                        $newSemestre = new Semestre;
+                        $newSemestre->nom = $SemestreCourant;
+                        $newSemestre->debut = new Carbon('2016-01-23');
+                        $newSemestre->fin = new Carbon('2016-07-23');
+                        $newSemestre->Formation_idFormation = 1;
+                        $newSemestre->save();
+                    }
 
-                $getUE = UE::where('nomUE', $UECourant)->first();
-                $matiere->UE_idUE = $getUE->idUE;
-                $matiere->save();
+                    if (is_null($getUE)) {
+                        $getSemestre = Semestre::where('nom', $SemestreCourant)->first();
+                        $newUE = new UE;
+                        $newUE->nomUE = $UECourant;
+                        $newUE->debut = new Carbon('2016-01-23');
+                        $newUE->fin = new Carbon('2016-07-23');
+                        $newUE->Semestre_idSemestre = $getSemestre->idSemestre;
+                        $newUE->save();
+                    }
+
+                    $getUE = UE::where('nomUE', $UECourant)->first();
+                    $matiere->UE_idUE = $getUE->idUE;
+                    $matiere->save();
+                }
             }
+
         }
+
+    }
+
+    public function test(){
+        MatiereController::creationMatieresDansDatabase('S3','2018');
     }
 }

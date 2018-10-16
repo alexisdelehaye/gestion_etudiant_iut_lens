@@ -2,14 +2,16 @@
 namespace App\Http\Controllers;
 use App\Etudiant;
 use App\Formation;
+use Faker\Provider\DateTime;
 use PHPExcel;
 use PHPExcel_IOFactory;
 use Illuminate\Http\Request;
 class EtudiantController extends Controller
 {
-    public function insertStudiantInDatabase(){
-        $excelFile = 'C:\Users\cdcde\Music\PROJET S5 LPDIOC GESTION ETUDIANT\GestionEtudiants2018\projetS5\public\fichierExcel\Bilan_INFO_S3_20162017.xls';
-        $sheetname = "Liste";
+    public static function inscriptionEtudiantInBD($SemestreVoulu,$AnneeVoulue){
+        $AnneeCourante = $AnneeVoulue.'-'.($AnneeVoulue+1);
+        $excelFile = public_path().'\INFO\\'.$AnneeCourante.'\ADMIN\LISTES\INFO_'.$AnneeCourante.'_ADMIN_LISTES_'.$SemestreVoulu.'.xlsx';
+        $sheetname = "LISTE";
         $inputFileType = PHPExcel_IOFactory::identify($excelFile);
         $objReader = PHPExcel_IOFactory::createReader($inputFileType);
         /**  Advise the Reader of which WorkSheets we want to load  **/
@@ -34,7 +36,7 @@ class EtudiantController extends Controller
 
             $etablissement = str_replace("'"," ", $etablissementEtudiantPrécédant);
 
-
+            echo $formationCourante.PHP_EOL;
 
 
             if ($numeroEtudiantCourant != null) {
@@ -59,6 +61,108 @@ class EtudiantController extends Controller
                     $etudiant->save();
                 }
             }
+
+
         }
     }
+
+/*
+    public function MiseAjourSemetreEutdiant(Etudiant $etudiant){
+    $etudiant
+
+    }
+*/
+
+
+
+    public function CreationArborescenceGenerale() {
+        $CurrentYear =  date('Y');
+        echo $CurrentYear.'-'.($CurrentYear+1);
+
+
+        if (!is_dir(public_path().'\\'.'INFO\\'.$CurrentYear.'-'.($CurrentYear+1))){
+            mkdir(public_path().'\INFO\\');
+
+            $DossierPrincipale = 'INFO\\'.$CurrentYear.'-'.($CurrentYear+1);
+            mkdir(public_path().'\\'.$DossierPrincipale.'\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO1\\');
+
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO1\S1\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO1\S1\UE11\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO1\S1\UE12\\');;
+
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO1\S2\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO1\S2\UE21\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO1\S2\UE22\\');
+
+
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\\');
+
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S3\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S3\UE31\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S3\UE32\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S3\UE33\\');
+
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S4\\');
+
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S4\IPI\\');
+
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S4\IPI\UE41\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S4\IPI\UE42\\');
+
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S4\PEL\\');
+
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S4\PEL\UE41\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S4\PEL\UE42\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S4\ETRANGER\\');
+
+            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S4\\UE43\\');
+
+            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S5\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S5\UE1\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S5\UE2\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S5\UE3\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S5\UE4\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S5\UE5\\');
+
+
+            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S6\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S6\UE6\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S6\UE7\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S6\UE8\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S6\UE9\\');
+
+
+
+            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\LISTES\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\MATIERES\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\TROMBIS\\');
+
+            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\TROMBIS\INFO1\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\TROMBIS\INFO2\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\TROMBIS\LPDIOC\\');
+
+            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\BULLETINS\\');
+
+            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\BULLETINS\S1\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\BULLETINS\S2\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\BULLETINS\S3\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\BULLETINS\S4\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\BULLETINS\S5\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\BULLETINS\S6\\');
+
+            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\JURY\\');
+            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\POURSUITES-ETUDES\\');
+
+        }
+
+    }
+
+    public function test(){
+        EtudiantController::inscriptionEtudiantInBD('S3','2018');
+    }
 }
+

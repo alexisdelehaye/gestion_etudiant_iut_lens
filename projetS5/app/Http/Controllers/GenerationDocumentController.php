@@ -13,9 +13,9 @@ use PHPExcel_IOFactory;
 class GenerationDocumentController extends Controller
 {
 
-    public static function GenerationFichierExcelParMatiere($matiere)
+    public static function GenerationFichierExcelParMatiere($matiere,$annéeVoulu,$nomInfo,$nomSemestre,$nomUE)
     {
-
+        $AnneeCourante = $annéeVoulu.'-'.($annéeVoulu+1);
         $listeEtudiant = Etudiant::all();
 
 
@@ -59,20 +59,36 @@ class GenerationDocumentController extends Controller
         $objSheet->getColumnDimension('E')->setAutoSize(true);
        // ob_end_clean();
 
-        $repertoireFichier = 'C:/Users/cdcde/Music/PROJET S5 LPDIOC GESTION ETUDIANT/GestionEtudiants2018/projetS5/public/ListeMatieres/'.$matiere->abreviation.'.xlsx';
+        $repertoireFichier =  public_path().'\INFO\\'.$AnneeCourante.'\\'.$nomInfo.'\\'.$nomSemestre.'\\'.$nomUE.'\\'.$matiere->abreviation.'.xlsx';
         $objWriter->save(str_replace(__FILE__,$repertoireFichier,__FILE__));
 
     }
 
 
-    public static function creationFicheNotesPourToutesLesMatieres()
+    public static function creationFicheNotesPourToutesLesMatieres($idUE,$annéeVoulu,$nomInfo,$nomSemestre,$nomUE)
     {
 
         $listeMatiere = Matiere::all();
         foreach ($listeMatiere as $matiere) {
             echo $matiere->abreviation;
-           self::GenerationFichierExcelParMatiere($matiere);
+            if ($matiere->UE_idUE == $idUE) {
+                self::GenerationFichierExcelParMatiere($matiere,$annéeVoulu,$nomInfo,$nomSemestre,$nomUE);
+            }
         }
+    }
+
+
+    public static function créationFicheMatièresSelonSemestre($annéeVoulu,$nomSemestre,$nomInfo){
+        $getIdSemestre = Semestre::where('nom',$nomSemestre)->first();
+        $getUepourMatieres = UE::where('Semestre_idSemestre',$getIdSemestre->idSemestre)->get();
+        foreach ($getUepourMatieres as $ue ) {
+             self::creationFicheNotesPourToutesLesMatieres($ue['idUE'],$annéeVoulu,$nomInfo,$nomSemestre,$ue['nomUE']);
+        }
+
+    }
+
+    public function test(){
+        GenerationDocumentController::créationFicheMatièresSelonSemestre('2018','S3',"INFO2");
 
     }
 }
