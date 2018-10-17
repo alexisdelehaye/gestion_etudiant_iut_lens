@@ -72,6 +72,36 @@ class EtudiantController extends Controller
 
     }
 */
+    public function inscriptionEtudiantByCsv($semestre,$anneeDebut){
+        $annees = $anneeDebut.'-'.($anneeDebut + 1);
+
+        $file = public_path().DIRECTORY_SEPARATOR."INFO".DIRECTORY_SEPARATOR.$annees.DIRECTORY_SEPARATOR."ADMIN".
+            DIRECTORY_SEPARATOR."LISTES".DIRECTORY_SEPARATOR."INFO_".$annees."_ADMIN_LISTES_".$semestre.'.csv';
+
+        if($handle = fopen($file,"r") !== FALSE) {
+            while(($data = fgetcsv($handle)) !== FALSE) {
+                $colonnes = count($data);
+
+                if($colonnes[0] == "Numéro") // si c'est la premiere ligne
+                    continue;
+
+                // sinon
+                $numero = $colonnes[0];
+                $nom = $colonnes[1];
+                $prenom = $colonnes[2];
+                $groupe = $colonnes[3];
+                $naissance = $colonnes[4];
+                $bac = $colonnes[5];
+                $etablissementPrec = $colonnes[6];
+                $formation = $colonnes[7];
+                $semestreAct = $colonnes[8];
+
+                echo "$numero, $nom, $prenom, $groupe, $naissance";
+
+            }
+            fclose($handle);
+        }
+    }
 
 
 
@@ -79,85 +109,63 @@ class EtudiantController extends Controller
         $CurrentYear =  date('Y');
         echo $CurrentYear.'-'.($CurrentYear+1);
 
+        echo public_path();
+        
+        if(is_dir(public_path().DIRECTORY_SEPARATOR."INFO".DIRECTORY_SEPARATOR.$CurrentYear.'-'.($CurrentYear+1)))
+            return;
 
-        if (!is_dir(public_path().'\\'.'INFO\\'.$CurrentYear.'-'.($CurrentYear+1))){
-            mkdir(public_path().'\INFO\\');
+        $racine = public_path().DIRECTORY_SEPARATOR."INFO";
 
-            $DossierPrincipale = 'INFO\\'.$CurrentYear.'-'.($CurrentYear+1);
-            mkdir(public_path().'\\'.$DossierPrincipale.'\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO1\\');
+        mkdir($racine.DIRECTORY_SEPARATOR."INFO1".DIRECTORY_SEPARATOR."S1".DIRECTORY_SEPARATOR."UE11",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."INFO1".DIRECTORY_SEPARATOR."S1".DIRECTORY_SEPARATOR."UE12",0777, true);
 
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO1\S1\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO1\S1\UE11\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO1\S1\UE12\\');;
+        mkdir($racine.DIRECTORY_SEPARATOR."INFO1".DIRECTORY_SEPARATOR."S2".DIRECTORY_SEPARATOR."UE21",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."INFO1".DIRECTORY_SEPARATOR."S2".DIRECTORY_SEPARATOR."UE22",0777, true);
 
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO1\S2\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO1\S2\UE21\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO1\S2\UE22\\');
+        mkdir($racine.DIRECTORY_SEPARATOR."INFO2".DIRECTORY_SEPARATOR."S3".DIRECTORY_SEPARATOR."UE31",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."INFO2".DIRECTORY_SEPARATOR."S3".DIRECTORY_SEPARATOR."UE32",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."INFO2".DIRECTORY_SEPARATOR."S3".DIRECTORY_SEPARATOR."UE33",0777, true);
 
+        mkdir($racine.DIRECTORY_SEPARATOR."INFO2".DIRECTORY_SEPARATOR."S4".DIRECTORY_SEPARATOR."IPI".DIRECTORY_SEPARATOR."UE41",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."INFO2".DIRECTORY_SEPARATOR."S4".DIRECTORY_SEPARATOR."IPI".DIRECTORY_SEPARATOR."UE42",0777, true);
 
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\\');
+        mkdir($racine.DIRECTORY_SEPARATOR."INFO2".DIRECTORY_SEPARATOR."S4".DIRECTORY_SEPARATOR."PEL".DIRECTORY_SEPARATOR."UE41",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."INFO2".DIRECTORY_SEPARATOR."S4".DIRECTORY_SEPARATOR."PEL".DIRECTORY_SEPARATOR."UE42",0777, true);
 
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S3\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S3\UE31\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S3\UE32\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S3\UE33\\');
+        mkdir($racine.DIRECTORY_SEPARATOR."INFO2".DIRECTORY_SEPARATOR."S4".DIRECTORY_SEPARATOR."ETRANGER",0777, true);
 
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S4\\');
+        mkdir($racine.DIRECTORY_SEPARATOR."INFO2".DIRECTORY_SEPARATOR."S4".DIRECTORY_SEPARATOR."UE43",0777, true);
 
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S4\IPI\\');
+        mkdir($racine.DIRECTORY_SEPARATOR."LPDIOC".DIRECTORY_SEPARATOR."S5".DIRECTORY_SEPARATOR."UE1",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."LPDIOC".DIRECTORY_SEPARATOR."S5".DIRECTORY_SEPARATOR."UE2",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."LPDIOC".DIRECTORY_SEPARATOR."S5".DIRECTORY_SEPARATOR."UE3",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."LPDIOC".DIRECTORY_SEPARATOR."S5".DIRECTORY_SEPARATOR."UE4",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."LPDIOC".DIRECTORY_SEPARATOR."S5".DIRECTORY_SEPARATOR."UE5",0777, true);
 
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S4\IPI\UE41\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S4\IPI\UE42\\');
+        mkdir($racine.DIRECTORY_SEPARATOR."LPDIOC".DIRECTORY_SEPARATOR."S6".DIRECTORY_SEPARATOR."UE6",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."LPDIOC".DIRECTORY_SEPARATOR."S6".DIRECTORY_SEPARATOR."UE7",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."LPDIOC".DIRECTORY_SEPARATOR."S6".DIRECTORY_SEPARATOR."UE8",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."LPDIOC".DIRECTORY_SEPARATOR."S6".DIRECTORY_SEPARATOR."UE9",0777, true);
 
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S4\PEL\\');
+        mkdir($racine.DIRECTORY_SEPARATOR."ADMIN".DIRECTORY_SEPARATOR."LISTES",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."ADMIN".DIRECTORY_SEPARATOR."MATIERES",0777, true);
 
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S4\PEL\UE41\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S4\PEL\UE42\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S4\ETRANGER\\');
+        mkdir($racine.DIRECTORY_SEPARATOR."ADMIN".DIRECTORY_SEPARATOR."TROMBIS".DIRECTORY_SEPARATOR."INFO1",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."ADMIN".DIRECTORY_SEPARATOR."TROMBIS".DIRECTORY_SEPARATOR."INFO2",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."ADMIN".DIRECTORY_SEPARATOR."TROMBIS".DIRECTORY_SEPARATOR."LPDIOC",0777, true);
 
-            mkdir(public_path().'\\'.$DossierPrincipale.'\INFO2\S4\\UE43\\');
-
-            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S5\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S5\UE1\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S5\UE2\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S5\UE3\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S5\UE4\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S5\UE5\\');
-
-
-            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S6\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S6\UE6\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S6\UE7\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S6\UE8\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\LPDIOC\S6\UE9\\');
+        mkdir($racine.DIRECTORY_SEPARATOR."ADMIN".DIRECTORY_SEPARATOR."DOCUMENTS".DIRECTORY_SEPARATOR."BULLETINS".DIRECTORY_SEPARATOR."S1",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."ADMIN".DIRECTORY_SEPARATOR."DOCUMENTS".DIRECTORY_SEPARATOR."BULLETINS".DIRECTORY_SEPARATOR."S2",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."ADMIN".DIRECTORY_SEPARATOR."DOCUMENTS".DIRECTORY_SEPARATOR."BULLETINS".DIRECTORY_SEPARATOR."S3",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."ADMIN".DIRECTORY_SEPARATOR."DOCUMENTS".DIRECTORY_SEPARATOR."BULLETINS".DIRECTORY_SEPARATOR."S4",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."ADMIN".DIRECTORY_SEPARATOR."DOCUMENTS".DIRECTORY_SEPARATOR."BULLETINS".DIRECTORY_SEPARATOR."S5",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."ADMIN".DIRECTORY_SEPARATOR."DOCUMENTS".DIRECTORY_SEPARATOR."BULLETINS".DIRECTORY_SEPARATOR."S6",0777, true);
 
 
+        mkdir($racine.DIRECTORY_SEPARATOR."ADMIN".DIRECTORY_SEPARATOR."DOCUMENTS".DIRECTORY_SEPARATOR."JURY",0777, true);
+        mkdir($racine.DIRECTORY_SEPARATOR."ADMIN".DIRECTORY_SEPARATOR."DOCUMENTS".DIRECTORY_SEPARATOR."POURSUITES-ETUDES",0777, true);
 
-            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\LISTES\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\MATIERES\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\TROMBIS\\');
 
-            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\TROMBIS\INFO1\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\TROMBIS\INFO2\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\TROMBIS\LPDIOC\\');
-
-            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\BULLETINS\\');
-
-            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\BULLETINS\S1\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\BULLETINS\S2\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\BULLETINS\S3\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\BULLETINS\S4\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\BULLETINS\S5\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\BULLETINS\S6\\');
-
-            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\JURY\\');
-            mkdir(public_path().'\\'.$DossierPrincipale.'\ADMIN\DOCUMENTS\POURSUITES-ETUDES\\');
-
-        }
 
     }
 
