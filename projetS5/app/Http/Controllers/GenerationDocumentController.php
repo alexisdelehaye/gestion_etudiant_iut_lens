@@ -59,7 +59,7 @@ class GenerationDocumentController extends Controller
         $objSheet->getColumnDimension('E')->setAutoSize(true);
        // ob_end_clean();
 
-        $repertoireFichier =  public_path().'\INFO\\'.$AnneeCourante.'\\'.$nomInfo.'\\'.$nomSemestre.'\\'.$nomUE.'\\'.$matiere->abreviation.'.xlsx';
+        $repertoireFichier =  public_path().DIRECTORY_SEPARATOR.'INFO'.DIRECTORY_SEPARATOR.$AnneeCourante.DIRECTORY_SEPARATOR.$nomInfo.DIRECTORY_SEPARATOR.$nomSemestre.DIRECTORY_SEPARATOR.$nomUE.DIRECTORY_SEPARATOR.$matiere->abreviation.'.xlsx';
         $objWriter->save(str_replace(__FILE__,$repertoireFichier,__FILE__));
 
     }

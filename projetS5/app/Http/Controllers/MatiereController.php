@@ -15,7 +15,7 @@ class MatiereController extends Controller
     public static function creationMatieresDansDatabase($SemestreVoulu, $AnneeVoulue)
     {
         $AnneeCourante = $AnneeVoulue . '-' . ($AnneeVoulue + 1);
-        $excelFile = public_path() . '\INFO\\' . $AnneeCourante . '\ADMIN\MATIERES\INFO_' . $AnneeCourante . '_ADMIN_MATIERES_' . $SemestreVoulu . '.xlsx';
+        $excelFile = public_path() .DIRECTORY_SEPARATOR.'INFO'.DIRECTORY_SEPARATOR.$AnneeCourante.DIRECTORY_SEPARATOR.'ADMIN'.DIRECTORY_SEPARATOR.'MATIERES'.DIRECTORY_SEPARATOR.'INFO_'.$AnneeCourante . '_ADMIN_MATIERES_' . $SemestreVoulu . '.xlsx';
 
 
         $sheetname = "Matières";
@@ -56,18 +56,13 @@ class MatiereController extends Controller
 
                     $getUE = UE::where('nomUE', $UECourant)->first();
                     $getSemestre = Semestre::where('nom', $SemestreCourant)->first();
+
                     if (is_null($getSemestre)) {
                         SemestreController::createIfNoteExitsSemestre($excelFile);
                     }
 
                     if (is_null($getUE)) {
-                        $getSemestre = Semestre::where('nom', $SemestreCourant)->first();
-                        $newUE = new UE;
-                        $newUE->nomUE = $UECourant;
-                        $newUE->debut = new Carbon('2016-01-23');
-                        $newUE->fin = new Carbon('2016-07-23');
-                        $newUE->Semestre_idSemestre = $getSemestre->idSemestre;
-                        $newUE->save();
+                        UEController::createIfNotExistsUE($UECourant,$SemestreCourant);
                     }
 
                     $getUE = UE::where('nomUE', $UECourant)->first();

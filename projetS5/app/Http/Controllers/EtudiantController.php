@@ -6,12 +6,15 @@ use Faker\Provider\DateTime;
 use PHPExcel;
 use PHPExcel_IOFactory;
 use Illuminate\Http\Request;
+
 class EtudiantController extends Controller
 {
     public static function inscriptionEtudiantInBD($SemestreVoulu,$AnneeVoulue){
         $AnneeCourante = $AnneeVoulue.'-'.($AnneeVoulue+1);
-        $excelFile = public_path().'\INFO\\'.$AnneeCourante.'\ADMIN\LISTES\INFO_'.$AnneeCourante.'_ADMIN_LISTES_'.$SemestreVoulu.'.xlsx';
-        $sheetname = "LISTE";
+        $excelFile = public_path().DIRECTORY_SEPARATOR."INFO".DIRECTORY_SEPARATOR.$AnneeCourante.DIRECTORY_SEPARATOR."ADMIN".
+            DIRECTORY_SEPARATOR."LISTES".DIRECTORY_SEPARATOR."INFO_".$AnneeCourante."_ADMIN_LISTES_".$SemestreVoulu.'.xlsx';
+
+        $sheetname = "LISTE_".$SemestreVoulu;
         $inputFileType = PHPExcel_IOFactory::identify($excelFile);
         $objReader = PHPExcel_IOFactory::createReader($inputFileType);
         /**  Advise the Reader of which WorkSheets we want to load  **/
@@ -27,17 +30,9 @@ class EtudiantController extends Controller
             $nomEtudiantCourant = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(1, 2 + $i)->getValue();
             $prenomEtudiantCourant = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(2, 2 + $i)->getValue();
             $groupeEtudiantCourant = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(3, 2 + $i)->getValue();
-            $dateNaissanceEtudiantCourant = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(4, 2 + $i)->getValue();
-            $bacEtudiantCourant = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(5, 2 + $i)->getValue();
-            $etablissementEtudiantPrécédant = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(6, 2 + $i)->getValue();
+
             $formationCourante = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(7, 2 + $i)->getValue();
             $getFormation = Formation::where('nom',$formationCourante)->first();
-
-
-            $etablissement = str_replace("'"," ", $etablissementEtudiantPrécédant);
-
-            echo $formationCourante.PHP_EOL;
-
 
             if ($numeroEtudiantCourant != null) {
 
@@ -56,7 +51,9 @@ class EtudiantController extends Controller
                     $etudiant->prenom = $prenomEtudiantCourant;
                     $etudiant->numEtu = $numeroEtudiantCourant;
                     $etudiant->groupe = $groupeEtudiantCourant;
+
                     $getFormation = Formation::where('nom', $formationCourante)->first();
+
                     $etudiant->Formation_idFormation = $getFormation->idFormation;
                     $etudiant->save();
                 }

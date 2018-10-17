@@ -16,7 +16,6 @@ class CreateFormationsTable extends Migration
         Schema::create('formations', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('idFormation');
-           // $table->primary('idFormation');
             $table->string('nom',45);
             $table->timestamps();
 
