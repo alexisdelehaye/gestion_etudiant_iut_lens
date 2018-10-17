@@ -40,10 +40,10 @@ class MatiereController extends Controller
             $UECourant = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(4, 1 + $i)->getValue();
             $SemestreCourant = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(5, 1 + $i)->getValue();
 
-            echo 'contenu de la ligne :' . $referenceMatiereCourante . '/ ';
 
 
             $checkIfMatiereExists = Matiere::where('ref', $referenceMatiereCourante)->first();
+            //SemestreController::createIfNoteExitsSemestre($excelFile);
 
             if ($referenceMatiereCourante != null) {
 
@@ -57,12 +57,7 @@ class MatiereController extends Controller
                     $getUE = UE::where('nomUE', $UECourant)->first();
                     $getSemestre = Semestre::where('nom', $SemestreCourant)->first();
                     if (is_null($getSemestre)) {
-                        $newSemestre = new Semestre;
-                        $newSemestre->nom = $SemestreCourant;
-                        $newSemestre->debut = new Carbon('2016-01-23');
-                        $newSemestre->fin = new Carbon('2016-07-23');
-                        $newSemestre->Formation_idFormation = 1;
-                        $newSemestre->save();
+                        SemestreController::createIfNoteExitsSemestre($excelFile);
                     }
 
                     if (is_null($getUE)) {
@@ -78,6 +73,7 @@ class MatiereController extends Controller
                     $getUE = UE::where('nomUE', $UECourant)->first();
                     $matiere->UE_idUE = $getUE->idUE;
                     $matiere->save();
+
                 }
             }
 

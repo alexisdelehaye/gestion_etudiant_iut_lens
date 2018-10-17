@@ -78,9 +78,37 @@ class GenerationDocumentController extends Controller
     }
 
 
-    public static function créationFicheMatièresSelonSemestre($annéeVoulu,$nomSemestre,$nomInfo){
+    public static function créationFicheMatièresSelonSemestre($annéeVoulu,$nomSemestre){
+        $nomSemestre = strtoupper($nomSemestre);
+        $nomInfo=null;
+
+
+        switch (intval($nomSemestre[1])){
+
+            case 1 :
+                $nomInfo = "INFO1";
+                break;
+            case 2 :
+                $nomInfo = "INFO1";
+                break;
+            case 3 :
+                $nomInfo = "INFO2";
+                break;
+            case 4 :
+                $nomInfo = "INFO2";
+                break;
+            case 5:
+                $nomInfo = "LPDIOC";
+                break;
+            case 6:
+                $nomInfo = "LPDIOC";
+                break;
+
+        }
+
         $getIdSemestre = Semestre::where('nom',$nomSemestre)->first();
         $getUepourMatieres = UE::where('Semestre_idSemestre',$getIdSemestre->idSemestre)->get();
+
         foreach ($getUepourMatieres as $ue ) {
              self::creationFicheNotesPourToutesLesMatieres($ue['idUE'],$annéeVoulu,$nomInfo,$nomSemestre,$ue['nomUE']);
         }
@@ -88,12 +116,7 @@ class GenerationDocumentController extends Controller
     }
 
     public function test(){
-        GenerationDocumentController::créationFicheMatièresSelonSemestre('2018','S3',"INFO2");
+        GenerationDocumentController::créationFicheMatièresSelonSemestre('2018','S3');
 
     }
 }
-/*
-echo "pass";
-$testmatiere = Matiere::where('idMatiere',4)->first();
-GenerationDocumentController::GenerationFichierExcelParMatiere($testmatiere);
-*/
