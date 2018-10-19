@@ -41,6 +41,7 @@ class GenerationDocumentController extends Controller
                 $objSheet->setCellValue('C1', 'Prénom');
                 $objSheet->setCellValue('D1', 'Groupe');
                 $objSheet->setCellValue('E1', "Moyenne de l'étudiant");
+                $objSheet->setCellValue('F1', "Rang");
 
 
                 $objSheet->setCellValueByColumnAndRow(0, $i + 3, $listeEtudiant[$i]->numEtu);
