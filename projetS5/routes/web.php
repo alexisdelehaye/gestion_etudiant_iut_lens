@@ -29,7 +29,7 @@ Route::get('testMatiere', 'MatiereController@test');
 
 Route::get('testCreationExcelNotesAuBonneEndroit', 'GenerationDocumentController@test');
 
-Route::get('testMiseAjourNotesEtudiant','NoteController@miseAjourNotesEtudiants');
+Route::get('testMiseAjourNotesEtudiant','NoteController@test');
 
 
 Route::get('testCréationArborescence','EtudiantController@CreationArborescenceGenerale');
