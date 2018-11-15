@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Etudiant;
 use App\Matiere;
 use App\Note;
+use App\Semestre;
 use App\UE;
 use Illuminate\Http\Request;
 use PHPExcel_IOFactory;
@@ -13,7 +14,7 @@ class NoteController extends Controller
 {
 
 
-    public function miseAjourNotesEtudiants($annneeVoulu,$semestreVoulu,$matiereVoulu)
+    public static function miseAjourNotesEtudiantsparMatiere($annneeVoulu,$semestreVoulu,$idmatiereVoulu)
     {
         $nomSemestre = strtoupper($semestreVoulu);
         $anneeCourante = $annneeVoulu . '-' . ($annneeVoulu + 1);
@@ -44,17 +45,27 @@ class NoteController extends Controller
 
         }
 
-        $idUeMatiere = Matiere::where("abreviation",$matiereVoulu)->first();
+        $idUeMatiere = Matiere::where("idMatiere",$idmatiereVoulu)->first();
         $nomUe = UE::where('idUE',$idUeMatiere->UE_idUE)->first();
 
-        $excelFile =  public_path().DIRECTORY_SEPARATOR.'INFO'.DIRECTORY_SEPARATOR.$anneeCourante.DIRECTORY_SEPARATOR.$nomInfo.DIRECTORY_SEPARATOR.$nomSemestre.DIRECTORY_SEPARATOR.$nomUe->nomUE.DIRECTORY_SEPARATOR.$matiereVoulu.'.xlsx';
+        $excelFile =  public_path().DIRECTORY_SEPARATOR.'INFO'.DIRECTORY_SEPARATOR.$anneeCourante.DIRECTORY_SEPARATOR.$nomInfo.DIRECTORY_SEPARATOR.$nomSemestre.DIRECTORY_SEPARATOR.$nomUe->nomUE.DIRECTORY_SEPARATOR.$idUeMatiere->abreviation.'.xlsx';
+
+
+        if ($nomSemestre == "S4_IPI" or $nomSemestre == "S4_PEL") {
+            if ($nomSemestre == "S4_IPI") {
+                $excelFile = public_path() . DIRECTORY_SEPARATOR . 'INFO' . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . $nomInfo . DIRECTORY_SEPARATOR . 'S4' . DIRECTORY_SEPARATOR . 'IPI' .DIRECTORY_SEPARATOR. $nomUe->nomUE . DIRECTORY_SEPARATOR . $idUeMatiere->abreviation . '.xlsx';
+            } else if ($nomSemestre == "S4_PEL") {
+                $excelFile = public_path() . DIRECTORY_SEPARATOR . 'INFO' . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . $nomInfo . DIRECTORY_SEPARATOR . 'S4' . DIRECTORY_SEPARATOR . 'PEL' .DIRECTORY_SEPARATOR. $nomUe->nomUE . DIRECTORY_SEPARATOR . $idUeMatiere->abreviation . '.xlsx';
+            }
+
+        }
 
         $inputFileType = PHPExcel_IOFactory::identify($excelFile);
 
         $objReader = PHPExcel_IOFactory::createReader($inputFileType);
 
         /**  Advise the Reader of which WorkSheets we want to load  **/
-        $objReader->setLoadSheetsOnly($matiereVoulu);
+        $objReader->setLoadSheetsOnly($idUeMatiere->abreviation);
 
         /**  Load $inputFileName to a PHPExcel Object  **/
         $objPHPExcel = $objReader->load($excelFile);
@@ -76,10 +87,19 @@ class NoteController extends Controller
         }
 
 
+        public static function miseAjourNotesEtudiantsparSemestre($anneeVoulu,$semestreVoulu){
+        $idSemestre = Semestre::where('nom',$semestreVoulu)->first();
+      foreach (UE::where('Semestre_idSemestre',$idSemestre->idSemestre)->cursor() as $ue){
+          foreach (Matiere::where('UE_idUE',$ue->idUE)->cursor() as $matiere) {
+              self::miseAjourNotesEtudiantsparMatiere($anneeVoulu,$semestreVoulu,$matiere->idMatiere);
+          }
+      }
+        }
 
 
     public function test(){
-        NoteController::miseAjourNotesEtudiants("2018","S3","APA");
+        self::miseAjourNotesEtudiantsparSemestre('2018','S4_IPI');
+        //NoteController::miseAjourNotesEtudiantsparMatiere("2018","S3","CPA");
 
     }
 

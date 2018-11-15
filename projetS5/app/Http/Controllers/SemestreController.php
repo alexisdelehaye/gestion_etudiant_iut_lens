@@ -21,8 +21,8 @@ class SemestreController extends Controller {
 
 
 
-    public static function createIfNoteExitsSemestre($cheminFichier){
-        //date_default_timezone_set('Europe/Paris');
+    public static function createIfNoteExitsSemestre($cheminFichier,$anneeVoulu){
+        $AnneeCourante = $anneeVoulu.'-'.($anneeVoulu+1);
 
         $inputFileType = PHPExcel_IOFactory::identify($cheminFichier);
 
@@ -44,16 +44,18 @@ class SemestreController extends Controller {
 
         $startDate = self::dateToMySQL($dateDebut);
         $endDate = self::dateToMySQL($dateFin);
-        echo "date de fin ".$dateFin;
+        $checkIfSemestresExist = Semestre::where('nom',$SemestreCourant)->first();
 
-        $newSemestre = new Semestre;
-        $newSemestre->nom = $SemestreCourant;
-        $newSemestre->debut = new Carbon($startDate);
-        $newSemestre->fin = new Carbon($endDate);
-        $newSemestre->Formation_idFormation = 1;
-        $newSemestre->save();
+        if(is_null($checkIfSemestresExist)) {
 
+            $newSemestre = new Semestre;
+            $newSemestre->nom = $SemestreCourant;
+            $newSemestre->debut = new Carbon($startDate);
+            $newSemestre->fin = new Carbon($endDate);
+            $newSemestre->Formation_idFormation = 1;
+            $newSemestre->save();
 
+        }
     }
 
     public static function dateToMySQL($date){

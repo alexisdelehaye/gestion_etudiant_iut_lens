@@ -36,3 +36,9 @@ Route::get('testCréationArborescence','EtudiantController@CreationArborescenceG
 
 Route::get('testCréationNotesDansBonRépertoire','GenerationDocumentController@test');
 
+
+Route::get('testJsonEtudiant','jsonController@test');
+
+Route::get("testInitialization",'initializationController@test');
+
+

@@ -18,7 +18,7 @@ class CreateMatieresTable extends Migration
             $table->string('nom',150);
             $table->char('ref',5);
             $table->char('abreviation',10);
-            $table->decimal('coefficient',2,1);
+            $table->decimal('coefficient');
             $table->integer('UE_idUE')->unsigned();
             $table->timestamps();
         });

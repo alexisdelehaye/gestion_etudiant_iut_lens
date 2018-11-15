@@ -12,10 +12,10 @@ use PHPExcel_IOFactory;
 class MatiereController extends Controller
 {
 
-    public static function creationMatieresDansDatabase($semestreVoulu, $AnneeVoulue)
+    public static function creationMatieresDansDatabase($fileName, $AnneeVoulue)
     {
         $AnneeCourante = $AnneeVoulue . '-' . ($AnneeVoulue + 1);
-        $excelFile = public_path() .DIRECTORY_SEPARATOR.'INFO'.DIRECTORY_SEPARATOR.$AnneeCourante.DIRECTORY_SEPARATOR.'ADMIN'.DIRECTORY_SEPARATOR.'MATIERES'.DIRECTORY_SEPARATOR.'INFO_'.$AnneeCourante . '_ADMIN_MATIERES_' . $semestreVoulu . '.xlsx';
+        $excelFile = public_path() .DIRECTORY_SEPARATOR.'INFO'.DIRECTORY_SEPARATOR.$AnneeCourante.DIRECTORY_SEPARATOR.'ADMIN'.DIRECTORY_SEPARATOR.'MATIERES'.DIRECTORY_SEPARATOR.$fileName;
 
 
         $sheetname = "Matières";
@@ -58,7 +58,7 @@ class MatiereController extends Controller
                     $getSemestre = Semestre::where('nom', $SemestreCourant)->first();
 
                     if (is_null($getSemestre)) {
-                        SemestreController::createIfNoteExitsSemestre($excelFile);
+                        SemestreController::createIfNoteExitsSemestre($excelFile,$AnneeVoulue);
                     }
 
                     if (is_null($getUE)) {
