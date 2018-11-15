@@ -22,7 +22,7 @@ class CreateEtudiantsTable extends Migration
             $table->string('numEtu',45);
             $table->string('groupe',5);
             $table->integer('Formation_idFormation')->unsigned();
-          //  $table->integer('Semestre_idSemestre')->unsigned();
+            $table->integer('Semestre_idSemestre')->unsigned();
 
             $table->timestamps();
 
@@ -31,7 +31,7 @@ class CreateEtudiantsTable extends Migration
         //Schema::enableForeignKeyConstraints();
         Schema::table('etudiants', function($table) {
            $table->foreign('Formation_idFormation')->references('idFormation')->on('formations');
-          //  $table->foreign('Semestre_idSemestre')->references('idSemestre')->on('semestres');
+            $table->foreign('Semestre_idSemestre')->references('idSemestre')->on('semestres');
 
         });
 
