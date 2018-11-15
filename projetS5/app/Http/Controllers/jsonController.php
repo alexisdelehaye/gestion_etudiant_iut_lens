@@ -147,52 +147,148 @@ class jsonController extends Controller
 
 //close the file
         fclose($handle);
-
     }
 
 
-    public static function getMoyenneUeEtudiant($numerotudiant)
+    public static function getMoyenneEtudiant($numerotudiant)
     {
         $getEtudiant = Etudiant::where('numEtu', $numerotudiant)->first();
         $data = [];
-
         foreach (UE::all() as $ue) {
             $moyenne = 0;
             $nbMatiere = 0;
-        foreach (Note::where('Etudiant_idEtudiant', $getEtudiant->idEtudiant)->cursor() as $mark) {
-            $getMatiere = Matiere::where("idMatiere", $mark->Matiere_idMatiere)->first();
+            foreach (Note::where('Etudiant_idEtudiant', $getEtudiant->idEtudiant)->cursor() as $mark) {
+                $getMatiere = Matiere::where("idMatiere", $mark->Matiere_idMatiere)->first();
                 if ($ue->idUE == $getMatiere->UE_idUE) {
-                    $moyenne += ($mark->note*$getMatiere->coefficient);
-                    $nbMatiere+=$getMatiere->coefficient;
+                    $moyenne += ($mark->note * $getMatiere->coefficient);
+                    $nbMatiere += $getMatiere->coefficient;
                 }
             }
             $moyenne /= $nbMatiere;
 
             $data[$numerotudiant][] = [
                 'nomUe' => $ue->nomUE,
-                'moyenne' => round($moyenne,2)
+                'moyenne' => round($moyenne, 2)
             ];
         }
 
-        $semestreMoyenneData= [];
+        $semestreMoyenneData = [];
         foreach (Semestre::all() as $semestre) {
-            $moyenneSemestre =0;
-            $nbUes =UE::where(['Semestre_idSemestre'=>$semestre->idSemestre])->count();
+            $moyenneSemestre = 0;
+            $nbUes = UE::where(['Semestre_idSemestre' => $semestre->idSemestre])->count();
 
             foreach ($data[$numerotudiant] as $d) {
-                $getUe = UE::where('nomUE',$d['nomUe'])->first();
-                if($semestre->idSemestre == $getUe->Semestre_idSemestre){
-                    $moyenneSemestre+=$d['moyenne'];
+                $getUe = UE::where('nomUE', $d['nomUe'])->first();
+                if ($semestre->idSemestre == $getUe->Semestre_idSemestre) {
+                    $moyenneSemestre += $d['moyenne'];
                 }
             }
-            if($nbUes>0) {
-                $semestreMoyenneData[] = [
-                    $semestre->nom => round($moyenneSemestre / $nbUes,2)
+            if ($nbUes > 0) {
+                $semestreMoyenneData[$numerotudiant][] = [
+                    $semestre->nom => round($moyenneSemestre / $nbUes, 2)
                 ];
             }
         }
-    array_push($data,$semestreMoyenneData);
-     print_r(json_encode($data));
+
+            $moyenneAnnee = [];
+
+            $moyenneAnnee[$numerotudiant] = [
+                "DUT_1" => ($semestreMoyenneData[$numerotudiant][0]["S1"] +$semestreMoyenneData[$numerotudiant][1]["S2"])/2,
+                "DUT_2" => ($semestreMoyenneData[$numerotudiant][2]["S3"] +$semestreMoyenneData[$numerotudiant][3]["S4_IPI"])/2
+            ];
+
+
+    //self::moyenneDutStudient($moyenneAnnee,'2018');
+    self::moyenneSemestreEtudiant($semestreMoyenneData,'2018');
+    self::moyenneUEsEtudiant($data,'2018');
+
+    }
+
+    public static function getMoyenneAllStudents(){
+        foreach (Etudiant::all() as $etu){
+            self::getMoyenneEtudiant($etu->numEtu);
+        }
+
+    }
+    public static function moyenneUEsEtudiant($data,$year){
+
+        $anneeCourante = $year . '-' . ($year + 1);
+        $pathFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
+            DIRECTORY_SEPARATOR . 'moyenneUEstudiants.json';
+        //write the data into the file
+        $jsondata = file_get_contents($pathFile);
+        $arr_data = json_decode($jsondata, true);
+
+        // Push user data to array
+        array_push($arr_data,$data);
+
+        //Convert updated array to JSON
+        $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
+        //open or create the file
+        $handle = fopen($pathFile, 'w+');
+
+
+
+        fwrite($handle, $jsondata);
+
+//close the file
+        fclose($handle);
+
+
+    }
+
+    public static function moyenneSemestreEtudiant($data,$year){
+
+        $anneeCourante = $year . '-' . ($year + 1);
+        $pathFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
+            DIRECTORY_SEPARATOR . 'moyenneSemestreEtudiants.json';
+
+        //write the data into the file
+        $jsondata = file_get_contents($pathFile);
+        $arr_data = json_decode($jsondata, true);
+
+        // Push user data to array
+        array_push($arr_data,$data);
+
+        //Convert updated array to JSON
+        $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
+        //open or create the file
+        $handle = fopen($pathFile, 'w+');
+
+
+
+        fwrite($handle, $jsondata);
+
+//close the file
+        fclose($handle);
+
+
+    }
+
+    public static function moyenneDutStudient($data,$year){
+        $anneeCourante = $year . '-' . ($year + 1);
+        $pathFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
+            DIRECTORY_SEPARATOR . 'moyenneDUTEtudiants.json';
+        //write the data into the file
+        $jsondata = file_get_contents($pathFile);
+        $arr_data = json_decode($jsondata, true);
+
+        // Push user data to array
+        array_push($arr_data,$data);
+
+        //Convert updated array to JSON
+        $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
+        //open or create the file
+        $handle = fopen($pathFile, 'w+');
+
+
+
+        fwrite($handle, $jsondata);
+
+//close the file
+        fclose($handle);
+
+
     }
 
 
@@ -201,6 +297,7 @@ class jsonController extends Controller
     {
         //self::exportAllStudentsToJson('2018');
         // self::exportAllStudentsMarksToJson(null,'2018');
-        self::getMoyenneUeEtudiant('20150934');
+       self::getMoyenneAllStudents();
+
     }
 }
