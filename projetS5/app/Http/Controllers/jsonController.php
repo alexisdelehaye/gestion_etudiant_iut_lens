@@ -46,7 +46,7 @@ class jsonController extends Controller
         $handle = fopen($pathFile, 'w+');
 
 //write the data into the file
-        fwrite($handle, json_encode($data,JSON_PRETTY_PRINT));
+        fwrite($handle, json_encode($data, JSON_PRETTY_PRINT));
 
 //close the file
         fclose($handle);
@@ -150,7 +150,7 @@ class jsonController extends Controller
     }
 
 
-    public static function getMoyenneEtudiant($numerotudiant,$uesJsonFile, $semestreJsonFile, $dutJsonFile)
+    public static function getMoyenneEtudiant($numerotudiant, $uesJsonFile, $semestreJsonFile, $dutJsonFile)
     {
         $getEtudiant = Etudiant::where('numEtu', $numerotudiant)->first();
         $data = [];
@@ -190,51 +190,51 @@ class jsonController extends Controller
             }
         }
 
-            $moyenneAnnee = [];
+        $moyenneAnnee = [];
 
-            $moyenneAnnee[$numerotudiant] = [
-                "DUT_1" => ($semestreMoyenneData[$numerotudiant][0]["S1"] +$semestreMoyenneData[$numerotudiant][1]["S2"])/2,
-                "DUT_2" => ($semestreMoyenneData[$numerotudiant][2]["S3"] +$semestreMoyenneData[$numerotudiant][3]["S4_IPI"])/2
-            ];
+        $moyenneAnnee[$numerotudiant] = [
+            "DUT_1" => ($semestreMoyenneData[$numerotudiant][0]["S1"] + $semestreMoyenneData[$numerotudiant][1]["S2"]) / 2,
+            "DUT_2" => ($semestreMoyenneData[$numerotudiant][2]["S3"] + $semestreMoyenneData[$numerotudiant][3]["S4_IPI"]) / 2
+        ];
 
 
-    self::moyenneDutStudient($moyenneAnnee,$dutJsonFile);
-    self::moyenneSemestreEtudiant($semestreMoyenneData,$semestreJsonFile);
-    self::moyenneUEsEtudiant($data,$uesJsonFile);
+        self::moyenneDutStudient($moyenneAnnee, $dutJsonFile);
+        self::moyenneSemestreEtudiant($semestreMoyenneData, $semestreJsonFile);
+        self::moyenneUEsEtudiant($data, $uesJsonFile);
         //print_r(json_encode($data));
 
     }
 
-    public static function getMoyenneAllStudents($year){
+    public static function getMoyenneAllStudents($year)
+    {
 
         $anneeCourante = $year . '-' . ($year + 1);
         $uesJsonFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
             DIRECTORY_SEPARATOR . 'moyenneUEstudiants.json';
 
-        $semestresJsonFile =  public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
+        $semestresJsonFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
             DIRECTORY_SEPARATOR . 'moyenneSemestreEtudiants.json';
 
         $dutJsonFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
             DIRECTORY_SEPARATOR . 'moyenneDUTEtudiants.json';
 
 
+        ftruncate(fopen($uesJsonFile, 'r+'), 0);
+        ftruncate(fopen($semestresJsonFile, 'r+'), 0);
+        ftruncate(fopen($dutJsonFile, 'r+'), 0);
 
+        fclose(fopen($uesJsonFile, 'r+'));
+        fclose(fopen($semestresJsonFile, 'r+'));
+        fclose(fopen($dutJsonFile, 'r+'));
 
-        ftruncate(fopen($uesJsonFile,'r+'),0);
-        ftruncate(fopen($semestresJsonFile,'r+'),0);
-        ftruncate(fopen($dutJsonFile,'r+'),0);
-
-        fclose(fopen($uesJsonFile,'r+'));
-        fclose(fopen($semestresJsonFile,'r+'));
-        fclose(fopen($dutJsonFile,'r+'));
-
-        foreach (Etudiant::all() as $etu){
-            self::getMoyenneEtudiant($etu->numEtu,$uesJsonFile,$semestresJsonFile,$dutJsonFile);
+        foreach (Etudiant::all() as $etu) {
+            self::getMoyenneEtudiant($etu->numEtu, $uesJsonFile, $semestresJsonFile, $dutJsonFile);
         }
 
     }
-    public static function moyenneUEsEtudiant($data,$pathFile){
 
+    public static function moyenneUEsEtudiant($data, $pathFile)
+    {
 
 
         //write the data into the file
@@ -244,7 +244,7 @@ class jsonController extends Controller
         if (is_null($arr_data)) $arr_data = array();
 
         // Push user data to array
-        array_push($arr_data,$data);
+        array_push($arr_data, $data);
 
         //Convert updated array to JSON
         $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
@@ -259,7 +259,8 @@ class jsonController extends Controller
 
     }
 
-    public static function moyenneSemestreEtudiant($data, $pathFile){
+    public static function moyenneSemestreEtudiant($data, $pathFile)
+    {
 
         //write the data into the file
         $jsondata = file_get_contents($pathFile);
@@ -267,13 +268,12 @@ class jsonController extends Controller
 
         if (is_null($arr_data)) $arr_data = array();
         // Push user data to array
-        array_push($arr_data,$data);
+        array_push($arr_data, $data);
 
         //Convert updated array to JSON
         $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
         //open or create the file
         $handle = fopen($pathFile, 'w+');
-
 
 
         fwrite($handle, $jsondata);
@@ -284,7 +284,8 @@ class jsonController extends Controller
 
     }
 
-    public static function moyenneDutStudient($data,$pathFile){
+    public static function moyenneDutStudient($data, $pathFile)
+    {
 
         //write the data into the file
         $jsondata = file_get_contents($pathFile);
@@ -293,8 +294,7 @@ class jsonController extends Controller
 
         if (is_null($arr_data)) $arr_data = array();
         // Push user data to array
-        array_push($arr_data,$data);
-
+        array_push($arr_data, $data);
 
 
         //Convert updated array to JSON
@@ -303,23 +303,82 @@ class jsonController extends Controller
         $handle = fopen($pathFile, 'w+');
 
 
-
         fwrite($handle, $jsondata);
 
 //close the file
         fclose($handle);
-
-
     }
 
+    public static function ClassementDut1Etudiant($year)
+    {
+        $clasementDut1 = array();
+        $anneeCourante = $year . '-' . ($year + 1);
+        $dutJsonFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
+            DIRECTORY_SEPARATOR . 'moyenneDUTEtudiants.json';
+        $jsondata = file_get_contents($dutJsonFile);
+        $arr_data = json_decode($jsondata, true);
+        foreach ($arr_data as $value){
+            foreach ($value as $s){
+                $clasementDut1[key($value)] = $s['DUT_1'];
 
+            }
+        }
+        arsort($clasementDut1);
+        //print_r($clasementDut1);
+
+        $pathFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
+            DIRECTORY_SEPARATOR . 'classementDUT1Etudiants.json';
+
+
+        //Convert updated array to JSON
+        $jsondata = json_encode($clasementDut1, JSON_PRETTY_PRINT);
+        //open or create the file
+        $handle = fopen($pathFile, 'w+');
+
+
+        fwrite($handle,$jsondata);
+
+//close the file
+        fclose($handle);
+    }
+
+    public static function classementDut2Etudiants($year){
+
+        $clasementDut2 = array();
+        $anneeCourante = $year . '-' . ($year + 1);
+        $dutJsonFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
+            DIRECTORY_SEPARATOR . 'moyenneDUTEtudiants.json';
+        $jsondata = file_get_contents($dutJsonFile);
+        $arr_data = json_decode($jsondata, true);
+        foreach ($arr_data as $value){
+            foreach ($value as $s){
+                $clasementDut2[key($value)] = $s['DUT_2'];
+
+            }
+        }
+        arsort($clasementDut2);
+        //print_r($clasementDut1);
+
+        $pathFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
+            DIRECTORY_SEPARATOR . 'classementDUT2Etudiants.json';
+
+
+        //Convert updated array to JSON
+        $jsondata = json_encode($clasementDut2, JSON_PRETTY_PRINT);
+        //open or create the file
+        $handle = fopen($pathFile, 'w+');
+
+
+        fwrite($handle,$jsondata);
+
+//close the file
+        fclose($handle);
+
+    }
 
     public function test()
     {
-       // self::getMoyenneEtudiant('20150983');
-        //self::exportAllStudentsToJson('2018');
-        // self::exportAllStudentsMarksToJson(null,'2018');
-      // self::getMoyenneAllStudents('2018');
-    self::exportAllStudentsMarksToJson('2018');
+        //self::exportAllStudentsMarksToJson('2018');
+        self::classementDut2Etudiants('2018');
     }
 }
