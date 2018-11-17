@@ -378,7 +378,9 @@ class jsonController extends Controller
 
     public function test()
     {
-        //self::exportAllStudentsMarksToJson('2018');
+        self::exportAllStudentsMarksToJson('2018');
         self::classementDut2Etudiants('2018');
+        self::exportAllStudentsToJson('2018');
+        self::getMoyenneAllStudents('2018');
     }
 }

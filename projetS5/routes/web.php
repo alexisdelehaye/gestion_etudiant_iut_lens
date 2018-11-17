@@ -25,8 +25,6 @@ Route::get('users', function()
 Route::get('testEtudiant', 'EtudiantController@test');
 
 
-Route::get('testMatiere', 'MatiereController@test');
-
 Route::get('testCreationExcelNotesAuBonneEndroit', 'GenerationDocumentController@test');
 
 Route::get('testMiseAjourNotesEtudiant','NoteController@test');
@@ -34,11 +32,11 @@ Route::get('testMiseAjourNotesEtudiant','NoteController@test');
 
 Route::get('testCréationArborescence','EtudiantController@CreationArborescenceGenerale');
 
-Route::get('testCréationNotesDansBonRépertoire','GenerationDocumentController@test');
+Route::get('testCréationNotesDansBonRépertoire','GenerationDocumentController@test');// création excel des matieres dans les dossiers voulues selon le semestre demandé
 
 
-Route::get('testJsonEtudiant','jsonController@test');
+Route::get('testJsonEtudiant','jsonController@test'); //export en json des notes (moyennes des étudiants) , moyennes de leurs ues, semestres et dut (1 et 2), ainsi que la liste des étudiants
 
-Route::get("testInitialization",'initializationController@test');
+Route::get("testInitialization",'initializationController@test');//initialization (insertion de tous les étudiants et matières présents dans les dossiers admin correspondant)
 
 
