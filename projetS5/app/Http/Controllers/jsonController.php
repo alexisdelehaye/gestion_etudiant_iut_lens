@@ -201,7 +201,6 @@ class jsonController extends Controller
         self::moyenneDutStudient($moyenneAnnee, $dutJsonFile);
         self::moyenneSemestreEtudiant($semestreMoyenneData, $semestreJsonFile);
         self::moyenneUEsEtudiant($data, $uesJsonFile);
-        //print_r(json_encode($data));
 
     }
 
@@ -324,12 +323,16 @@ class jsonController extends Controller
             }
         }
         arsort($clasementDut1);
-        //print_r($clasementDut1);
+
+        $moyennePromo = array_sum($clasementDut1)/count($clasementDut1);
+        $minPromo = min($clasementDut1);
+        $maxPromo = max($clasementDut1);
+        $statPromoDUT1 = array('minimum' => $minPromo,'maximum' => $maxPromo,"moyenne" =>round($moyennePromo,3));
 
         $pathFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
             DIRECTORY_SEPARATOR . 'classementDUT1Etudiants.json';
 
-
+        $clasementDut1['classement'] = $statPromoDUT1;
         //Convert updated array to JSON
         $jsondata = json_encode($clasementDut1, JSON_PRETTY_PRINT);
         //open or create the file
@@ -357,17 +360,91 @@ class jsonController extends Controller
             }
         }
         arsort($clasementDut2);
-        //print_r($clasementDut1);
+
+
+        $moyennePromo = array_sum($clasementDut2)/count($clasementDut2);
+        $minPromo = min($clasementDut2);
+        $maxPromo = max($clasementDut2);
+        $statPromoDUT2 = array('minimum' => $minPromo,'maximum' => $maxPromo,"moyenne" =>round($moyennePromo,3));
 
         $pathFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
             DIRECTORY_SEPARATOR . 'classementDUT2Etudiants.json';
 
-
+        $clasementDut2['classement'] = $statPromoDUT2;
         //Convert updated array to JSON
         $jsondata = json_encode($clasementDut2, JSON_PRETTY_PRINT);
         //open or create the file
         $handle = fopen($pathFile, 'w+');
 
+        fwrite($handle,$jsondata);
+
+//close the file
+        fclose($handle);
+    }
+
+
+    public static function classementEtudiantsUEs($year) {
+
+        $anneeCourante = $year . '-' . ($year + 1);
+        $uesJsonFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
+            DIRECTORY_SEPARATOR . 'moyenneUEstudiants.json';
+
+        $jsondata = file_get_contents($uesJsonFile);
+        $arr_data = json_decode($jsondata, true);
+        $minUE11 = $arr_data[0][key($arr_data[0])][0]['moyenne'];
+        $minUE12 = $arr_data[0][key($arr_data[0])][1]['moyenne'];
+        $minUE21 = $arr_data[0][key($arr_data[0])][2]['moyenne'];
+        $minUE22 = $arr_data[0][key($arr_data[0])][3]['moyenne'];
+        $minUE31 = $arr_data[0][key($arr_data[0])][4]['moyenne'];
+        $minUE32 = $arr_data[0][key($arr_data[0])][5]['moyenne'];
+        $minUE33 = $arr_data[0][key($arr_data[0])][6]['moyenne'];
+        $minUE41 = $arr_data[0][key($arr_data[0])][7]['moyenne'];
+        $minUE42 = $arr_data[0][key($arr_data[0])][8]['moyenne'];
+        $minUE43 = $arr_data[0][key($arr_data[0])][9]['moyenne'];
+        $maxUE11 = 0; $moyenneUE11 = 0; $nbUE11 = 0;
+        $maxUE12 = 0; $moyenneUE12 = 0; $nbUE12 = 0;
+        $maxUE21 = 0; $moyenneUE21 = 0; $nbUE21 = 0;
+        $maxUE22 = 0; $moyenneUE22 = 0; $nbUE22 = 0;
+        $maxUE31 = 0; $moyenneUE31 = 0; $nbUE31 = 0;
+        $maxUE32 = 0; $moyenneUE32 = 0; $nbUE32 = 0;
+        $maxUE33 = 0; $moyenneUE33 = 0; $nbUE33 = 0;
+        $maxUE41 = 0; $moyenneUE41 = 0; $nbUE41 = 0;
+        $maxUE42 = 0; $moyenneUE42 = 0; $nbUE42 = 0;
+        $maxUE43 = 0; $moyenneUE43 = 0; $nbUE43 = 0;
+
+
+        foreach ($arr_data as $numEtu) {
+            foreach ($numEtu as $data) {
+                self::compare($data[0]['moyenne'],$minUE11,$maxUE11,$moyenneUE11,$nbUE11);
+                self::compare($data[1]['moyenne'],$minUE12,$maxUE12,$moyenneUE12,$nbUE12);
+                self::compare($data[2]['moyenne'],$minUE21,$maxUE21,$moyenneUE21,$nbUE21);
+                self::compare($data[3]['moyenne'],$minUE22,$maxUE22,$moyenneUE22,$nbUE22);
+                self::compare($data[4]['moyenne'],$minUE31,$maxUE31,$moyenneUE31,$nbUE31);
+                self::compare($data[5]['moyenne'],$minUE32,$maxUE32,$moyenneUE32,$nbUE32);
+                self::compare($data[6]['moyenne'],$minUE33,$maxUE33,$moyenneUE33,$nbUE33);
+                self::compare($data[7]['moyenne'],$minUE41,$maxUE41,$moyenneUE41,$nbUE41);
+                self::compare($data[7]['moyenne'],$minUE42,$maxUE42,$moyenneUE42,$nbUE42);
+                self::compare($data[8]['moyenne'],$minUE43,$maxUE43,$moyenneUE43,$nbUE43);
+            }
+        }
+
+        $statsUEs = array();
+        $statsUEs['stats_UE11'] = array("minimum" =>$minUE11, "maximum" => $maxUE11 , "moyenne" =>round($moyenneUE11/$nbUE11,3));
+        $statsUEs['stats_UE12'] = array("minimum" =>$minUE12, "maximum" => $maxUE12 , "moyenne" =>round($moyenneUE12/$nbUE12,3));
+        $statsUEs['stats_UE21'] = array("minimum" =>$minUE21, "maximum" => $maxUE21 , "moyenne" =>round($moyenneUE21/$nbUE21,3));
+        $statsUEs['stats_UE22'] = array("minimum" =>$minUE22, "maximum" => $maxUE22 , "moyenne" =>round($moyenneUE22/$nbUE22,3));
+        $statsUEs['stats_UE31'] = array("minimum" =>$minUE31, "maximum" => $maxUE31 , "moyenne" =>round($moyenneUE31/$nbUE31,3));
+        $statsUEs['stats_UE32'] = array("minimum" =>$minUE32, "maximum" => $maxUE32 , "moyenne" =>round($moyenneUE32/$nbUE32));
+        $statsUEs['stats_UE33'] = array("minimum" =>$minUE33, "maximum" => $maxUE33 , "moyenne" =>round($moyenneUE33/$nbUE33,3));
+        $statsUEs['stats_UE41'] = array("minimum" =>$minUE41, "maximum" => $maxUE41 , "moyenne" =>round($moyenneUE41/$nbUE41,3));
+        $statsUEs['stats_UE42'] = array("minimum" =>$minUE42, "maximum" => $maxUE42 , "moyenne" =>round($moyenneUE42/$nbUE42,3));
+        $statsUEs['stats_UE43'] = array("minimum" =>$minUE43, "maximum" => $maxUE43 , "moyenne" =>round($moyenneUE43/$nbUE43,3));
+
+        $arr_data['stats_UES'] = $statsUEs;
+
+        $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
+        //open or create the file
+        $handle = fopen($uesJsonFile, 'w+');
 
         fwrite($handle,$jsondata);
 
@@ -376,11 +453,75 @@ class jsonController extends Controller
 
     }
 
+
+    public static function classementEtudiantsSemestres($year) {
+
+        $anneeCourante = $year . '-' . ($year + 1);
+        $semestreJsonFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
+            DIRECTORY_SEPARATOR . 'moyenneSemestreEtudiants.json';
+
+        $jsondata = file_get_contents($semestreJsonFile);
+        $arr_data = json_decode($jsondata, true);
+
+        $minS1 = $arr_data[0][key($arr_data[0])][0][ 'S1'];
+        $minS2 = $arr_data[0][key($arr_data[0])][1][ 'S2'];
+        $minS3 = $arr_data[0][key($arr_data[0])][2][ 'S3'];
+        $minS4_IPI = $arr_data[0][key($arr_data[0])][3][ 'S4_IPI'];
+        $maxS1 = 0; $moyenneS1 = 0; $nbSemestre1 =0;
+        $maxS2 = 0; $moyenneS2 = 0; $nbSemestre2 =0;
+        $maxS3 = 0; $moyenneS3 = 0; $nbSemestre3 = 0;
+        $maxS4_IPI =0; $moyenneS4_IPI = 0; $nbS4_IPI = 0;
+
+        foreach ($arr_data as $numEtu){
+            foreach ($numEtu as $data) {
+                self::compare($data[0]['S1'],$minS1,$maxS1, $moyenneS1, $nbSemestre1);
+                self::compare($data[1]['S2'],$minS2,$maxS2, $moyenneS2, $nbSemestre2);
+                self::compare($data[2]['S3'],$minS3,$maxS3, $moyenneS3, $nbSemestre3);
+                self::compare($data[3]['S4_IPI'],$minS4_IPI, $maxS4_IPI, $moyenneS4_IPI, $nbS4_IPI);
+            }
+
+        }
+
+        $statsSemestre = array();
+
+        $statsSemestre['stats_S1'] = array('minimum' => $minS1, 'maximum' =>$maxS1, "moyenne" => round($moyenneS1/$nbSemestre1,3));
+        $statsSemestre['stats_S2'] = array('minimum' => $minS2, 'maximum' =>$maxS2, "moyenne" => round($moyenneS2/$nbSemestre2,3));
+        $statsSemestre['stats_S3'] = array('minimum' => $minS3, 'maximum' =>$maxS3, "moyenne" => round($moyenneS3/$nbSemestre3,3));
+        $statsSemestre['stats_S4_IPI'] = array('minimum' => $minS4_IPI, 'maximum' =>$maxS4_IPI, "moyenne" => round($moyenneS4_IPI/$nbS4_IPI,3));
+
+        $arr_data["classement_semestres"] = $statsSemestre;
+        $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
+        $handle = fopen($semestreJsonFile, 'w+');
+
+        fwrite($handle,$jsondata);
+        fclose($handle);
+
+    }
+
+    public  static function compare(&$value,&$minValue,&$maxValue, &$sum, &$nb){
+        if( $value < $minValue) {
+            $minValue = $value;
+        }
+        else if ($value > $maxValue) {
+            $maxValue = $value;
+        }
+        $sum+= $value;
+        $nb++;
+    }
+
     public function test()
     {
+        /*
         self::exportAllStudentsMarksToJson('2018');
         self::classementDut2Etudiants('2018');
         self::exportAllStudentsToJson('2018');
         self::getMoyenneAllStudents('2018');
+        */
+        self::classementEtudiantsUEs('2018');
+    }
+
+    public function testClassementDUT(){
+        self::classementEtudiantsUEs('2018');
+
     }
 }

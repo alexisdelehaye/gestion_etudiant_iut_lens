@@ -39,4 +39,6 @@ Route::get('testJsonEtudiant','jsonController@test'); //export en json des notes
 
 Route::get("testInitialization",'initializationController@test');//initialization (insertion de tous les étudiants et matières présents dans les dossiers admin correspondant)
 
+Route::get('testClassementEtudiant','jsonController@testClassementDUT');
+
 
