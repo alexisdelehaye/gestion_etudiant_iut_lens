@@ -359,6 +359,7 @@ class jsonController extends Controller
 
             }
         }
+
         arsort($clasementDut2);
 
 
@@ -401,17 +402,18 @@ class jsonController extends Controller
         $minUE41 = $arr_data[0][key($arr_data[0])][7]['moyenne'];
         $minUE42 = $arr_data[0][key($arr_data[0])][8]['moyenne'];
         $minUE43 = $arr_data[0][key($arr_data[0])][9]['moyenne'];
-        $maxUE11 = 0; $moyenneUE11 = 0; $nbUE11 = 0;
-        $maxUE12 = 0; $moyenneUE12 = 0; $nbUE12 = 0;
-        $maxUE21 = 0; $moyenneUE21 = 0; $nbUE21 = 0;
-        $maxUE22 = 0; $moyenneUE22 = 0; $nbUE22 = 0;
-        $maxUE31 = 0; $moyenneUE31 = 0; $nbUE31 = 0;
-        $maxUE32 = 0; $moyenneUE32 = 0; $nbUE32 = 0;
-        $maxUE33 = 0; $moyenneUE33 = 0; $nbUE33 = 0;
-        $maxUE41 = 0; $moyenneUE41 = 0; $nbUE41 = 0;
-        $maxUE42 = 0; $moyenneUE42 = 0; $nbUE42 = 0;
-        $maxUE43 = 0; $moyenneUE43 = 0; $nbUE43 = 0;
+        $maxUE11 = 0; $moyenneUE11 = 0; $nbUE11 = 0; $classementUE11 = array();
+        $maxUE12 = 0; $moyenneUE12 = 0; $nbUE12 = 0; $classementUE12 = array();
+        $maxUE21 = 0; $moyenneUE21 = 0; $nbUE21 = 0; $classementUE21 = array();
+        $maxUE22 = 0; $moyenneUE22 = 0; $nbUE22 = 0; $classementUE22 = array();
+        $maxUE31 = 0; $moyenneUE31 = 0; $nbUE31 = 0; $classementUE31 = array();
+        $maxUE32 = 0; $moyenneUE32 = 0; $nbUE32 = 0; $classementUE32 = array();
+        $maxUE33 = 0; $moyenneUE33 = 0; $nbUE33 = 0; $classementUE33 = array();
+        $maxUE41 = 0; $moyenneUE41 = 0; $nbUE41 = 0; $classementUE41 = array();
+        $maxUE42 = 0; $moyenneUE42 = 0; $nbUE42 = 0; $classementUE42 = array();
+        $maxUE43 = 0; $moyenneUE43 = 0; $nbUE43 = 0; $classementUE43 = array();
 
+        echo $minUE11;
 
         foreach ($arr_data as $numEtu) {
             foreach ($numEtu as $data) {
@@ -423,12 +425,33 @@ class jsonController extends Controller
                 self::compare($data[5]['moyenne'],$minUE32,$maxUE32,$moyenneUE32,$nbUE32);
                 self::compare($data[6]['moyenne'],$minUE33,$maxUE33,$moyenneUE33,$nbUE33);
                 self::compare($data[7]['moyenne'],$minUE41,$maxUE41,$moyenneUE41,$nbUE41);
-                self::compare($data[7]['moyenne'],$minUE42,$maxUE42,$moyenneUE42,$nbUE42);
-                self::compare($data[8]['moyenne'],$minUE43,$maxUE43,$moyenneUE43,$nbUE43);
+                self::compare($data[8]['moyenne'],$minUE42,$maxUE42,$moyenneUE42,$nbUE42);
+                self::compare($data[9]['moyenne'],$minUE43,$maxUE43,$moyenneUE43,$nbUE43);
+
+                $classementUE11[key($numEtu)] = $data[0]['moyenne'];
+                $classementUE12[key($numEtu)] = $data[1]['moyenne'];
+                $classementUE21[key($numEtu)] = $data[2]['moyenne'];
+                $classementUE22[key($numEtu)] = $data[3]['moyenne'];
+                $classementUE31[key($numEtu)] = $data[4]['moyenne'];
+                $classementUE32[key($numEtu)] = $data[5]['moyenne'];
+                $classementUE33[key($numEtu)] = $data[6]['moyenne'];
+                $classementUE41[key($numEtu)] = $data[7]['moyenne'];
+                $classementUE42[key($numEtu)] = $data[8]['moyenne'];
+                $classementUE43[key($numEtu)] = $data[9]['moyenne'];
             }
         }
 
+        arsort($classementUE11); arsort($classementUE12);
+        arsort($classementUE21);arsort($classementUE22);
+        arsort($classementUE31); arsort($classementUE32); arsort($classementUE33);
+        arsort($classementUE41); arsort($classementUE42); arsort($classementUE43);
+        self::trieClassement($classementUE11); self::trieClassement($classementUE12);
+        self::trieClassement($classementUE21); self::trieClassement($classementUE22);
+        self::trieClassement($classementUE31); self::trieClassement($classementUE32); self::trieClassement($classementUE33);
+        self::trieClassement($classementUE41); self::trieClassement($classementUE42); self::trieClassement($classementUE43);
+
         $statsUEs = array();
+
         $statsUEs['stats_UE11'] = array("minimum" =>$minUE11, "maximum" => $maxUE11 , "moyenne" =>round($moyenneUE11/$nbUE11,3));
         $statsUEs['stats_UE12'] = array("minimum" =>$minUE12, "maximum" => $maxUE12 , "moyenne" =>round($moyenneUE12/$nbUE12,3));
         $statsUEs['stats_UE21'] = array("minimum" =>$minUE21, "maximum" => $maxUE21 , "moyenne" =>round($moyenneUE21/$nbUE21,3));
@@ -439,8 +462,21 @@ class jsonController extends Controller
         $statsUEs['stats_UE41'] = array("minimum" =>$minUE41, "maximum" => $maxUE41 , "moyenne" =>round($moyenneUE41/$nbUE41,3));
         $statsUEs['stats_UE42'] = array("minimum" =>$minUE42, "maximum" => $maxUE42 , "moyenne" =>round($moyenneUE42/$nbUE42,3));
         $statsUEs['stats_UE43'] = array("minimum" =>$minUE43, "maximum" => $maxUE43 , "moyenne" =>round($moyenneUE43/$nbUE43,3));
+        $statsUEs['rang_UE11'] = $classementUE11;
+        $statsUEs['rang_UE12'] = $classementUE12;
+        $statsUEs['rang_UE21'] = $classementUE21;
+        $statsUEs['rang_UE22'] = $classementUE22;
+        $statsUEs['rang_UE31'] = $classementUE31;
+        $statsUEs['rang_UE32'] = $classementUE32;
+        $statsUEs['rang_UE33'] = $classementUE33;
+        $statsUEs['rang_UE41'] = $classementUE41;
+        $statsUEs['rang_UE42'] = $classementUE42;
+        $statsUEs['rang_UE43'] = $classementUE43;
 
         $arr_data['stats_UES'] = $statsUEs;
+
+        print_r($statsUEs['stats_UE11']);
+
 
         $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
         //open or create the file
@@ -450,7 +486,6 @@ class jsonController extends Controller
 
 //close the file
         fclose($handle);
-
     }
 
 
@@ -472,15 +507,31 @@ class jsonController extends Controller
         $maxS3 = 0; $moyenneS3 = 0; $nbSemestre3 = 0;
         $maxS4_IPI =0; $moyenneS4_IPI = 0; $nbS4_IPI = 0;
 
+        $classementS1 = array();
+        $classementS2 = array();
+        $classementS3 = array();
+        $classementS4_IPI = array();
+
         foreach ($arr_data as $numEtu){
             foreach ($numEtu as $data) {
                 self::compare($data[0]['S1'],$minS1,$maxS1, $moyenneS1, $nbSemestre1);
                 self::compare($data[1]['S2'],$minS2,$maxS2, $moyenneS2, $nbSemestre2);
                 self::compare($data[2]['S3'],$minS3,$maxS3, $moyenneS3, $nbSemestre3);
                 self::compare($data[3]['S4_IPI'],$minS4_IPI, $maxS4_IPI, $moyenneS4_IPI, $nbS4_IPI);
+
+                $classementS1[key($numEtu)] = $data[0]['S1'];
+                $classementS2[key($numEtu)] = $data[1]['S2'];
+                $classementS3[key($numEtu)] = $data[2]['S3'];
+                $classementS4_IPI[key($numEtu)] = $data[3]['S4_IPI'];
             }
 
         }
+
+        arsort($classementS1); arsort($classementS2); arsort($classementS3); arsort($classementS4_IPI);
+
+        self::trieClassement($classementS1); self::trieClassement($classementS2);
+        self::trieClassement($classementS3); self::trieClassement($classementS4_IPI);
+
 
         $statsSemestre = array();
 
@@ -488,26 +539,45 @@ class jsonController extends Controller
         $statsSemestre['stats_S2'] = array('minimum' => $minS2, 'maximum' =>$maxS2, "moyenne" => round($moyenneS2/$nbSemestre2,3));
         $statsSemestre['stats_S3'] = array('minimum' => $minS3, 'maximum' =>$maxS3, "moyenne" => round($moyenneS3/$nbSemestre3,3));
         $statsSemestre['stats_S4_IPI'] = array('minimum' => $minS4_IPI, 'maximum' =>$maxS4_IPI, "moyenne" => round($moyenneS4_IPI/$nbS4_IPI,3));
-
+        $statsSemestre['rang_S1'] = $classementS1;
+        $statsSemestre['rang_S2'] = $classementS2;
+        $statsSemestre['rang_S3'] = $classementS3;
+        $statsSemestre['rang_S4_IPI'] = $classementS4_IPI;
         $arr_data["classement_semestres"] = $statsSemestre;
+
         $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
         $handle = fopen($semestreJsonFile, 'w+');
 
         fwrite($handle,$jsondata);
         fclose($handle);
 
+
     }
 
-    public  static function compare(&$value,&$minValue,&$maxValue, &$sum, &$nb){
-        if( $value < $minValue) {
-            $minValue = $value;
+    public  static function compare(&$value,&$minValue,&$maxValue, &$sum, &$nb)
+    {
+        if (!is_null($value)) {
+            if ($value < $minValue) {
+                $minValue = $value;
+            } else if ($value > $maxValue) {
+                $maxValue = $value;
+            }
+            $sum += $value;
+            $nb++;
         }
-        else if ($value > $maxValue) {
-            $maxValue = $value;
-        }
-        $sum+= $value;
-        $nb++;
     }
+
+
+
+        public static function trieClassement(&$arrayClassement){
+        $i=1;
+        foreach ($arrayClassement as &$c){
+                $c = $i;
+                $i++;
+            }
+
+        }
+
 
     public function test()
     {
