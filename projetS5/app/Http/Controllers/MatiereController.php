@@ -42,10 +42,24 @@ class MatiereController extends Controller
 
 
 
-            $checkIfMatiereExists = Matiere::where('ref', $referenceMatiereCourante)->first();
-            //SemestreController::createIfNoteExitsSemestre($excelFile);
+
+
 
             if ($referenceMatiereCourante != null) {
+
+                $getIdSemestre=Semestre::where("nom", $SemestreCourant)->first();
+                if (is_null($getIdSemestre)) {
+                    SemestreController::createIfNoteExitsSemestre($excelFile,$AnneeVoulue);
+                }
+                $getIdSemestre=Semestre::where("nom", $SemestreCourant)->first();
+                $resultUe = UE::where('nomUE','=',$UECourant)->where('Semestre_idSemestre','=',$getIdSemestre->idSemestre)->first();
+
+                if (is_null($resultUe)) {
+                    UEController::createIfNotExistsUE($UECourant,$SemestreCourant);
+                }
+                $resultUe = UE::where('nomUE','=',$UECourant)->where('Semestre_idSemestre','=',$getIdSemestre->idSemestre)->first();
+                echo $resultUe->idUE.'/';
+                $checkIfMatiereExists = Matiere::where('abreviation','=',$AbreviationMatiereCourante)->where('UE_idUE','=',$resultUe->idUE)->first();
 
                 if (is_null($checkIfMatiereExists)) {
                     $matiere = new Matiere;
@@ -53,30 +67,16 @@ class MatiereController extends Controller
                     $matiere->ref = $referenceMatiereCourante;
                     $matiere->abreviation = $AbreviationMatiereCourante;
                     $matiere->coefficient = floatval($coefficientMatiereCourante);
-
-                    $getUE = UE::where('nomUE', $UECourant)->first();
-                    $getSemestre = Semestre::where('nom', $SemestreCourant)->first();
-
-                    if (is_null($getSemestre)) {
-                        SemestreController::createIfNoteExitsSemestre($excelFile,$AnneeVoulue);
-                    }
-
-                    if (is_null($getUE)) {
-                        UEController::createIfNotExistsUE($UECourant,$SemestreCourant);
-                    }
-
-                    $getUE = UE::where('nomUE', $UECourant)->first();
-                    $matiere->UE_idUE = $getUE->idUE;
+                    $matiere->UE_idUE =  $resultUe->idUE;
                     $matiere->save();
 
                 }
             }
-
         }
 
     }
 
     public function test(){
-        MatiereController::creationMatieresDansDatabase('S3','2018');
+        MatiereController::creationMatieresDansDatabase('S4','2018');
     }
 }

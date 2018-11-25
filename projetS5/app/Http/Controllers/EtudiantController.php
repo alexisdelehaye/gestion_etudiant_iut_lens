@@ -63,10 +63,25 @@ class EtudiantController extends Controller
 
                     $etudiant->save();
                 }
+
+                $getSemestre = Semestre::where('nom', strtoupper($SemestreVoulu))->first();
+
+                $checkEtudiantBonSemestre =  Etudiant::where('numEtu','=',$numeroEtudiantCourant)->where('Semestre_idSemestre','=',$getSemestre->idSemestre)->first();
+
+                if (is_null($checkEtudiantBonSemestre)){
+                    Etudiant::where('numEtu',$numeroEtudiantCourant) ->update(['Semestre_idSemestre' =>$getSemestre->idSemestre]);
+
+                }
+
             }
-
-
         }
+    }
+
+    public static function updateStudent(Etudiant $etudiant,$idSemestre){
+        $etudiant->Semestre_idSemestre = $idSemestre;
+        $etudiant->save();
+
+
     }
 
 

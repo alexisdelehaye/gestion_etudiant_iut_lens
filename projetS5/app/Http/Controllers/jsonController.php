@@ -38,10 +38,8 @@ class jsonController extends Controller
             }
         }
 
-
         $pathFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $AnneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
             DIRECTORY_SEPARATOR . 'notesEtudiants.json';
-
         //open or create the file
         $handle = fopen($pathFile, 'w+');
 
@@ -153,7 +151,7 @@ class jsonController extends Controller
     public static function getMoyenneEtudiant($numerotudiant, $uesJsonFile, $semestreJsonFile, $dutJsonFile)
     {
         $getEtudiant = Etudiant::where('numEtu', $numerotudiant)->first();
-        $data = [];
+        $data = array();
         foreach (UE::all() as $ue) {
             $moyenne = 0;
             $nbMatiere = 0;
@@ -171,7 +169,7 @@ class jsonController extends Controller
                 'moyenne' => round($moyenne, 2)
             ];
         }
-
+/*
         $semestreMoyenneData = [];
         foreach (Semestre::all() as $semestre) {
             $moyenneSemestre = 0;
@@ -197,13 +195,59 @@ class jsonController extends Controller
             "DUT_2" => ($semestreMoyenneData[$numerotudiant][2]["S3"] + $semestreMoyenneData[$numerotudiant][3]["S4_IPI"]) / 2
         ];
 
-
-        self::moyenneDutStudient($moyenneAnnee, $dutJsonFile);
-        self::moyenneSemestreEtudiant($semestreMoyenneData, $semestreJsonFile);
+*/
+  //      self::moyenneDutStudient($moyenneAnnee, $dutJsonFile);
+    //    self::moyenneSemestreEtudiant($semestreMoyenneData, $semestreJsonFile);
         self::moyenneUEsEtudiant($data, $uesJsonFile);
 
     }
 
+
+    public static function testUesAffichage($year)
+    {
+
+
+        $anneeCourante = $year . '-' . ($year + 1);
+        $uesJsonFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
+            DIRECTORY_SEPARATOR . 'testAffichageUes.json';
+
+        $listeEtudiant = Etudiant::all();
+        $data = array();
+        foreach ($listeEtudiant as $etudiant) {
+            foreach (UE::all() as $ue) {
+                $moyenne = 0;
+                $nbMatiere = 0;
+                foreach (Note::where('Etudiant_idEtudiant', $etudiant->idEtudiant)->cursor() as $mark) {
+                    $getMatiere = Matiere::where("idMatiere", $mark->Matiere_idMatiere)->first();
+                    if ($ue->idUE == $getMatiere->UE_idUE) {
+                        $moyenne += ($mark->note * $getMatiere->coefficient);
+                        $nbMatiere += $getMatiere->coefficient;
+                    }
+                }
+                $moyenne /= $nbMatiere;
+
+                $data[$etudiant->numEtu][] = [
+                    'nomUe' => $ue->nomUE,
+                    'moyenne' => round($moyenne, 2)
+                ];
+            }
+
+        }
+
+
+        $jsondata = json_encode($data, JSON_PRETTY_PRINT);
+        //open or create the file
+        $handle = fopen($uesJsonFile, 'w+');
+
+
+        fwrite($handle, $jsondata);
+
+//close the file
+        fclose($handle);
+
+
+        print_r($data);
+    }
     public static function getMoyenneAllStudents($year)
     {
 
@@ -567,8 +611,6 @@ class jsonController extends Controller
         }
     }
 
-
-
         public static function trieClassement(&$arrayClassement){
         $i=1;
         foreach ($arrayClassement as &$c){
@@ -577,6 +619,33 @@ class jsonController extends Controller
             }
 
         }
+
+public static function generationMatiereSemestre($year) {
+    $anneeCourante = $year . '-' . ($year + 1);
+    $matiereJsonFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
+        DIRECTORY_SEPARATOR . 'listeMatieres.json';
+
+        $listeSemestres = Semestre::all();
+        $result = array();
+        foreach ($listeSemestres as $semestre) {
+            $result[$semestre->nom] = array();
+            foreach (UE::where('Semestre_idSemestre', $semestre->idSemestre)->cursor() as $ue) {
+                foreach (Matiere::where('UE_idUE', $ue->idUE)->cursor() as $matiere) {
+                    array_push($result[$semestre->nom], $matiere->abreviation);
+                }
+
+            }
+        }
+
+    $jsondata = json_encode($result, JSON_PRETTY_PRINT);
+    $handle = fopen($matiereJsonFile, 'w+');
+
+    fwrite($handle,$jsondata);
+    fclose($handle);
+        }
+
+
+
 
 
     public function test()
@@ -587,7 +656,8 @@ class jsonController extends Controller
         self::exportAllStudentsToJson('2018');
         self::getMoyenneAllStudents('2018');
         */
-        self::classementEtudiantsUEs('2018');
+        //self::classementEtudiantsUEs('2018');
+        self::getMoyenneAllStudents('2018');
     }
 
     public function testClassementDUT(){

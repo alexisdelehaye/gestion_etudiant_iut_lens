@@ -16,7 +16,8 @@ class GenerationDocumentController extends Controller
     public static function GenerationFichierExcelParMatiere($matiere, $annéeVoulu, $nomInfo, $nomSemestre, $nomUE)
     {
         $AnneeCourante = $annéeVoulu . '-' . ($annéeVoulu + 1);
-        $listeEtudiant = Etudiant::all();
+        $getIdSemestre = Semestre::where('nom',$nomSemestre)->first();
+        $listeEtudiant = Etudiant::where('Semestre_idSemestre',$getIdSemestre->idSemestre)->get();
 
 
         $objPHPExcel = new PHPExcel;
