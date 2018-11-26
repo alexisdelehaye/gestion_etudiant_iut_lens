@@ -98,6 +98,8 @@ class NoteController extends Controller
 
 
     public function test(){
+        self::miseAjourNotesEtudiantsparSemestre('2018','S2');
+        self::miseAjourNotesEtudiantsparSemestre('2018','S3');
         self::miseAjourNotesEtudiantsparSemestre('2018','S4_IPI');
         //NoteController::miseAjourNotesEtudiantsparMatiere("2018","S3","CPA");
 
