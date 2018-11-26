@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Liste etudiant</title>
+    </head>
+    <body>
+    	<div class="container">
+	    	<div class="row">
+                    <div class="col-md-4">
+    		          <img src="./ressources/img/default.svg" class="img-thumbnail">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="col-md-12"></div>
+                        <div class="col-md-12">
+                            <h1 id="nom"></h1>
+                        </div>
+                        <div class="col-md-12">
+                            <h1 id="prenom"></h1>
+                        </div>
+                        <div class="col-md-12">
+                            <h4>Numéro étudiant : <b id="numEtu"></b> </h4>
+                        </div>
+                    </div>
+                
+		    </div>
+            <div class="row">
+                <table id="tableau" class="col-md-12">
+                    <tbody id="tableContent">
+                        <tr class='ligne' id="header"><th></th><th>Moyenne</th><th>Classement</th><th>Moyenne Promo</th><th>Max Promo</th><th>Min Promo</th></tr>
+                    </tbody>
+                </table>
+            </div>
+		</div>
+        <script  src= "ressources/classementDUT1Etudiants.js"></script>
+        <script  src= "ressources/classementDUT2Etudiants.js"></script>
+        <script  src= "ressources/moyenneDUTEtudiants.js"></script>
+        <script  src= "ressources/moyenneSemestreEtudiants.js"></script>
+        <script  src= "ressources/moyenneUEEtudiants.js"></script>
+		<script  src= "ressources/listeEtudiants.js"></script>
+        <script  src= "ressources/notesEtudiants.js"></script>
+        <script  src= "ressources/listeMatieres.js"></script>
+        
+        <script  src= "js/etudiant.js"></script>
+    </body>
+</html>
