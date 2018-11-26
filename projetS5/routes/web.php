@@ -12,20 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-
-Route::get('users', function()
-{
-    return 'Users!';
+    return view('index');
 });
 
 
 Route::get('testEtudiant', 'EtudiantController@test');
 
 
-Route::get('testCreationExcelNotesAuBonneEndroit', 'GenerationDocumentController@test');
+Route::get('testCreationExcelNotesAuBonneEndroit', 'GenerationDocumentController@createAllMarksFile');
 
 Route::get('testMiseAjourNotesEtudiant','NoteController@test');
 
@@ -37,7 +31,7 @@ Route::get('testCréationNotesDansBonRépertoire','GenerationDocumentController@
 
 Route::get('testJsonEtudiant','jsonController@test'); //export en json des notes (moyennes des étudiants) , moyennes de leurs ues, semestres et dut (1 et 2), ainsi que la liste des étudiants
 
-Route::get("testInitialization",'initializationController@test');//initialization (insertion de tous les étudiants et matières présents dans les dossiers admin correspondant)
+Route::get("initialisationDonnées",'initializationController@test');//initialization (insertion de tous les étudiants et matières présents dans les dossiers admin correspondant)
 
 Route::get('testClassementEtudiant','jsonController@testClassementDUT');
 

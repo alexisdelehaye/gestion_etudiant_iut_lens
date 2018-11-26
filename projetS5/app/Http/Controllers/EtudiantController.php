@@ -17,7 +17,7 @@ class EtudiantController extends Controller
         $excelFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $AnneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
             DIRECTORY_SEPARATOR . "LISTES" . DIRECTORY_SEPARATOR . $fileName;
 
-
+        echo $fileName.'/'.$SemestreVoulu.'/';
         $sheetname = "LISTE_" . $SemestreVoulu;
         $inputFileType = PHPExcel_IOFactory::identify($excelFile);
         $objReader = PHPExcel_IOFactory::createReader($inputFileType);
@@ -68,9 +68,9 @@ class EtudiantController extends Controller
 
                 $checkEtudiantBonSemestre =  Etudiant::where('numEtu','=',$numeroEtudiantCourant)->where('Semestre_idSemestre','=',$getSemestre->idSemestre)->first();
 
+
                 if (is_null($checkEtudiantBonSemestre)){
                     Etudiant::where('numEtu',$numeroEtudiantCourant) ->update(['Semestre_idSemestre' =>$getSemestre->idSemestre]);
-
                 }
 
             }

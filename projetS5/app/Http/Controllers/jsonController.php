@@ -277,6 +277,8 @@ class jsonController extends Controller
             self::getMoyenneEtudiant($etu->numEtu, $uesJsonFile, $semestresJsonFile, $dutJsonFile);
         }
 
+        self::ClassementDut1Etudiant($year); self::classementDut2Etudiants($year); self::classementEtudiantsSemestres($year);
+        self::classementEtudiantsUEs($year);
     }
 
     public
