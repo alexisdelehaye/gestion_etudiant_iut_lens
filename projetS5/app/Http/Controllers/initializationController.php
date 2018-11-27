@@ -29,7 +29,6 @@ use Illuminate\Http\Request;
             if($studentsFiles[$i][-6] != "S"){
                 $nomSemestreCourant= "S4_".$studentsFiles[$i][-8].$studentsFiles[$i][-7].$studentsFiles[$i][-6];
             }
-
             EtudiantController::inscriptionEtudiantInBD($nomSemestreCourant,$year,$studentsFiles[$i]);
         }
     }
