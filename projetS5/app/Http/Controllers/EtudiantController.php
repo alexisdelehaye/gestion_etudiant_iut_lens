@@ -128,7 +128,7 @@ class EtudiantController extends Controller
         if (is_dir(public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $CurrentYear . '-' . ($CurrentYear + 1)))
             return;
 
-        $racine = public_path() . DIRECTORY_SEPARATOR . "INFO";
+        $racine = public_path() . DIRECTORY_SEPARATOR . "INFO". DIRECTORY_SEPARATOR . $CurrentYear . '-' . ($CurrentYear + 1);
 
         mkdir($racine . DIRECTORY_SEPARATOR . "INFO1" . DIRECTORY_SEPARATOR . "S1" . DIRECTORY_SEPARATOR . "UE11", 0777, true);
         mkdir($racine . DIRECTORY_SEPARATOR . "INFO1" . DIRECTORY_SEPARATOR . "S1" . DIRECTORY_SEPARATOR . "UE12", 0777, true);
@@ -142,13 +142,15 @@ class EtudiantController extends Controller
 
         mkdir($racine . DIRECTORY_SEPARATOR . "INFO2" . DIRECTORY_SEPARATOR . "S4" . DIRECTORY_SEPARATOR . "IPI" . DIRECTORY_SEPARATOR . "UE41", 0777, true);
         mkdir($racine . DIRECTORY_SEPARATOR . "INFO2" . DIRECTORY_SEPARATOR . "S4" . DIRECTORY_SEPARATOR . "IPI" . DIRECTORY_SEPARATOR . "UE42", 0777, true);
+        mkdir($racine . DIRECTORY_SEPARATOR . "INFO2" . DIRECTORY_SEPARATOR . "S4" . DIRECTORY_SEPARATOR . "IPI" . DIRECTORY_SEPARATOR . "UE43", 0777, true);
 
         mkdir($racine . DIRECTORY_SEPARATOR . "INFO2" . DIRECTORY_SEPARATOR . "S4" . DIRECTORY_SEPARATOR . "PEL" . DIRECTORY_SEPARATOR . "UE41", 0777, true);
         mkdir($racine . DIRECTORY_SEPARATOR . "INFO2" . DIRECTORY_SEPARATOR . "S4" . DIRECTORY_SEPARATOR . "PEL" . DIRECTORY_SEPARATOR . "UE42", 0777, true);
+        mkdir($racine . DIRECTORY_SEPARATOR . "INFO2" . DIRECTORY_SEPARATOR . "S4" . DIRECTORY_SEPARATOR . "PEL" . DIRECTORY_SEPARATOR . "UE43", 0777, true);
 
         mkdir($racine . DIRECTORY_SEPARATOR . "INFO2" . DIRECTORY_SEPARATOR . "S4" . DIRECTORY_SEPARATOR . "ETRANGER", 0777, true);
 
-        mkdir($racine . DIRECTORY_SEPARATOR . "INFO2" . DIRECTORY_SEPARATOR . "S4" . DIRECTORY_SEPARATOR . "UE43", 0777, true);
+
 
         mkdir($racine . DIRECTORY_SEPARATOR . "LPDIOC" . DIRECTORY_SEPARATOR . "S5" . DIRECTORY_SEPARATOR . "UE1", 0777, true);
         mkdir($racine . DIRECTORY_SEPARATOR . "LPDIOC" . DIRECTORY_SEPARATOR . "S5" . DIRECTORY_SEPARATOR . "UE2", 0777, true);

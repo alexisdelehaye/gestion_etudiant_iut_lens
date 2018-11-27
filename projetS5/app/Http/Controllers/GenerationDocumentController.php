@@ -127,10 +127,10 @@ class GenerationDocumentController extends Controller
 
     public function createAllMarksFile()
     {
-        $semestre = array('S1','S2','S3','S4_IPI','S4_PEL');
+        $semestre = Semestre::all();
 
         foreach ($semestre as $s){
-            GenerationDocumentController::créationFicheMatièresSelonSemestre('2018', $s);
+            GenerationDocumentController::créationFicheMatièresSelonSemestre('2018', $s->nom);
         }
 
 

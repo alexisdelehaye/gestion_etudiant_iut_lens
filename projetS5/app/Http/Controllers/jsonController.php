@@ -596,8 +596,10 @@ class jsonController extends Controller
 
         $uesJsonFile =  public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $anneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
             DIRECTORY_SEPARATOR . 'moyenneUEstudiants.json';
-        //self::testUesAffichage('2018',$dutJsonFile, $semestresJsonFile,$uesJsonFile);
+        self::testUesAffichage('2018',$dutJsonFile, $semestresJsonFile,$uesJsonFile);
         self::ClassementDutEtudiant($year);
+        self::classementEtudiantsSemestres($year);
+        self::classementEtudiantsUEs($year);
 
     }
 
