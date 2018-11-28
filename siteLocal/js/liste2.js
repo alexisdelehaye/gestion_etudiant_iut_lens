@@ -1,20 +1,57 @@
 
-// trouver un moyen de retirer les compteurs
-var cpt = 0;
-var cptMat = 0
+var init = false;
+
 
 var semestre = 1;
 
-// generer une liste des matieres par semestre en JSON ?
-var matieres = ["SE-3","RX-2","APA","Pweb-1","CPA"];
+function rechercheNotesSemestre(numeroEtudiant) {
+
+  var notesSemestre;
+
+  moyenneSemestreEtudiants.forEach(function (etu) {
+    if(etu[numeroEtudiant] != undefined){
+      notesSemestre = etu[numeroEtudiant];
+      return;
+    }
+  });
+
+  if(notesSemestre['S4_IPI'] == 0)
+    notesSemestre['S4'] = notesSemestre['S4_PEL'];
+  else
+    notesSemestre['S4'] = notesSemestre['S4_IPI'];
+
+  return notesSemestre;
+}
+
 
 function ajouterEtudiant (etudiant) {
 	// création d'une ligne étudiant  
 	// <tr class='ligne'><th>NOM</th><th>PRENOM</th></tr>
 	// Remarque : c'est beaucoup plus "propre" de procéder comme ça....
 	
+  if(!init) {
+    var header = document.getElementById("header");
 
-  var header = document.getElementById("header");
+    var thS1 = document.createElement('TH');
+    thS1.innerHTML = 'S1';
+    header.appendChild(thS1);
+
+    var thS2 = document.createElement('TH');
+    thS2.innerHTML = 'S2';
+    header.appendChild(thS2);
+
+    var thS3 = document.createElement('TH');
+    thS3.innerHTML = 'S3';
+    header.appendChild(thS3);
+
+    var thS4 = document.createElement('TH');
+    thS4.innerHTML = 'S4';
+    header.appendChild(thS4);
+
+    init = true
+  }
+  
+
   var nodeTableau = document.getElementById("tableau"); 
   var newTR = document.createElement("TR"); 
   newTR.setAttribute("class","ligne"); 
@@ -36,28 +73,25 @@ function ajouterEtudiant (etudiant) {
   tdPrenom.appendChild(aPrenom);
   newTR.appendChild(tdPrenom);
 
-  
+  var notes = rechercheNotesSemestre(numeroEtu);
 
-  matieres.forEach(function(matiere){
-    if(cpt == 0) {
-      //Ajout entete
-      var trMat = document.createElement("TH");
-      trMat.innerHTML = matiere;
-      header.appendChild(trMat);
-    }
-
-    var tdNote = document.createElement("TD");
-    tdNote.innerHTML = notes[cpt][numeroEtu][semestre][cptMat][matiere];
-    newTR.appendChild(tdNote);
-    cptMat++;
-  })
-
-  cptMat = 0;
-  console.log(notes[cpt][numeroEtu][1][0]["SE-3"]);
+  var tdS1 = document.createElement("TD");
+  tdS1.innerHTML = notes['S1'];
+  newTR.appendChild(tdS1);
   
+  var tdS2 = document.createElement("TD");
+  tdS2.innerHTML = notes['S2'];
+  newTR.appendChild(tdS2);
+
+  var tdS3 = document.createElement("TD");
+  tdS3.innerHTML = notes['S3'];
+  newTR.appendChild(tdS3);
+
+  var tdS4 = document.createElement("TD");
+  tdS4.innerHTML = notes['S4'];
+  newTR.appendChild(tdS4);
   
-  nodeTableau.appendChild(newTR);    
-  cpt++;
+  nodeTableau.appendChild(newTR); 
 
 }
 
