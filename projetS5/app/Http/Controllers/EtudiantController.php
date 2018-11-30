@@ -17,7 +17,6 @@ class EtudiantController extends Controller
         $excelFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $AnneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
             DIRECTORY_SEPARATOR . "LISTES" . DIRECTORY_SEPARATOR . $fileName;
 
-        echo $fileName.'/'.$SemestreVoulu.'/';
         $sheetname = "LISTE_" . $SemestreVoulu;
         $inputFileType = PHPExcel_IOFactory::identify($excelFile);
         $objReader = PHPExcel_IOFactory::createReader($inputFileType);
@@ -26,8 +25,6 @@ class EtudiantController extends Controller
         /**  Load $inputFileName to a PHPExcel Object  **/
         $objPHPExcel = $objReader->load($excelFile);
         $nombreLigneFeuille = $objPHPExcel->getActiveSheet()->getHighestRow();
-        echo "nb ligne : " . $objPHPExcel->getActiveSheet()->getHighestRow() . PHP_EOL;
-
 
         for ($i = 0; $i <= $nombreLigneFeuille; $i++) {
             $numeroEtudiantCourant = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(0, 2 + $i)->getValue();
@@ -121,13 +118,11 @@ class EtudiantController extends Controller
     public function CreationArborescenceGenerale()
     {
         $CurrentYear = date('Y');
-        echo $CurrentYear . '-' . ($CurrentYear + 1);
 
-        echo public_path();
-
-        if (is_dir(public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $CurrentYear . '-' . ($CurrentYear + 1)))
-            return;
-
+        if (is_dir(public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $CurrentYear . '-' . ($CurrentYear + 1))) {
+            echo "l'arborescence des fichiers à déja été créée ";
+        return;
+    }
         $racine = public_path() . DIRECTORY_SEPARATOR . "INFO". DIRECTORY_SEPARATOR . $CurrentYear . '-' . ($CurrentYear + 1);
 
         mkdir($racine . DIRECTORY_SEPARATOR . "INFO1" . DIRECTORY_SEPARATOR . "S1" . DIRECTORY_SEPARATOR . "UE11", 0777, true);
@@ -182,6 +177,8 @@ class EtudiantController extends Controller
         mkdir($racine . DIRECTORY_SEPARATOR . "ADMIN" . DIRECTORY_SEPARATOR . "DOCUMENTS" . DIRECTORY_SEPARATOR . "POURSUITES-ETUDES", 0777, true);
 
 
+        echo "vous venez de créer l'arborescence des fichiers pour l'année ".$CurrentYear." dans le répertoire ".$racine;
     }
+
 }
 
