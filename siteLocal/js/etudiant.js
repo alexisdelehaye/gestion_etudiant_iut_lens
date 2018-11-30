@@ -68,11 +68,11 @@ function genererLignesFormation(formation, numeroEtudiant){
 			sem.innerHTML = 'S' + (c+j);
 			ligne.appendChild(sem);
 
-			/*
+
 			var semMoy = document.createELement('td');
 			semMoy.innerHTML = etuSem['S'];
 			ligne.appendChild(semMoy);
-			*/
+
 
 			lignes.push(ligne);
 
