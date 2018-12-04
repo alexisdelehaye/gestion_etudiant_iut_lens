@@ -40,6 +40,7 @@ class SemestreController extends Controller {
         $dateDebut = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(1,3)->getFormattedValue();
         $dateFin = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(1,4)->getFormattedValue();
         $SemestreCourant = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(1,5)->getValue();
+        $dateDebut =str_replace("/","-",$dateDebut);
         $dateFin =str_replace("/","-",$dateFin);
 
         $startDate = self::dateToMySQL($dateDebut);
@@ -60,6 +61,12 @@ class SemestreController extends Controller {
 
     public static function dateToMySQL($date){
         $tabDate = explode('-' , $date);
+        if (count($tabDate)<3) {
+           echo "<br>SemestreController.dateToMySQL ";  
+           echo " Erreur Date :".$date.PHP_EOL;
+           print_r($tabDate); 
+           exit(1); 
+        }
         $date  = $tabDate[2].'-'.$tabDate[0].'-'.$tabDate[1];
         $date = date( 'Y-m-d H:i:s', strtotime($date) );
         return $date;
