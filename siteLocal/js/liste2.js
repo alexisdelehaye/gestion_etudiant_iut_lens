@@ -15,12 +15,24 @@ function rechercheNotesSemestre(numeroEtudiant) {
     }
   });
 
+
+
   if(notesSemestre['S4_IPI'] == 0)
     notesSemestre['S4'] = notesSemestre['S4_PEL'];
   else
     notesSemestre['S4'] = notesSemestre['S4_IPI'];
 
   return notesSemestre;
+}
+
+function afficherDetailsSemestre(semestre){
+  var moyenneUE;
+  moyenneUEEtudiants.forEach(function (etu) {
+    if(etu[numeroEtudiant] != undefined){
+      moyennesSemestre = etu[numeroEtudiant];
+      console.log("test");
+    }
+  });
 }
 
 

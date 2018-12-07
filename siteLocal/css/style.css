@@ -2,3 +2,26 @@
 	background-color:lightgray;
 }
 
+.dut{
+	background-color: #BDB76B;
+}
+
+.semestre {
+	background-color: #EEE8AA;
+}
+
+.semestre:hover + .ue{
+	display:table-row;
+}
+
+.semestre:hover + .ue + .ue{
+	display:table-row;
+}
+
+.semestre:hover + .ue + .ue + .ue{
+	display:table-row;
+}
+
+.ue{
+	display:none;
+}
