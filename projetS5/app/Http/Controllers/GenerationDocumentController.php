@@ -79,7 +79,6 @@ class GenerationDocumentController extends Controller
 
         $listeMatiere = Matiere::all();
         foreach ($listeMatiere as $matiere) {
-            echo $matiere->abreviation;
             if ($matiere->UE_idUE == $idUE) {
                 self::GenerationFichierExcelParMatiere($matiere, $annéeVoulu, $nomInfo, $nomSemestre, $nomUE);
             }
@@ -131,6 +130,7 @@ class GenerationDocumentController extends Controller
 
         foreach ($semestre as $s){
             GenerationDocumentController::créationFicheMatièresSelonSemestre('2018', $s->nom);
+            echo "<br/> vous venez de créer l'ensemble dez fiches de notes pour le semestre ".$s->nom;
         }
 
 

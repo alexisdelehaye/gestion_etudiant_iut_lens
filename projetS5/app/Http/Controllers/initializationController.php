@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
         $matieresFiles = scandir($pathFile);
         for($i=2;$i<sizeof($matieresFiles);$i++){
             MatiereController::creationMatieresDansDatabase($matieresFiles[$i],$year);
+            echo "<br/>   vous venez d'importer les matières du fichier ".$matieresFiles[$i]." dans la base de données".PHP_EOL;
         }
     }
 
@@ -30,7 +31,9 @@ use Illuminate\Http\Request;
                 $nomSemestreCourant= "S4_".$studentsFiles[$i][-8].$studentsFiles[$i][-7].$studentsFiles[$i][-6];
             }
             EtudiantController::inscriptionEtudiantInBD($nomSemestreCourant,$year,$studentsFiles[$i]);
+            echo "<br/>vous venez d'importer les étudians de la liste".$studentsFiles[$i]."dans la base de données".PHP_EOL;
         }
+
     }
 
 

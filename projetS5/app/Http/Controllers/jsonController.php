@@ -601,6 +601,8 @@ class jsonController extends Controller
         self::classementEtudiantsSemestres($year);
         self::classementEtudiantsUEs($year);
 
+        echo "<br/> vous venez d'importer l'emsemble des résultats des étudiants dans les différents fichiers json";
+
     }
 
     public function test()

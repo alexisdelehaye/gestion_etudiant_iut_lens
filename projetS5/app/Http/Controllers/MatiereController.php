@@ -30,7 +30,6 @@ class MatiereController extends Controller
         /**  Load $inputFileName to a PHPExcel Object  **/
         $objPHPExcel = $objReader->load($excelFile);
         $nombreLigneFeuille = $objPHPExcel->getActiveSheet()->getHighestRow();
-        echo "nb ligne : " . $objPHPExcel->getActiveSheet()->getHighestRow() . PHP_EOL;
         for ($i = 1; $i <= $nombreLigneFeuille; $i++) {
 
             $referenceMatiereCourante = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(0, 1 + $i)->getValue();
@@ -39,10 +38,6 @@ class MatiereController extends Controller
             $coefficientMatiereCourante = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(3, 1 + $i)->getValue();
             $UECourant = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(4, 1 + $i)->getValue();
             $SemestreCourant = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(5, 1 + $i)->getValue();
-
-
-
-
 
 
             if ($referenceMatiereCourante != null) {
@@ -58,7 +53,6 @@ class MatiereController extends Controller
                     UEController::createIfNotExistsUE($UECourant,$SemestreCourant);
                 }
                 $resultUe = UE::where('nomUE','=',$UECourant)->where('Semestre_idSemestre','=',$getIdSemestre->idSemestre)->first();
-                echo $resultUe->idUE.'/';
                 $checkIfMatiereExists = Matiere::where('abreviation','=',$AbreviationMatiereCourante)->where('UE_idUE','=',$resultUe->idUE)->first();
 
                 if (is_null($checkIfMatiereExists)) {
