@@ -102,7 +102,6 @@ class NoteController extends Controller
         foreach ($listeSemestre as $semestre) {
             self::miseAjourNotesEtudiantsparSemestre('2018',$semestre->nom);
         }
-
     }
 
 }

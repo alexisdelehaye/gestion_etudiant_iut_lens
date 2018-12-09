@@ -13,10 +13,8 @@ class EtudiantController extends Controller
     public static function inscriptionEtudiantInBD($SemestreVoulu, $AnneeVoulue, $fileName)
     {
         $AnneeCourante = $AnneeVoulue . '-' . ($AnneeVoulue + 1);
-
         $excelFile = public_path() . DIRECTORY_SEPARATOR . "INFO" . DIRECTORY_SEPARATOR . $AnneeCourante . DIRECTORY_SEPARATOR . "ADMIN" .
             DIRECTORY_SEPARATOR . "LISTES" . DIRECTORY_SEPARATOR . $fileName;
-
         $sheetname = "LISTE_" . $SemestreVoulu;
         $inputFileType = PHPExcel_IOFactory::identify($excelFile);
         $objReader = PHPExcel_IOFactory::createReader($inputFileType);

@@ -12,9 +12,12 @@ use Illuminate\Http\Request;
             DIRECTORY_SEPARATOR."MATIERES";
 
         $matieresFiles = scandir($pathFile);
-        for($i=2;$i<sizeof($matieresFiles);$i++){
-            MatiereController::creationMatieresDansDatabase($matieresFiles[$i],$year);
-            echo "<br/>   vous venez d'importer les matières du fichier ".$matieresFiles[$i]." dans la base de données".PHP_EOL;
+        for($i=2;$i<sizeof($matieresFiles);$i++) {
+            if (!is_dir ($matieresFiles[$i])) {
+                MatiereController::creationMatieresDansDatabase($matieresFiles[$i], $year);
+                echo "<br/>   vous venez d'importer les matières du fichier " . $matieresFiles[$i] . " dans la base de données" . PHP_EOL;
+            }
+            else echo $matieresFiles[$i]."n'est pas un fichier";
         }
     }
 
@@ -24,16 +27,18 @@ use Illuminate\Http\Request;
             DIRECTORY_SEPARATOR."LISTES";
 
         $studentsFiles = scandir($pathFile);
-        for($i=2;$i<sizeof($studentsFiles);$i++){
-            $nomSemestreCourant = $studentsFiles[$i][-7].$studentsFiles[$i][-6];
+        for($i=2;$i<sizeof($studentsFiles);$i++) {
+            if (!is_dir($studentsFiles[$i])) {
+                $nomSemestreCourant = $studentsFiles[$i][-7] . $studentsFiles[$i][-6];
 
-            if($studentsFiles[$i][-7] != "S"){
-                $nomSemestreCourant= "S4_".$studentsFiles[$i][-8].$studentsFiles[$i][-7].$studentsFiles[$i][-6];
+                if ($studentsFiles[$i][-7] != "S") {
+                    $nomSemestreCourant = "S4_" . $studentsFiles[$i][-8] . $studentsFiles[$i][-7] . $studentsFiles[$i][-6];
+                }
+                EtudiantController::inscriptionEtudiantInBD($nomSemestreCourant, $year, $studentsFiles[$i]);
+                echo "<br/>vous venez d'importer les étudians de la liste" . $studentsFiles[$i] . "dans la base de données" . PHP_EOL;
             }
-            EtudiantController::inscriptionEtudiantInBD($nomSemestreCourant,$year,$studentsFiles[$i]);
-            echo "<br/>vous venez d'importer les étudians de la liste".$studentsFiles[$i]."dans la base de données".PHP_EOL;
+            else echo $studentsFiles[$i]." n'est pas un fichier";
         }
-
     }
 
 

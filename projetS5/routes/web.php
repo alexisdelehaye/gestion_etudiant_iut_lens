@@ -29,7 +29,7 @@ Route::get('testCréationArborescence','EtudiantController@CreationArborescenceG
 Route::get('testCréationNotesDansBonRépertoire','GenerationDocumentController@test');// création excel des matieres dans les dossiers voulues selon le semestre demandé
 
 
-Route::get('testJsonEtudiant','jsonController@test'); //export en json des notes (moyennes des étudiants) , moyennes de leurs ues, semestres et dut (1 et 2), ainsi que la liste des étudiants
+Route::get('testJsonEtudiant','jsonController@testCorrectionClassementUe'); //export en json des notes (moyennes des étudiants) , moyennes de leurs ues, semestres et dut (1 et 2), ainsi que la liste des étudiants
 
 Route::get("initialisationDonnées",'initializationController@test');//initialization (insertion de tous les étudiants et matières présents dans les dossiers admin correspondant)
 

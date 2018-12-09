@@ -1,0 +1,734 @@
+{
+    "20170926": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 14.12
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 14.35
+        }
+    ],
+    "20170927": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 12.26
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 10.38
+        }
+    ],
+    "20170928": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 11.71
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 16.42
+        }
+    ],
+    "20170929": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 14.68
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 12.92
+        }
+    ],
+    "20170930": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 16.24
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 13
+        }
+    ],
+    "20170931": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 15.53
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 9
+        }
+    ],
+    "20170932": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 10.85
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 8.69
+        }
+    ],
+    "20170933": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 12.59
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 14.81
+        }
+    ],
+    "20170934": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 12.76
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 12.73
+        }
+    ],
+    "20170935": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 11.06
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 11
+        }
+    ],
+    "20170936": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 13.32
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 13.23
+        }
+    ],
+    "20170937": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 13.82
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 12.19
+        }
+    ],
+    "20170938": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 14.21
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 14.77
+        }
+    ],
+    "20170939": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 13.62
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 10.15
+        }
+    ],
+    "20170940": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 11.97
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 11.65
+        }
+    ],
+    "20170941": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 13.56
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 14.92
+        }
+    ],
+    "20170942": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 13.71
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 14.08
+        }
+    ],
+    "20170943": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 14.59
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 11.19
+        }
+    ],
+    "20170944": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 14.26
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 8.92
+        }
+    ],
+    "20170945": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 7.82
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 11.81
+        }
+    ],
+    "20170946": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 11.47
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 14.23
+        }
+    ],
+    "20170947": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 12.79
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 12.12
+        }
+    ],
+    "20170948": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 12.53
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 14.15
+        }
+    ],
+    "20170949": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 13.15
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 11.96
+        }
+    ],
+    "20170950": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 11.53
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 13.04
+        }
+    ],
+    "20170951": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 10.71
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 13.96
+        }
+    ],
+    "20170952": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 12.24
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 10.77
+        }
+    ],
+    "20170953": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 11.44
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 15.85
+        }
+    ],
+    "20170954": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 11.65
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 11
+        }
+    ],
+    "20170955": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 11.71
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 12.31
+        }
+    ],
+    "20170956": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 9.41
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 12.92
+        }
+    ],
+    "20170957": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 14.44
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 11.65
+        }
+    ],
+    "20170958": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 12
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 12.62
+        }
+    ],
+    "20170959": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 9.59
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 11.23
+        }
+    ],
+    "20170960": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 14.68
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 11.65
+        }
+    ],
+    "20170961": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 12.32
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 10.12
+        }
+    ],
+    "20170962": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 8.59
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 13.04
+        }
+    ],
+    "20170963": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 12.18
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 10.23
+        }
+    ],
+    "20170964": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 11.56
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 13.65
+        }
+    ],
+    "20170965": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 10.44
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 9.81
+        }
+    ],
+    "20170966": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 12.53
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 12.54
+        }
+    ],
+    "20170967": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 11.59
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 17.04
+        }
+    ],
+    "20170968": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 12.79
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 12.88
+        }
+    ],
+    "20170969": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 14.26
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 14.88
+        }
+    ],
+    "20170970": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 13.15
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 13.12
+        }
+    ],
+    "20170971": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 10.76
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 11.58
+        }
+    ],
+    "20170972": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 11.85
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 13.46
+        }
+    ],
+    "20170973": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 9.21
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 8.5
+        }
+    ],
+    "20170974": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 10.71
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 12.04
+        }
+    ],
+    "20170975": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 13.94
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 14.27
+        }
+    ],
+    "20170976": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 9.82
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 14.85
+        }
+    ],
+    "20170977": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 14.47
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 10.27
+        }
+    ],
+    "20170978": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 12.03
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 16.77
+        }
+    ],
+    "20170979": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 12.59
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 9.88
+        }
+    ],
+    "20170980": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 9.82
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 15.5
+        }
+    ],
+    "20170981": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 11.68
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 11.12
+        }
+    ],
+    "20170982": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 8.35
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 9.92
+        }
+    ],
+    "20170983": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 8.79
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 13.62
+        }
+    ],
+    "20170984": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 11.12
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 12.31
+        }
+    ],
+    "20170985": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 9.53
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 10
+        }
+    ],
+    "20170986": [
+        {
+            "Semestre": "S1",
+            "nomUe": "UE11",
+            "moyenne": 14.09
+        },
+        {
+            "Semestre": "S1",
+            "nomUe": "UE12",
+            "moyenne": 12.27
+        }
+    ]
+}
