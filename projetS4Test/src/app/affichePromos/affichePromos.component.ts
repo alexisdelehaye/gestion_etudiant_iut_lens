@@ -1,34 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import {Matiere} from './affichePromos.interface';
+import {Promotion} from './affichePromos.interface';
 import {Router} from "@angular/router";
 import {Observable} from "rxjs/Rx";
-import {AppState} from "../store/index";
 import {select, Store} from "@ngrx/store";
-import {MatiereListModule} from "../store/actions/matiere.action";
-import {selectMatiereListEntitiesConverted$, selectMatieresLoading$} from "../store/selectors/matiere.selector";
 
 @Component({
-  selector: 'app-matieres',
+  selector: 'app-affichePromos',
   templateUrl: './affichePromos.component.html',
   styleUrls: ['./affichePromos.component.css']
 })
 export class AffichePromosComponent implements OnInit {
 
-  public matieres$: Observable<Matiere[]>;
-  public  matieresLoading: Observable<boolean>;
+  public promotions$: Observable<Promotion[]>;
+  public  promotionsLoading: Observable<boolean>;
 
-  constructor(private router: Router, private store: Store<AppState>) {
-    this.matieres$ = store
-      .pipe(select(selectMatiereListEntitiesConverted$));
-
-    this.matieresLoading = store.pipe(select(selectMatieresLoading$));
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
-    this.store.dispatch(new  MatiereListModule.LoadInitMatieres());
   }
 
-  goToAddMatiere () {
+  goToafficheEtudiants () {
     this.router.navigateByUrl('/afficheEtudiants');
   }
 

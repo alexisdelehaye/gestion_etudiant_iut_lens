@@ -10,12 +10,13 @@
 
 
     <div class="col-md-6">
+      <!--Faire la fonction getEtudiant qui recherche l'étudiant en question et le retourne-->
       <button mwlConfirmationPopover
               [popoverTitle]="'Confirmation'"
               [popoverMessage]="'êtes-vous sûr?'"
               placement="top"
-              (confirm)="createMatiere(matiereForm.value)"
-              type="submit" class="btn btn-save btn-primary" [disabled]="!matiereForm.valid">
+              (confirm)="getEtudiant(etudiantForm.value)"
+              type="submit" class="btn btn-save btn-primary" [disabled]="!etudiantForm.valid">
         <span class="glyphicon glyphicon-floppy-disk"></span> Rechercher
       </button>
     </div>

@@ -18,11 +18,10 @@ import {ConfirmationPopoverModule} from "angular-confirmation-popover";
 import {environment} from "../environments/environment";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {EffectsModule} from "@ngrx/effects";
-import {appEffects, getReducers, REDUCER_TOKEN} from "./store/index";
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/matiere', pathMatch: 'full' },
-  { path: 'matiere', component: AffichePromosComponent },
+  { path: '', redirectTo: '/affichePromos', pathMatch: 'full' },
+  { path: 'affichePromos', component: AffichePromosComponent },
   { path: 'afficheEtudiants', component: AfficheEtudiantsComponent }
 ];
 
@@ -51,8 +50,6 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    StoreModule.forRoot(REDUCER_TOKEN),
-    EffectsModule.forRoot(appEffects),
     StoreDevtoolsModule.instrument({
       name: '[TODOLIST]',
       maxAge: 25, // Retains last 25 states
@@ -65,10 +62,7 @@ const appRoutes: Routes = [
       confirmButtonType: 'danger' // set defaults here
     })
   ],
-  providers: [{
-      provide: REDUCER_TOKEN,
-      useFactory: getReducers
-    },
+  providers: [
     AffichePromosService
   ],
   bootstrap: [AppComponent]

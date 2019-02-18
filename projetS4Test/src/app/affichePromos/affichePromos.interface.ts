@@ -1,5 +1,5 @@
-export interface Matiere {
+export interface Promotion {
   id: Number;
   libelle: String;
-  coefficient: Number;
+  moyenne: Number;
 }
