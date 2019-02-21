@@ -32,7 +32,8 @@ export class AffichePromosComponent implements OnInit {
     {
       promo: '2016_2017',
       id: 1
-    },{
+    },
+    {
       promo: '2017_2018',
       id: 2
     }

@@ -7,4 +7,13 @@
     <th>Moyenne générale</th>
   </tr>
   </thead>
+
+  <tbody>
+    <tr *ngFor="let etu of etudiantsListe">
+      <td>{{ etu.id }}</td>
+      <td>{{ etu.nom }}</td>
+      <td>{{ etu.prenom }}</td>
+      <td>{{ etu.moyenne }}</td>
+    </tr>
+  </tbody>
 </table>
