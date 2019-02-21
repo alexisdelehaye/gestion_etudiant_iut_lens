@@ -24,5 +24,19 @@ export class AffichePromosComponent implements OnInit {
     this.router.navigateByUrl('/afficheEtudiants');
   }
 
+  promosListe = [
+    {
+      promo: '2015_2016',
+      id: 0
+    },
+    {
+      promo: '2016_2017',
+      id: 1
+    },{
+      promo: '2017_2018',
+      id: 2
+    }
+  ];
+
 
 }

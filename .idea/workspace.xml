@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="913e5b53-2750-4a34-a968-80a363c90a4b" name="Default Changelist" comment="">
+    <list default="true" id="913e5b53-2750-4a34-a968-80a363c90a4b" name="Default Changelist" comment="Correction bug menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4Test/src/app/dashboard/dashboard.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4Test/src/app/dashboard/dashboard.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseDeDonnées/ExempleFicheEtudiant.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDeDonnées/ExempleFicheEtudiant.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,54 +19,50 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/dashboard/dashboard.component.html">
+        <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="28" column="29" selection-start-line="28" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/afficheEtudiants/afficheEtudiants.component.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/app.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="225">
+              <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/dashboard/dashboard.component.css">
+        <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/afficheEtudiants/afficheEtudiants.component.spec.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+            <state relative-caret-position="320">
+              <caret line="30" column="6" lean-forward="true" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
               <folding>
-                <element signature="e#0#73#0" expanded="true" />
+                <element signature="e#0#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.html">
+        <entry file="file://$PROJECT_DIR$/projetS5/public/INFO/2018-2019/ADMIN/classementDUTEtudiants.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projetS5/public/INFO/2018-2019/ADMIN/moyenneDUTEtudiants.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projetS5/public/INFO/2018-2019/ADMIN/moyenneSemestreEtudiants.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="255">
+              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local/js/liste.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-878">
+              <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -72,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="765">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -93,7 +91,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/dashboard/dashboard.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
+            <state relative-caret-position="225">
               <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
@@ -105,7 +103,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/afficheEtudiants/afficheEtudiants.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
+            <state relative-caret-position="285">
               <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
@@ -179,35 +177,36 @@
         <option value="$PROJECT_DIR$/projetS4Test/src/app/matieres/matieres.interface.ts" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/matieres/matieres.component.ts" />
         <option value="$PROJECT_DIR$/projetS4Test/src/index.html" />
-        <option value="$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.html" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/store/reducers/matiere.reducer.ts" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.interface.ts" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/store/actions/matiere.action.ts" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/store/index.ts" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.service.ts" />
-        <option value="$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.ts" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/dashboard/dashboard.component.ts" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/afficheEtudiants/afficheEtudiants.component.ts" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/afficheEtudiants/afficheEtudiants.component.html" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/dashboard/dashboard.component.html" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/dashboard/dashboard.component.css" />
+        <option value="$PROJECT_DIR$/local/js/liste.js" />
+        <option value="$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.html" />
+        <option value="$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.ts" />
       </list>
     </option>
   </component>
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -249,19 +248,10 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="affichePromos" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
-              <item name="projetS4Test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -304,7 +294,9 @@
       <workItem from="1544369969168" duration="1380000" />
       <workItem from="1550409861374" duration="534000" />
       <workItem from="1550410505907" duration="13157000" />
-      <workItem from="1550483880411" duration="8393000" />
+      <workItem from="1550483880411" duration="8933000" />
+      <workItem from="1550665802730" duration="733000" />
+      <workItem from="1550764011346" duration="1482000" />
     </task>
     <task id="LOCAL-00001" summary="creation du projet s4">
       <created>1550410828265</created>
@@ -341,14 +333,21 @@
       <option name="project" value="LOCAL" />
       <updated>1550502885280</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Correction bug menu">
+      <created>1550503494195</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1550503494195</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29112000" />
+    <option name="totallyTimeSpent" value="31867000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25369978" />
@@ -364,8 +363,8 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.49299362" />
+      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.3554217" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.49299362" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -382,30 +381,10 @@
     <MESSAGE value="implementation d'un template" />
     <MESSAGE value="Correction erreurs template" />
     <MESSAGE value="suppression partie recherche étudiant" />
-    <option name="LAST_COMMIT_MESSAGE" value="suppression partie recherche étudiant" />
+    <MESSAGE value="Correction bug menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction bug menu" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/siteLocal/index2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="48" lean-forward="true" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/siteLocal/etudiant.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4/src/app/etudiant.html" />
-    <entry file="file://$PROJECT_DIR$/projetS4/src/app/app.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4/src/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projetS4/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -523,13 +502,7 @@
     <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/afficheEtudiants/afficheEtudiants.component.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/store/actions/matiere.action.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/store/actions/matiere.action.ts" />
     <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.interface.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -537,85 +510,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/store/reducers/matiere.reducer.ts">
+    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/store/reducers/matiere.reducer.ts" />
+    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/store/effects/matiere.effect.ts" />
+    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/store/selectors/matiere.selector.ts" />
+    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/dashboard/dashboard.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="67" column="14" lean-forward="true" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/store/effects/matiere.effect.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/store/selectors/matiere.selector.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/dashboard/dashboard.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/afficheEtudiants/afficheEtudiants.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/afficheEtudiants/afficheEtudiants.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="420">
+          <caret line="28" column="29" selection-start-line="28" selection-end-line="29" />
         </state>
       </provider>
     </entry>
@@ -629,24 +530,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.html">
+    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/afficheEtudiants/afficheEtudiants.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/dashboard/dashboard.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/ressources/notesEtudiants.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS5/public/INFO/2018-2019/ADMIN/classementDUTEtudiants.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS5/public/INFO/2018-2019/ADMIN/moyenneDUTEtudiants.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/dashboard/dashboard.component.html">
+    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/dashboard/dashboard.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="28" column="29" selection-start-line="28" selection-end-line="29" />
+        <state relative-caret-position="225">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/dashboard/dashboard.component.css">
+    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/afficheEtudiants/afficheEtudiants.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="285">
+          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS5/public/INFO/2018-2019/ADMIN/moyenneSemestreEtudiants.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/js/liste.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-878">
+          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="30" column="6" lean-forward="true" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

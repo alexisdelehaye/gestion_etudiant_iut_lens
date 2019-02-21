@@ -8,10 +8,9 @@
   </thead>
 
   <tbody>
-    <tr>
-      <td>Promotion 2017 - 2018</td>
-      <td>Promo17_18</td>
+    <tr *ngFor="let pro of promosListe">
+      <td>{{ pro.promo }}</td>
+      <td>{{ pro.id }}</td>
     </tr>
   </tbody>
-
 </table>
