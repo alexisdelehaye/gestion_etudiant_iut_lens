@@ -16,12 +16,14 @@ import {ConfirmationPopoverModule} from "angular-confirmation-popover";
 import {environment} from "../environments/environment";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import { FicheEtudiantComponent } from './ficheEtudiant/ficheEtudiant.component';
+import { AfficheGroupePromoComponent } from './affiche-groupe-promo/affiche-groupe-promo.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/affichePromos', pathMatch: 'full' },
   { path: 'affichePromos', component: AffichePromosComponent },
   { path: 'afficheEtudiants', component: AfficheEtudiantsComponent },
-  { path: 'ficheEtudiant', component: FicheEtudiantComponent }
+  { path: 'ficheEtudiant', component: FicheEtudiantComponent },
+  { path: 'ficheEtudiant', component: AfficheGroupePromoComponent }
 ];
 
 @NgModule({
@@ -31,6 +33,7 @@ const appRoutes: Routes = [
     AffichePromosComponent,
     AfficheEtudiantsComponent,
     FicheEtudiantComponent,
+    AfficheGroupePromoComponent,
   ],
   imports: [
     BrowserModule,
