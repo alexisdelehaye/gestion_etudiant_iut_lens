@@ -1,0 +1,16 @@
+<table class="table table-striped">
+
+  <thead>
+  <tr>
+    <th>Groupes</th>
+    <th>Id Groupe</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let gr of groupesPromo">
+    <td>{{ gr.groupe }}</td>
+    <td>{{ gr.id }}</td>
+  </tr>
+  </tbody>
+</table>
