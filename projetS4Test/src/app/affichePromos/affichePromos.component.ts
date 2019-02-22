@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Promotion} from './affichePromos.interface';
-import {Router} from "@angular/router";
-import {Observable} from "rxjs/Rx";
-import {select, Store} from "@ngrx/store";
 
 @Component({
   selector: 'app-affichePromos',
@@ -11,18 +7,9 @@ import {select, Store} from "@ngrx/store";
 })
 export class AffichePromosComponent implements OnInit {
 
-  public promotions$: Observable<Promotion[]>;
-  public  promotionsLoading: Observable<boolean>;
+  constructor() { }
 
-  constructor(private router: Router) {
-  }
-
-  ngOnInit() {
-  }
-
-  goToafficheEtudiants () {
-    this.router.navigateByUrl('/afficheEtudiants');
-  }
+  ngOnInit() {  }
 
   promosListe = [
     {

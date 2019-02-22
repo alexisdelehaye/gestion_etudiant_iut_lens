@@ -1,8 +1,4 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {Promotion} from "../affichePromos/affichePromos.interface";
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {Store} from "@ngrx/store";
-import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-afficheEtudiants',
@@ -11,17 +7,9 @@ import {Router} from "@angular/router";
 })
 export class AfficheEtudiantsComponent implements OnInit {
 
-  public etudiantForm: FormGroup;
+  constructor() { }
 
-  constructor(private router: Router, @Inject(FormBuilder) fb: FormBuilder) {
-    this.etudiantForm = fb.group({
-      nom: ['', Validators.required],
-      prenom: ['', Validators.required]
-    });
-  }
-
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   etudiantsListe = [
     {

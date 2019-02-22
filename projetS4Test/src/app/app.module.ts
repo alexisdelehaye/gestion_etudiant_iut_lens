@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -10,14 +9,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import {HttpClientModule} from "@angular/common/http";
 import { AffichePromosComponent } from './affichePromos/affichePromos.component';
-import {AffichePromosService} from "./affichePromos/affichePromos.service";
 import { AfficheEtudiantsComponent } from './afficheEtudiants/afficheEtudiants.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ToastrModule} from "ngx-toastr";
 import {ConfirmationPopoverModule} from "angular-confirmation-popover";
 import {environment} from "../environments/environment";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
-import {EffectsModule} from "@ngrx/effects";
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/affichePromos', pathMatch: 'full' },
@@ -63,7 +60,6 @@ const appRoutes: Routes = [
     })
   ],
   providers: [
-    AffichePromosService
   ],
   bootstrap: [AppComponent]
 })
