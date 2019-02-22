@@ -15,11 +15,13 @@ import {ToastrModule} from "ngx-toastr";
 import {ConfirmationPopoverModule} from "angular-confirmation-popover";
 import {environment} from "../environments/environment";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
+import { FicheEtudiantComponent } from './ficheEtudiant/ficheEtudiant.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/affichePromos', pathMatch: 'full' },
   { path: 'affichePromos', component: AffichePromosComponent },
-  { path: 'afficheEtudiants', component: AfficheEtudiantsComponent }
+  { path: 'afficheEtudiants', component: AfficheEtudiantsComponent },
+  { path: 'ficheEtudiant', component: FicheEtudiantComponent }
 ];
 
 @NgModule({
@@ -28,6 +30,7 @@ const appRoutes: Routes = [
     DashboardComponent,
     AffichePromosComponent,
     AfficheEtudiantsComponent,
+    FicheEtudiantComponent,
   ],
   imports: [
     BrowserModule,

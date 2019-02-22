@@ -1,0 +1,19 @@
+<table class="table table-striped">
+
+  <thead>
+  <tr>
+    <th>Moyenne</th>
+    <th>Classement</th>
+    <th>Moyenne Promo</th>
+    <th>Max Promo</th>
+    <th>Min Promo</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let pro of promosListe">
+    <td>{{ pro.promo }}</td>
+    <td>{{ pro.id }}</td>
+  </tr>
+  </tbody>
+</table>

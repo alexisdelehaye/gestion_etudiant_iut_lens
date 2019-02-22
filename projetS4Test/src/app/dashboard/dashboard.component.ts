@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import {select, Store} from "@ngrx/store";
 import {ToastrService} from "ngx-toastr";
-import {tap} from "rxjs/internal/operators";
 
 @Component({
   selector: 'app-dashboard',
