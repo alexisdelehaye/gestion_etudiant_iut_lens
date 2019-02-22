@@ -14,6 +14,7 @@ export class FicheEtudiantComponent implements OnInit {
 
   etudiantListe = [
     {
+      semestre: "s1",
       moyenne: 13.34,
       classement: 24,
       moyennePromo: 14,
@@ -21,6 +22,7 @@ export class FicheEtudiantComponent implements OnInit {
       promoMin : 17
     },
     {
+      semestre: "s2",
       moyenne: 13.34,
       classement: 24,
       moyennePromo: 14,
@@ -28,6 +30,15 @@ export class FicheEtudiantComponent implements OnInit {
       promoMin : 17
     },
     {
+      semestre: "s3",
+      moyenne: 13.34,
+      classement: 24,
+      moyennePromo: 14,
+      promoMax : 12,
+      promoMin : 17
+    },
+    {
+      semestre: "s4",
       moyenne: 13.34,
       classement: 24,
       moyennePromo: 14,

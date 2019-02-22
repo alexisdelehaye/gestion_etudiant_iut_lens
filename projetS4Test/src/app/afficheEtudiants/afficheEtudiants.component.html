@@ -1,19 +1,13 @@
-<table class="table table-striped">
-  <thead>
-  <tr>
-    <th>ID</th>
-    <th>Nom</th>
-    <th>Prenom</th>
-    <th>Moyenne générale</th>
-  </tr>
-  </thead>
-
-  <tbody>
-    <tr *ngFor="let etu of etudiantsListe">
-      <td>{{ etu.id }}</td>
-      <td>{{ etu.nom }}</td>
-      <td>{{ etu.prenom }}</td>
-      <td>{{ etu.moyenne }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+  <div class="row">
+    <table id="tableau" class="table col-md-12">
+      <thead class = 'thead-dark'>
+      <tr class='ligne' id="header"><th>NOM</th><th>PRENOM</th></tr>
+      </thead>
+    </table>
+  </div>
+</div>
+<script  src= "../../ressources/data/listeEtudiants.js"></script>
+<script  src= "../../ressources/data/notesEtudiants.js"></script>
+<script  src= "../../ressources/data/moyenneSemestreEtudiants.js"></script>
+<script  src= "../../ressources/js/liste2.js"></script>
