@@ -23,7 +23,7 @@ const appRoutes: Routes = [
   { path: 'affichePromos', component: AffichePromosComponent },
   { path: 'afficheEtudiants', component: AfficheEtudiantsComponent },
   { path: 'ficheEtudiant', component: FicheEtudiantComponent },
-  { path: 'ficheEtudiant', component: AfficheGroupePromoComponent }
+  { path: 'affiche-groupe-promo', component: AfficheGroupePromoComponent }
 ];
 
 @NgModule({

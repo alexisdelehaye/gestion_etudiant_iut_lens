@@ -1,13 +1,48 @@
+<!--
 <div class="container">
   <div class="row">
-    <table id="tableau" class="table col-md-12">
-      <thead class = 'thead-dark'>
-      <tr class='ligne' id="header"><th>NOM</th><th>PRENOM</th></tr>
+    <table id="tableau" class="col-md-12 table table-bordered">
+      <thead class='thead-dark'>
+      <tr class='ligne' id="header"><th>id</th><th>Nom</th><th>Prenom</th><th>Moyenne</th></tr>
       </thead>
+      <tbody id="tableContent">
+      <tr *ngFor="let etu of etudiantsListe">
+        <td>{{ etu.id }}</td>
+        <td>{{ etu.nom }}</td>
+        <td>{{ etu.prenom }}</td>
+        <td>{{ etu.moyenne }}</td>
+      </tr>
+      </tbody>
     </table>
   </div>
 </div>
-<script  src= "../../ressources/data/listeEtudiants.js"></script>
-<script  src= "../../ressources/data/notesEtudiants.js"></script>
-<script  src= "../../ressources/data/moyenneSemestreEtudiants.js"></script>
-<script  src= "../../ressources/js/liste2.js"></script>
+-->
+
+
+<p>Rechercher un etudiant
+  <input placeholder="Prenom de l'étudiant" ng-model="f.prenom">
+</p>
+<div class="container">
+  <div class="row">
+    <table id="tableau" class="col-md-12 table table-bordered">
+      <thead class='thead-dark'>
+      <tr class='ligne' id="header"><th>id</th><th>Nom</th><th>Prenom</th><th>Moyenne</th></tr>
+      </thead>
+
+      <tbody id="tableContent">
+      <tr><td>test</td></tr>
+      <tr ng-repeat="p in persos | filter:f">
+        <td>{{ p.id }}</td>
+        <td>{{ p.nom }}</td>
+        <td>{{ p.prenom }}</td>
+        <td>{{ p.moyenne }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="../fichier.js"></script>

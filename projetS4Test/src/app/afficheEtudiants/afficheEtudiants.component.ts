@@ -5,11 +5,14 @@ import {Component, Inject, OnInit} from '@angular/core';
   templateUrl: './afficheEtudiants.component.html',
   styleUrls: ['./afficheEtudiants.component.css']
 })
+
+
 export class AfficheEtudiantsComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() { }
+
 
   etudiantsListe = [
     {
@@ -25,11 +28,13 @@ export class AfficheEtudiantsComponent implements OnInit {
       moyenne :13
     },
     {
-      id: 2,
+      id: 0,
       nom: "nom2",
       prenom : "prenom2",
       moyenne :3
     }
   ];
+
+
 
 }
