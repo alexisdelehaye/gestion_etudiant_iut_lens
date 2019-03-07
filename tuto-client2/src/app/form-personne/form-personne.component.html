@@ -1,0 +1,61 @@
+<main>
+  <div class="container">
+    <div class="text-center mb-4">
+      <h1 class="h3 mt-3 mb-3 font-weight-normal">Bienvenue</h1>
+      <p>{{pageTitle}}</p>
+      <hr>
+    </div>
+    <form  >
+      <div class="form-group" [ngClass]="{ 'has-error': !nom.valid && (nom.dirty || nom.touched) }">
+        <label for="nom">Nom</label>
+        <input type="text" formControlName="nom" class="form-control" id="nom" aria-describedby="nameHelp"
+               placeholder="Votre nom">
+        <div class="invalid-feedback"
+             *ngIf="nom.errors && (nom.dirty || nom.touched)">
+          <div *ngIf="nom.hasError('required')">Le nom est obligatoire</div>
+        </div>
+      </div>
+      <div class="form-group" [ngClass]="{ 'has-error': !prenom.valid && (prenom.dirty || prenom.touched) }">
+        <label for="prenom">Prénom</label>
+        <input type="text" formControlName="prenom" class="form-control" id="prenom" aria-describedby="nameHelp"
+               placeholder="Votre prénom">
+        <div class="invalid-feedback"
+             *ngIf="prenom.errors && (prenom.dirty || prenom.touched)">
+          <div *ngIf="prenom.hasError('required')">Le prénom est obligatoire</div>
+        </div>
+      </div>
+      <div class="form-group"
+           [ngClass]="{ 'has-error': !telephone.valid && (telephone.dirty || telephone.touched) }">
+        <label for="telephone">Téléphone</label>
+        <input type="tel" formControlName="telephone" class="form-control" id="telephone"
+               aria-describedby="emailHelp" placeholder="Numéro de téléphone">
+        <div class="invalid-feedback"
+             *ngIf="telephone.errors && (telephone.dirty || telephone.touched)">
+          <div *ngIf="telephone.hasError('required')">Le numéro de téléphone est obligatoire</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="avatar">Avatar</label>
+        <div class="row">
+          <div class="col-8">
+            <file-drop id="avatar" headertext="Coller l'image ici" (onFileDrop)="dropped($event)"
+                       (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+            </file-drop>
+          </div>
+          <div class="col-4">
+            <img *ngIf="imagePreview" [src]="imagePreview" class="ml-3 rounded-circle img-thumbnail img-fluid image-preview" alt="">
+            <img *ngIf="avatar" [src]="avatar" class="ml-3 rounded-circle img-thumbnail img-fluid image-preview" alt="">
+            <img *ngIf="!imagePreview && !avatar" src="assets/facebook-No-Image-big.png" class="ml-3 rounded-circle img-thumbnail img-fluid image-preview" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="error" class="alert alert-danger" role="alert">
+        Ops: {{ error }}
+      </div>
+      <button [disabled]="!personneForm.valid" class="btn btn-lg btn-primary btn-block mt-5" type="submit">
+        Enregistrer
+      </button>
+    </form>
+  </div>
+</main>

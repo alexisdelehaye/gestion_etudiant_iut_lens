@@ -1,0 +1,26 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" [routerLink]="['/']" (click)="setTitle('Personnes')">Gestion de Personnes</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['personnes']" routerLinkActive="active"
+             (click)="setTitle('Personnes')">Personnes<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['apropos']" routerLinkActive="active"
+             (click)="setTitle('A Propos')">A Propos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['contact']" routerLinkActive="active"
+             (click)="setTitle('Contact')">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
