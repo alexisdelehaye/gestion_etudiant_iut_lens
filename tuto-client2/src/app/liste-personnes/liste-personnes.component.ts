@@ -9,9 +9,8 @@ import {Personne} from '../personne';
 })
 export class ListePersonnesComponent implements OnInit {
   personnes: Personne[];
-  isLoading = false;
+  isLoading: Boolean = false;
   service: PersonneService;
-
 
   constructor(personneService: PersonneService) {
     this.service = personneService;
@@ -24,8 +23,8 @@ export class ListePersonnesComponent implements OnInit {
   getLesPersonnes(): void {
     this.isLoading = true;
     this.service.getPersonnes().subscribe(
-      response => this.handleResponse(response),
-      error => this.handleError(error));
+        response => this.handleResponse(response),
+        error => this.handleError(error));
   }
 
   protected handleResponse(response: Personne[]) {

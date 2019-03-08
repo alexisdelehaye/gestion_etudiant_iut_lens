@@ -1,5 +1,5 @@
 <main>
-  <div class="container">
-    <app-form-personne [personne]="personne"></app-form-personne>
-  </div>
+    <div *ngIf="personne" class="container">
+        <app-form-personne [personne]="personne"></app-form-personne>
+    </div>
 </main>

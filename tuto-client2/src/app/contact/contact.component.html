@@ -1,148 +1,159 @@
 <main>
-  <div class="container-fluid">
+    <div class="container-fluid">
 
-    <div class="row">
-      <div class="col-12">
-        <h3>Nous contacter</h3>
-        <hr>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <h3>Adresse &amp; Carte</h3>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12 col-md-3">
-        <h5>Notre adresse</h5>
-        <address style="font-size: 100%">
-          Rue de l'Université SP16<br>
-          62307 Lens Cedex<br>
-          FRANCE<br>
-          <fa-icon [icon]="['fas', 'phone']"></fa-icon>
-          : +33 (0)3.21.79.32.53<br>
-          <fa-icon [icon]="['fas', 'fax']"></fa-icon>
-          : +33 (0)3.21.79.32.40<br>
-          <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
-          :
-          <a href="mailto:contact@iut-lens.univ-artois.fr">contact@iut-lens.univ-artois.fr</a>
-        </address>
-        <div>
-          <div class="btn-group" role="group" aria-label="...">
-            <a class="btn btn-primary" href="tel:+85212345678">
-              <fa-icon [icon]="['fas', 'phone']"></fa-icon>
-              Call</a>
-            <a class="btn btn-info" href="tel:+85212345678">
-              <fa-icon [icon]="['fab', 'skype']"></fa-icon>
-              Skype</a>
-            <a class="btn btn-success" href="mailto:contact@iut-lens.univ-artois.fr">
-              <fa-icon [icon]="['fas', 'envelope-open']"></fa-icon>
-              Email</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="card">
-      <div class="card-body">
-
-        <!--Header-->
-        <div class="text-center">
-          <h4>
-            <fa-icon [icon]="['fas', 'pencil-alt']"></fa-icon>
-            Impressions:
-          </h4>
-          <hr class="mt-2 mb-2">
-        </div>
-        <p>Faites nous connaitre vos impressions.</p>
-        <hr>
-        <div class="form-group row">
-          <!--First column-->
-          <div class="col-md-6">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="nom"><fa-icon [icon]="['fas', 'user-tie']"></fa-icon></span>
-              </div>
-              <input type="text" class="form-control" placeholder="Nom" aria-label="Nom"
-                     aria-describedby="nom">
+        <div class="row">
+            <div class="col-12">
+                <h3>Nous contacter</h3>
+                <hr>
             </div>
-          </div>
+        </div>
 
-          <!--Second column-->
-          <div class="col-md-6">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Adresse &amp; Carte</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <h5>Notre adresse</h5>
+                <address style="font-size: 100%">
+                    Rue de l'Université SP16<br>
+                    62307 Lens Cedex<br>
+                    FRANCE<br>
+                    <fa-icon [icon]="['fas', 'phone']"></fa-icon>
+                    : +33 (0)3.21.79.32.53<br>
+                    <fa-icon [icon]="['fas', 'fax']"></fa-icon>
+                    : +33 (0)3.21.79.32.40<br>
+                    <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
+                    :
+                    <a href="mailto:contact@iut-lens.univ-artois.fr">contact@iut-lens.univ-artois.fr</a>
+                </address>
+                <div>
+                    <div class="btn-group" role="group" aria-label="...">
+                        <a class="btn btn-primary" href="tel:+85212345678">
+                            <fa-icon [icon]="['fas', 'phone']"></fa-icon>
+                            Call</a>
+                        <a class="btn btn-info" href="tel:+85212345678">
+                            <fa-icon [icon]="['fab', 'skype']"></fa-icon>
+                            Skype</a>
+                        <a class="btn btn-success" href="mailto:contact@iut-lens.univ-artois.fr">
+                            <fa-icon [icon]="['fas', 'envelope-open']"></fa-icon>
+                            Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-9">
+                <div class="card">
+                    <div class="card-header">
+                        Carte de situation
+                    </div>
+                    <div class="card-body">
+                        <div id="map" style="width: 100%; height: 300px">
+                          <app-map></app-map>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-body">
+
+                <!--Header-->
+                <div class="text-center">
+                    <h4>
+                        <fa-icon [icon]="['fas', 'pencil-alt']"></fa-icon>
+                        Impressions:
+                    </h4>
+                    <hr class="mt-2 mb-2">
+                </div>
+                <p>Faites nous connaitre vos impressions.</p>
+                <hr>
+                <div class="form-group row">
+                    <!--First column-->
+                    <div class="col-md-6">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="nom"><fa-icon [icon]="['fas', 'user-tie']"></fa-icon></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Nom" aria-label="Nom"
+                                   aria-describedby="nom">
+                        </div>
+                    </div>
+
+                    <!--Second column-->
+                    <div class="col-md-6">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
                                 <span class="input-group-text" id="prenom"><fa-icon
-                                  [icon]="['fas', 'user-tie']"></fa-icon></span>
-              </div>
-              <input type="text" class="form-control" placeholder="Prénom" aria-label="Prénom"
-                     aria-describedby="prenom">
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-md-12">
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Adresse mail" aria-label="Adresse mail"
-                     aria-describedby="email">
-              <div class="input-group-append">
+                                        [icon]="['fas', 'user-tie']"></fa-icon></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Prénom" aria-label="Prénom"
+                                   aria-describedby="prenom">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Adresse mail" aria-label="Adresse mail"
+                                   aria-describedby="email">
+                            <div class="input-group-append">
                                 <span class="input-group-text" id="email"><fa-icon
-                                  [icon]="['fas', 'envelope-open']"></fa-icon></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-md-12">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
+                                        [icon]="['fas', 'envelope-open']"></fa-icon></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
                                 <span class="input-group-text" id="tel"><fa-icon
-                                  [icon]="['fas', 'phone']"></fa-icon></span>
-              </div>
-              <input type="tel" class="form-control" placeholder="Numéro téléphone" aria-label="Nom"
-                     aria-describedby="tel">
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <!--First column-->
-          <div class="form-group col-md-6">
-            <label class="form-check-label" for="choixContact">
-              <strong>Pouvons nous vous contacter ?</strong>
-            </label>
-            <div class="btn-group btn-group-toggle mx-5" ngbRadioGroup id="choixContact">
-              <!--            <div class="btn-group btn-group-toggle mx-5" ngbRadioGroup id="choixContact" [(ngModel)]="contact">
-              -->
-              <label ngbButtonLabel class="btn-primary">
-                <input ngbButton type="radio" value="Oui"> Oui
-              </label>
-              <label ngbButtonLabel class="btn-primary">
-                <input ngbButton type="radio" value="Non"> Non
-              </label>
-            </div>
-          </div>
-          <div *ngIf="contact==='Oui'" class="form-group col-md-6">
-            <label for="typeContact">Comment ?</label>
-            <select class="form-control" id="typeContact">
-              <option value="" disabled selected>Votre Choix</option>
-              <option>Tel.</option>
-              <option>Email</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-md-3 col-form-label" for="feedback">Vos impressions :</label>
-          <div class="col-md-9">
+                                        [icon]="['fas', 'phone']"></fa-icon></span>
+                            </div>
+                            <input type="tel" class="form-control" placeholder="Numéro téléphone" aria-label="Nom"
+                                   aria-describedby="tel">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <!--First column-->
+                    <div class="form-group col-md-6">
+                        <label class="form-check-label" for="choixContact">
+                            <strong>Pouvons nous vous contacter ?</strong>
+                        </label>
+                        <div class="btn-group btn-group-toggle mx-5" ngbRadioGroup id="choixContact" [(ngModel)]="contact">
+                            <label ngbButtonLabel class="btn-primary">
+                                <input ngbButton type="radio" value="Oui"> Oui
+                            </label>
+                            <label ngbButtonLabel class="btn-primary">
+                                <input ngbButton type="radio" value="Non"> Non
+                            </label>
+                        </div>
+                    </div>
+                    <div *ngIf="contact==='Oui'" class="form-group col-md-6">
+                        <label for="typeContact">Comment ?</label>
+                        <select class="form-control" id="typeContact">
+                            <option value="" disabled selected>Votre Choix</option>
+                            <option>Tel.</option>
+                            <option>Email</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="feedback">Vos impressions :</label>
+                    <div class="col-md-9">
                         <textarea id="feedback" name="feedback" rows="9" class="form-control"
                                   placeholder="Content.."></textarea>
-          </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-success">Envoyer</button>
+                </div>
+
+            </div>
         </div>
-        <div class="text-center">
-          <button class="btn btn-success">Envoyer</button>
-        </div>
-      </div>
     </div>
-  </div>
 </main>

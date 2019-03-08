@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
-  apiUrl: '../donnees.ts'
+  apiUrl: 'http://localhost:8000/api/'
 
 };

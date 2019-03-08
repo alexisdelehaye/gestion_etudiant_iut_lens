@@ -5,7 +5,7 @@
       <p>{{pageTitle}}</p>
       <hr>
     </div>
-    <form  >
+    <form [formGroup]="personneForm" (ngSubmit)="onSubmit()" novalidate>
       <div class="form-group" [ngClass]="{ 'has-error': !nom.valid && (nom.dirty || nom.touched) }">
         <label for="nom">Nom</label>
         <input type="text" formControlName="nom" class="form-control" id="nom" aria-describedby="nameHelp"
