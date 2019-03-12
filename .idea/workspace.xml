@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="913e5b53-2750-4a34-a968-80a363c90a4b" name="Default Changelist" comment="" />
+    <list default="true" id="913e5b53-2750-4a34-a968-80a363c90a4b" name="Default Changelist" comment="problème dans la fonction getPersonneDetail() du fichier /app/details-personne/details-personne.component.ts&#10;Récupération de l'id impossible donc affichage des paramètres de l'étudiant impossible.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,38 +15,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/fichier.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/afficheEtudiants/afficheEtudiants.component.html">
+        <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/details-personne/details-personne.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+            <state relative-caret-position="364">
+              <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#74#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/ficheEtudiant/ficheEtudiant.component.html">
+        <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/personne.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/afficheEtudiants/afficheEtudiants.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="-630">
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,16 +122,17 @@
         <option value="$PROJECT_DIR$/projetS4Test/src/index.html" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/fichier.js" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/afficheEtudiants/afficheEtudiants.component.html" />
+        <option value="$PROJECT_DIR$/tuto-client2/src/app/details-personne/details-personne.component.ts" />
       </list>
     </option>
   </component>
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="897" />
-    <option name="width" value="1023" />
-    <option name="height" value="1172" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="27" />
+    <option name="width" value="1356" />
+    <option name="height" value="741" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -160,49 +150,28 @@
             <path>
               <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
-              <item name="projetS4Test" type="462c0819:PsiDirectoryNode" />
+              <item name="tuto-client2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
-              <item name="projetS4Test" type="462c0819:PsiDirectoryNode" />
+              <item name="tuto-client2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
-              <item name="projetS4Test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
-              <item name="projetS4Test" type="462c0819:PsiDirectoryNode" />
+              <item name="tuto-client2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="afficheEtudiants" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
-              <item name="projetS4Test" type="462c0819:PsiDirectoryNode" />
+              <item name="tuto-client2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
-              <item name="projetS4Test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="ficheEtudiant" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
-              <item name="tuto-client" type="462c0819:PsiDirectoryNode" />
+              <item name="details-personne" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -219,7 +188,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/projetS4/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/tuto-client2/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -264,6 +233,7 @@
       <workItem from="1551688037361" duration="1085000" />
       <workItem from="1551876720624" duration="36000" />
       <workItem from="1551952494152" duration="552000" />
+      <workItem from="1552413644443" duration="1124000" />
     </task>
     <task id="LOCAL-00001" summary="creation du projet s4">
       <created>1550410828265</created>
@@ -332,12 +302,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44936000" />
+    <option name="totallyTimeSpent" value="46060000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="897" y="0" width="1023" height="1172" extended-state="4" />
+    <frame x="0" y="25" width="1366" height="743" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.285" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22859271" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="0" />
@@ -350,7 +320,7 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.35496184" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3534202" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.30438933" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -387,6 +357,20 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creation du projet s4" />
@@ -401,10 +385,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="ajout projet tuto-client" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/projetS4bis/src/app/etudiants/etudiants.component.ts" />
-    <entry file="file://$PROJECT_DIR$/projetS4bis/src/app/dashboard/dashboard.component.html" />
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/matieres-clone/matieres-clone.component.html" />
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/matieres-parent/matieres-parent.component.html" />
     <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/matieres-parent/matieres-parent.component.ts" />
     <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/matieres-parent/matieres-parent.component.spec.ts" />
     <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/matieres-clone/matieres-clone.component.css" />
@@ -605,6 +585,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/afficheEtudiants/afficheEtudiants.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/fichier.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -626,10 +613,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/afficheEtudiants/afficheEtudiants.component.html">
+    <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/a-propos/a-propos.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/personne/personne.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        <state>
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/personne.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-630">
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/details-personne/details-personne.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
