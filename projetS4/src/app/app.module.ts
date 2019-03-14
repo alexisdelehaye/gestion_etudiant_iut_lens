@@ -1,29 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PageEtudiantsComponent } from './page-etudiants/page-etudiants.component';
-import { AccueilComponent } from './accueil/accueil.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {RouterModule, Routes} from '@angular/router';
-
-
-const appRoutes: Routes = [
-  { path: 'page-etudiants', component: PageEtudiantsComponent }
-];
-
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ListePersonnesComponent } from './liste-personnes/liste-personnes.component';
+import { DetailsPersonneComponent } from './details-personne/details-personne.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageEtudiantsComponent,
-    AccueilComponent
+    DashboardComponent,
+    PageNotFoundComponent,
+    ListePersonnesComponent,
+    DetailsPersonneComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes),
-
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

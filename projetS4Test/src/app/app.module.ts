@@ -19,6 +19,7 @@ import { FicheEtudiantComponent } from './ficheEtudiant/ficheEtudiant.component'
 import { AfficheGroupePromoComponent } from './affiche-groupe-promo/affiche-groupe-promo.component';
 import { ListePersonnesComponent } from './liste-personnes/liste-personnes.component';
 import { DetailsPersonneComponent } from './details-personne/details-personne.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/affichePromos', pathMatch: 'full' },
@@ -38,6 +39,7 @@ const appRoutes: Routes = [
     AfficheGroupePromoComponent,
     ListePersonnesComponent,
     DetailsPersonneComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
