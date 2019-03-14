@@ -8,16 +8,20 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ListePersonnesComponent } from './liste-personnes/liste-personnes.component';
+
 import { DetailsPersonneComponent } from './details-personne/details-personne.component';
+import {ListePromo1Component} from './liste-promo1/liste-promo1.component';
+import {ListePromo2Component} from './liste-promo2/liste-promo2.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     PageNotFoundComponent,
-    ListePersonnesComponent,
-    DetailsPersonneComponent
+    DetailsPersonneComponent,
+    ListePromo1Component,
+    ListePromo2Component
   ],
   imports: [
     BrowserModule,
