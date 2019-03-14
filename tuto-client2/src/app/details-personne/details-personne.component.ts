@@ -1,9 +1,10 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {PersonneService} from '../personne.service';
-import {ActivatedRoute, Router} from '@angular/router';
+import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {Personne} from '../personne';
 import {NgbModal, NgbTabChangeEvent, NgbTabset} from '@ng-bootstrap/ng-bootstrap';
 import {ModalPersonneComponent} from '../modal-personne/modal-personne.component';
+import {switchMap} from "rxjs/operators";
 
 @Component({
     selector: 'app-details-personne',
@@ -24,6 +25,7 @@ export class DetailsPersonneComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit() {
+
     }
 
     getPersonneDetail() {

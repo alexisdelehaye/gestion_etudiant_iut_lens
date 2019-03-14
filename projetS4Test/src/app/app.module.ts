@@ -17,6 +17,8 @@ import {environment} from "../environments/environment";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import { FicheEtudiantComponent } from './ficheEtudiant/ficheEtudiant.component';
 import { AfficheGroupePromoComponent } from './affiche-groupe-promo/affiche-groupe-promo.component';
+import { ListePersonnesComponent } from './liste-personnes/liste-personnes.component';
+import { DetailsPersonneComponent } from './details-personne/details-personne.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/affichePromos', pathMatch: 'full' },
@@ -34,6 +36,8 @@ const appRoutes: Routes = [
     AfficheEtudiantsComponent,
     FicheEtudiantComponent,
     AfficheGroupePromoComponent,
+    ListePersonnesComponent,
+    DetailsPersonneComponent,
   ],
   imports: [
     BrowserModule,
