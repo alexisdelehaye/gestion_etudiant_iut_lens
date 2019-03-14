@@ -11,7 +11,7 @@ import {PersonnesServiceService} from '../personne.service';
   styleUrls: ['./details-personne.component.css']
 })
 export class DetailsPersonneComponent implements OnInit {
-  private personne$: Observable<Personne>;
+  personne$: Observable<Personne>;
 
   constructor(private route: ActivatedRoute,
               private service: PersonnesServiceService) { }

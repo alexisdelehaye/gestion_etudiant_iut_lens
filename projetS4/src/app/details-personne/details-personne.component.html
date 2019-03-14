@@ -1,3 +1,40 @@
 <div *ngIf="personne$ | async as personne" >
   DETAILS Sur une personne : {{personne.id}} {{personne.nom}}
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="../default.svg" class="img-thumbnail">
+    </div>
+    <div class="col-md-8">
+      <div class="col-md-12"></div>
+      <div class="col-md-12">
+        <h1 id="nom"></h1>
+      </div>
+      <div class="col-md-12">
+        <h1 id="prenom"></h1>
+      </div>
+      <div class="col-md-12">
+        <h4>Numéro étudiant : <b id="numEtu"></b> </h4>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <table id="tableau" class="col-md-12 table table-bordered">
+      <thead class='thead-dark'>
+      <tr class='ligne' id="header"><th></th><th>Moyenne</th><th>Classement</th><th>Moyenne Promo</th><th>Max Promo</th><th>Min Promo</th></tr>
+      </thead>
+      <tbody id="tableContent">
+      <tr *ngFor="let etu of personne$">
+        <td>{{ etu.id }}</td>
+        <td>{{ etu.nom }}</td>
+        <td>{{ etu.classement }}</td>
+        <td>{{ etu.moyennePromo }}</td>
+        <td>{{ etu.promoMax }}</td>
+        <td>{{ etu.promoMin }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

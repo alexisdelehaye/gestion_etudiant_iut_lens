@@ -4,3 +4,23 @@
   </li>
 </ul>
 
+<p>Rechercher un etudiant
+  <input placeholder="Prenom de l'étudiant" ng-model="f.nom">
+</p>
+<div class="container">
+  <div class="row">
+    <table id="tableau" class="col-md-12 table table-bordered">
+      <thead class='thead-dark'>
+      <tr class='ligne' id="header"><th>id</th><th>Nom</th></tr>
+      </thead>
+      <tbody id="tableContent">
+      <tr ng-repeat="p in personnes$ | filter:f">
+        <td>{{ p.id }}</td>
+        <td>{{ p.nom }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
