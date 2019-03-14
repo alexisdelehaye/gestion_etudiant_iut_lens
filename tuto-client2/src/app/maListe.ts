@@ -25,5 +25,13 @@ export const maListe = [
       "telephone": "0612345678",
       "moyenne":13,
       "avatar": "./homme.jpeg"
+    },
+    {
+      "id": 4,
+      "nom": "Melanchon",
+      "prenom": "JeanLuc",
+      "telephone": "0612345678",
+      "moyenne":0,
+      "avatar": "./femme.jpeg"
     }
   ];
