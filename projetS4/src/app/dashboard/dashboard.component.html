@@ -1,3 +1,4 @@
+
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
@@ -5,9 +6,10 @@
       [opened]="!(isHandset$ | async)">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
+      <a mat-list-item routerLink="/etudiants">DUT</a>
       <a mat-list-item routerLink="/promo1">Promo 1</a>
       <a mat-list-item routerLink="/promo2">Promo 2</a>
-      <a mat-list-item href="#">Exemple etudiant</a>
+      <a mat-list-item href="/personne/16">Exemple etudiant</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -20,7 +22,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>NoteProjetAngularDemo</span>
+      <span>Gestion des étudiants</span>
     </mat-toolbar>
 
     <router-outlet></router-outlet>

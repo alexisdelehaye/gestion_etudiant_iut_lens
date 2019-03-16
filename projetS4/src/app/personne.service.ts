@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
-import {PERSONNES, PROMO1, PROMO2} from './mock-personne';
+import {PERSONNES, PERSONNES2, PROMO1, PROMO2} from './mock-personne';
 import {map} from 'rxjs/operators';
 import {Personne} from './personne-model';
 

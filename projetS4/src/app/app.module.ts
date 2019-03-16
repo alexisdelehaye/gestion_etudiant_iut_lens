@@ -12,6 +12,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { DetailsPersonneComponent } from './details-personne/details-personne.component';
 import {ListePromo1Component} from './liste-promo1/liste-promo1.component';
 import {ListePromo2Component} from './liste-promo2/liste-promo2.component';
+import { ListeEtudiantsComponent } from './liste-etudiants/liste-etudiants.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {ListePromo2Component} from './liste-promo2/liste-promo2.component';
     PageNotFoundComponent,
     DetailsPersonneComponent,
     ListePromo1Component,
-    ListePromo2Component
+    ListePromo2Component,
+    ListeEtudiantsComponent
   ],
   imports: [
     BrowserModule,

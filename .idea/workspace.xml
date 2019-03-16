@@ -2,35 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="913e5b53-2750-4a34-a968-80a363c90a4b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/projetS4Test/src/app/app-routing.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projetS4Test/src/app/personne-model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projetS4Test/src/mock-personne.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projetS4/src/app/homme.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/e2e/src/app.e2e-spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/e2e/src/app.e2e-spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/src/app/accueil/accueil.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/src/app/accueil/accueil.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/src/app/accueil/accueil.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projetS4/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/src/app/page-etudiants/page-etudiants.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/src/app/page-etudiants/page-etudiants.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/src/app/page-etudiants/page-etudiants.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/src/assets/img/forms.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/src/assets/img/libraries.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/src/app/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/dashboard/dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/src/app/details-personne/details-personne.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/details-personne/details-personne.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/src/app/liste-promo1/liste-promo1.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/liste-promo1/liste-promo1.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/src/app/liste-promo1/liste-promo1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/liste-promo1/liste-promo1.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/src/app/liste-promo2/liste-promo2.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/liste-promo2/liste-promo2.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/src/app/mock-personne.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/mock-personne.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/src/app/personne-model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/personne-model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/src/app/personne.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/personne.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projetS4/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/src/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/karma.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projetS4/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4Test/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4Test/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4Test/src/app/details-personne/details-personne.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4Test/src/app/details-personne/details-personne.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4Test/src/app/details-personne/details-personne.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4Test/src/app/details-personne/details-personne.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4Test/src/app/liste-personnes/liste-personnes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4Test/src/app/liste-personnes/liste-personnes.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4Test/src/app/liste-personnes/liste-personnes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4Test/src/app/liste-personnes/liste-personnes.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tuto-client2/src/app/details-personne/details-personne.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/tuto-client2/src/app/details-personne/details-personne.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,61 +30,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/app.component.html">
+        <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/liste-personnes/liste-personnes.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="390">
+              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/app.component.ts">
+        <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/maListe.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/app-routing.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/dashboard/dashboard.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="29" selection-start-line="28" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/dashboard/dashboard.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="495">
+              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/app.module.ts">
+        <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/personne.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-354">
-              <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -186,7 +139,6 @@
         <option value="$PROJECT_DIR$/projetS4Test/src/index.html" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/fichier.js" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/afficheEtudiants/afficheEtudiants.component.html" />
-        <option value="$PROJECT_DIR$/tuto-client2/src/app/details-personne/details-personne.component.html" />
         <option value="$PROJECT_DIR$/tuto-client2/src/app/liste-personnes/liste-personnes.component.ts" />
         <option value="$PROJECT_DIR$/tuto-client2/src/app/details-personne/details-personne.component.ts" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/details-personne/details-personne.component.html" />
@@ -195,6 +147,7 @@
         <option value="$PROJECT_DIR$/projetS4Test/src/mock-personne.ts" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/liste-personnes/liste-personnes.component.html" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/liste-personnes/liste-personnes.component.ts" />
+        <option value="$PROJECT_DIR$/tuto-client2/src/app/details-personne/details-personne.component.html" />
       </list>
     </option>
   </component>
@@ -202,9 +155,10 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="y" value="28" />
-    <option name="width" value="1680" />
-    <option name="height" value="877" />
+    <option name="x" value="-1280" />
+    <option name="y" value="-276" />
+    <option name="width" value="1280" />
+    <option name="height" value="1024" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -212,6 +166,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,34 +177,63 @@
             <path>
               <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
-              <item name="projetS4Test" type="462c0819:PsiDirectoryNode" />
+              <item name="tuto-client2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
-              <item name="projetS4Test" type="462c0819:PsiDirectoryNode" />
+              <item name="tuto-client2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
-              <item name="projetS4Test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
-              <item name="projetS4Test" type="462c0819:PsiDirectoryNode" />
+              <item name="tuto-client2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
+              <item name="tuto-client2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="details-personne" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
+              <item name="tuto-client2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="liste-personnes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
+              <item name="tuto-client2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
+              <item name="tuto-client2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
+              <item name="tuto-client2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="environments" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -260,7 +244,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/projetS4Test/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/projetS4/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -309,6 +293,8 @@
       <workItem from="1551876720624" duration="36000" />
       <workItem from="1551952494152" duration="552000" />
       <workItem from="1552413644443" duration="1124000" />
+      <workItem from="1552687219692" duration="576000" />
+      <workItem from="1552723744955" duration="2017000" />
     </task>
     <task id="LOCAL-00001" summary="creation du projet s4">
       <created>1550410828265</created>
@@ -384,13 +370,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49748000" />
+    <option name="totallyTimeSpent" value="52341000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="-1280" y="-276" width="1280" height="1024" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20084566" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22637014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="0" />
@@ -404,7 +390,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3534202" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.30361447" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2494759" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -469,17 +455,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="mise a jour dossier" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.interface.ts" />
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.service.ts" />
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -635,13 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/maListe.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/liste-personnes/liste-personnes.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -655,13 +623,6 @@
     <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/liste-personnes/liste-personnes.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/details-personne/details-personne.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-16">
@@ -669,13 +630,6 @@
           <folding>
             <element signature="e#0#74#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/details-personne/details-personne.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -746,24 +700,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/app.component.ts">
+    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/app-routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/dashboard/dashboard.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="29" selection-start-line="28" selection-end-line="29" />
+        <state relative-caret-position="15">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -777,13 +720,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/app.module.ts">
+    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/dashboard/dashboard.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-354">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        <state relative-caret-position="420">
+          <caret line="28" column="29" selection-start-line="28" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/details-personne/details-personne.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tuto-client2/src/assets/img/homme.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/maListe.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/liste-personnes/liste-personnes.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/personne.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>

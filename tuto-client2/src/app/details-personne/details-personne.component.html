@@ -1,8 +1,4 @@
 <main>
-  <div *ngIf="personne | async as personne" >
-    DETAILS Sur une personne : {{personne.id}} {{personne.nom}}
-  </div>
-
     <div class="container">
         <div *ngIf="isLoading" class="spinner-border" role="status">
             <span class="sr-only">Loading...</span>
