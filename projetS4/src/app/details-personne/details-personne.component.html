@@ -30,7 +30,7 @@
     </thead>
     <tbody >
     <tr *ngIf="personne$ | async as personne">
-      <td>S1</td>
+      <a [routerLink]="['/personne', personne.id]"><td>S1</td></a>
       <td>{{ personne.sm1.moyenne }}</td>
       <td>{{ personne.sm1.classement }}</td>
       <td>{{ personne.sm1.moyennePromo }}</td>
