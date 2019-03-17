@@ -8,11 +8,11 @@ import {ListeEtudiantsComponent} from './liste-etudiants/liste-etudiants.compone
 import {TestFormulaireComponent} from './test-formulaire/test-formulaire.component';
 
 const routes: Routes = [
-  {path: 'formulaire', component:TestFormulaireComponent},
+  {path: 'etudiants', component: ListeEtudiantsComponent},
   {path: 'promo1', component: ListePromo1Component},
   {path: 'promo2', component: ListePromo2Component},
-  {path: 'etudiants', component: ListeEtudiantsComponent},
   {path: 'personne/:id', component: DetailsPersonneComponent},
+  {path: 'formulaire', component:TestFormulaireComponent},
   {path: '', redirectTo: 'etudiants', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent},
 ];

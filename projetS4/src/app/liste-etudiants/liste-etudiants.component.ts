@@ -22,9 +22,8 @@ export class ListeEtudiantsComponent implements OnInit {
   ngOnInit() {
     this.personnes$ = this.personneService.getPersonnes();
   }
+
   onSubmit() {
-    // En fonction de la saisise : si l'utilisateur entre une chaine, on recherche, sinon on réinitialise ....
-    // Je pense qu'il est possible de faire mieux...
     if (this.student.nom.length > 0  ) {
        let nom = this.student.nom;
        this.personnes$ = this.personneService.findPersonnes(nom);

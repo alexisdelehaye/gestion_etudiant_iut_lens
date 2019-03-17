@@ -3,10 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="913e5b53-2750-4a34-a968-80a363c90a4b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/src/app/details-personne/details-personne.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/details-personne/details-personne.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/src/app/homme.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/assets/images/homme.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projetS4/src/app/mock-personne.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/mock-personne.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/src/app/test-formulaire/test-formulaire.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/test-formulaire/test-formulaire.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,19 +24,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4/src/app/details-personne/details-personne.component.html">
+        <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+            <state relative-caret-position="208">
+              <caret line="13" column="41" lean-forward="true" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.html">
+        <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="135">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,10 +56,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4/src/app/mock-personne.ts">
+        <entry file="file://$PROJECT_DIR$/projetS4/src/app/personne.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="98" selection-start-line="9" selection-start-column="98" selection-end-line="9" selection-end-column="98" />
+            <state relative-caret-position="375">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projetS4/src/app/app-routing.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projetS4/src/app/test-formulaire/test-formulaire.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projetS4/src/app/test-formulaire/test-formulaire.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,6 +123,7 @@
       <find>store</find>
       <find>interface</find>
       <find>service</find>
+      <find>find</find>
     </findStrings>
     <replaceStrings>
       <replace>afficheEtudiants</replace>
@@ -90,6 +133,7 @@
       <dir>$PROJECT_DIR$/projetS4Test/src</dir>
       <dir>$PROJECT_DIR$/projetS4Test</dir>
       <dir>$PROJECT_DIR$/projetS4Test/src/app</dir>
+      <dir>$PROJECT_DIR$/projetS4/src/app</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -98,8 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/siteLocal/css/style.css" />
-        <option value="$PROJECT_DIR$/siteLocal/js/etudiant.js" />
         <option value="$PROJECT_DIR$/projetS4/src/app/etudiant.html" />
         <option value="$PROJECT_DIR$/projetS4/src/styles.css" />
         <option value="$PROJECT_DIR$/projetS4/src/app/page-etudiants/page-etudiants.component.html" />
@@ -142,19 +184,24 @@
         <option value="$PROJECT_DIR$/projetS4Test/src/app/fichier.js" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/afficheEtudiants/afficheEtudiants.component.html" />
         <option value="$PROJECT_DIR$/tuto-client2/src/app/details-personne/details-personne.component.ts" />
-        <option value="$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.html" />
-        <option value="$PROJECT_DIR$/projetS4/src/app/mock-personne.ts" />
         <option value="$PROJECT_DIR$/projetS4/src/app/details-personne/details-personne.component.html" />
+        <option value="$PROJECT_DIR$/projetS4/angular.json" />
+        <option value="$PROJECT_DIR$/projetS4/src/app/mock-personne.ts" />
+        <option value="$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.ts" />
+        <option value="$PROJECT_DIR$/projetS4/src/app/test-formulaire/test-formulaire.component.html" />
+        <option value="$PROJECT_DIR$/projetS4/src/app/dashboard/dashboard.component.html" />
+        <option value="$PROJECT_DIR$/projetS4/src/app/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/projetS4/src/app/personne.service.ts" />
+        <option value="$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.html" />
       </list>
     </option>
   </component>
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="27" />
-    <option name="width" value="1356" />
-    <option name="height" value="741" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -194,6 +241,14 @@
               <item name="projetS4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
+              <item name="projetS4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="details-personne" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -209,15 +264,16 @@
               <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
               <item name="projetS4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="liste-promo2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
               <item name="projetS4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="test-formulaire" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -233,7 +289,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/tuto-client2/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/projetS4/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -280,6 +336,7 @@
       <workItem from="1551876720624" duration="36000" />
       <workItem from="1551952494152" duration="552000" />
       <workItem from="1552413644443" duration="1124000" />
+      <workItem from="1552858380833" duration="1490000" />
     </task>
     <task id="LOCAL-00001" summary="creation du projet s4">
       <created>1550410828265</created>
@@ -348,12 +405,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48903000" />
+    <option name="totallyTimeSpent" value="51042000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="793" width="1366" height="743" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2271035" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2473573" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="0" />
@@ -367,8 +425,8 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3534202" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3029316" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49964765" visible="true" weight="0.22650602" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5003524" side_tool="true" weight="0.30240965" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -432,50 +490,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="avatar" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/store/reducers/matiere.reducer.ts" />
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/store/effects/matiere.effect.ts" />
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/store/selectors/matiere.selector.ts" />
-    <entry file="file://$PROJECT_DIR$/local/ressources/notesEtudiants.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS5/public/INFO/2018-2019/ADMIN/classementDUTEtudiants.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS5/public/INFO/2018-2019/ADMIN/moyenneDUTEtudiants.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS5/public/INFO/2018-2019/ADMIN/moyenneSemestreEtudiants.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/js/liste.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-878">
-          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.interface.ts" />
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.service.ts" />
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affichePromos/affichePromos.component.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -679,17 +693,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4/src/app/personne.service.ts">
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/personne-model.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/details-personne/details-personne.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-promo1/liste-promo1.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/angular.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="63" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/personne.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/maListe.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tuto-client2/src/app/liste-personnes/liste-personnes.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/mock-personne.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="75" selection-start-line="3" selection-start-column="75" selection-end-line="3" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/dashboard/dashboard.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/dashboard/dashboard.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4/src/app/personne-model.ts">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/test-formulaire/test-formulaire.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/test-formulaire/test-formulaire.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/personne.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="41" lean-forward="true" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projetS4/src/app/details-personne/details-personne.component.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -700,24 +820,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4/src/app/mock-personne.ts">
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="98" selection-start-line="9" selection-start-column="98" selection-end-line="9" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4/src/app/details-personne/details-personne.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

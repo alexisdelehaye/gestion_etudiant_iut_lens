@@ -1,7 +1,7 @@
 import { Personne } from './personne-model';
 
 export const PERSONNES = [
-  { id: 11, nom: 'Durant', prenom: 'Georges', s1: 13, s2: 1, s3: 4, s4: 14 },
+  { id: 11, nom: 'Durant', prenom: 'Georges', s1: 13, s2: 1, s3: 4, s4: 14, avatar: 'images/homme.jpg' },
   { id: 12, nom: 'Audin', prenom: 'Patrick', s1: 13, s2: 1, s3: 4, s4: 14 },
   { id: 13, nom: 'Bertin', prenom: 'Sophie', s1: 13, s2: 1, s3: 4, s4: 14 },
   { id: 14, nom: 'Varon', prenom: 'Julie', s1: 13, s2: 1, s3: 4, s4: 14 },
