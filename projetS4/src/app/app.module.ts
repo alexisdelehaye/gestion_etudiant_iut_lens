@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+
+import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -13,6 +16,7 @@ import { DetailsPersonneComponent } from './details-personne/details-personne.co
 import {ListePromo1Component} from './liste-promo1/liste-promo1.component';
 import {ListePromo2Component} from './liste-promo2/liste-promo2.component';
 import { ListeEtudiantsComponent } from './liste-etudiants/liste-etudiants.component';
+import { TestFormulaireComponent } from './test-formulaire/test-formulaire.component';
 
 
 @NgModule({
@@ -23,10 +27,14 @@ import { ListeEtudiantsComponent } from './liste-etudiants/liste-etudiants.compo
     DetailsPersonneComponent,
     ListePromo1Component,
     ListePromo2Component,
-    ListeEtudiantsComponent
+    ListeEtudiantsComponent,
+    TestFormulaireComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,

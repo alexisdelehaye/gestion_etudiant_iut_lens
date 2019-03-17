@@ -5,8 +5,10 @@ import {DetailsPersonneComponent} from './details-personne/details-personne.comp
 import {ListePromo1Component} from './liste-promo1/liste-promo1.component';
 import {ListePromo2Component} from './liste-promo2/liste-promo2.component';
 import {ListeEtudiantsComponent} from './liste-etudiants/liste-etudiants.component';
+import {TestFormulaireComponent} from './test-formulaire/test-formulaire.component';
 
 const routes: Routes = [
+  {path: 'formulaire', component:TestFormulaireComponent},
   {path: 'promo1', component: ListePromo1Component},
   {path: 'promo2', component: ListePromo2Component},
   {path: 'etudiants', component: ListeEtudiantsComponent},

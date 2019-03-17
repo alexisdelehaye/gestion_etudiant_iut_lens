@@ -22,6 +22,11 @@ export class PersonnesServiceService {
     return of(PERSONNES);
   }
 
+  findPersonnes(name:string): Observable<Personne[]> {
+    let liste : Personne[] = PERSONNES.filter(p => p.nom==name);
+    return of(liste);
+  }
+
   getPersonne(id: number | string) {
     return this.getPersonnes().pipe(
       // (+) devant `id` traduit de string en number
