@@ -2,9 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <img [src]="personne.avatar"
-             class="align-self-start mr-3 rounded-circle img-thumbnail img-fluid image-preview"
-             alt="...">
+        <img src="../../assets/{{personne.avatar}}">
       </div>
       <div class="col-md-8">
         <div class="col-md-12"></div>
@@ -30,7 +28,7 @@
     </thead>
     <tbody >
     <tr *ngIf="personne$ | async as personne">
-      <a [routerLink]="['/personne', personne.id]"><td>S1</td></a>
+      <td>S1</td>
       <td>{{ personne.sm1.moyenne }}</td>
       <td>{{ personne.sm1.classement }}</td>
       <td>{{ personne.sm1.moyennePromo }}</td>
