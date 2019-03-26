@@ -10,18 +10,45 @@ export const PERSONNES = [
   { id: 16, nom: 'Prusier', prenom: 'Serge', s1: 13, s2: 1, s3: 4, s4: 14, s5: 12, avatar: 'images/homme.jpg', numero: 20172345,
      semestre : [
     {id : 1 ,  moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9,
-      UE11 : {moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9},
-      UE12 : {moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9},
-    },
+      UE11 : {moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9 ,
+        matieres :[ {id : 1,nom : 'BD1' , moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9 },
+                    {id : 2,nom : 'SE1' , moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9 },
+                    {id : 3, nom : 'AP' ,moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9}]
+      },
+      UE12 : {moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9 ,
+        matieres :[  {id : 1,nom : 'Anglais' , moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9 },
+                    {id : 2,nom : 'Maths' , moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9 },
+                    {id : 3, nom : 'COM' ,moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9}]
+      },},
+
     {id : 2, moyenne: 11, classement : 27, moyennePromo: 9, promoMax: 16, promoMin: 5,
-      UE21 : {moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9},
-      UE22 : {moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9},
-    },
+      UE21 : {moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9,
+        matieres :[ {id : 1,nom : 'BD1' , moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9 },
+                    {id : 2,nom : 'SE1' , moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9 },
+                    {id : 3, nom : 'AP' ,moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9}]
+      },
+      UE22 : {moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9,
+        matieres :[   {id : 1,nom : 'Anglais' , moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9 },
+                      {id : 2,nom : 'Maths' , moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9 },
+                      {id : 3, nom : 'COM' ,moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9}]
+      },},
+
     {id : 3 ,moyenne: 11, classement : 27, moyennePromo: 9, promoMax: 16, promoMin: 5,
-      UE31 : {moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9},
-      UE32 : {moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9},
-      UE33 : {moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9},
-    },
+      UE31 : {moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9,
+        matieres :[ {id : 1,nom : 'BD1' , moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9 },
+                    {id : 2,nom : 'SE1' , moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9 },
+                    {id : 3, nom : 'AP' ,moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9}]
+      },
+      UE32 : {moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9,
+        matieres :[   {id : 1,nom : 'Anglais' , moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9 },
+                      {id : 2,nom : 'Maths' , moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9 },
+                      {id : 3, nom : 'COM' ,moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9}]
+      },
+      UE33 : {moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9 ,
+        matieres :[   {id : 1,nom : 'Projet' , moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9 },
+                      {id : 2,nom : 'PPP' , moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9 }]
+      },},
+       
     {id : 4, moyenne: 11, classement : 27, moyennePromo: 9, promoMax: 16, promoMin: 5,
       UE41 : {moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9},
       UE42 : {moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9},
