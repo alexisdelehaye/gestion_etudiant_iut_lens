@@ -34,8 +34,6 @@ export const PERSONNES = [
   { id: 20, nom: 'Hister', prenom: 'Louis', s1: 13, s2: 1, s3: 4, s4: 14 }
 ];
 
-
-
 export const PROMO1 = [
   { id: 16, nom: 'Prusier', prenom: 'Serge' , s1: 13, s2: 1, s3: 4, s4: 14, s5: 12, avatar: 'app/homme.jpg', numero: 20172345 },
   { id: 17, nom: 'Figier', prenom: 'Adam', s1: 13, s2: 1, s3: 4, s4: 14 },
