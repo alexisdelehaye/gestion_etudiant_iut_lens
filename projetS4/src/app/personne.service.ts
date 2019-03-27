@@ -27,6 +27,10 @@ export class PersonnesServiceService {
     return of(liste);
   }
 
+  findNom(name: string): Observable<Personne[]> {
+    let liste : Personne[] = PERSONNES.filter(p => p.nom.toLocaleLowerCase().match(name.toLocaleLowerCase()));
+    return of(liste);
+  }
   getPersonne(id: number | string) {
     return this.getPersonnes().pipe(map(personnes => personnes.find(personne => personne.id === +id)));
   }
