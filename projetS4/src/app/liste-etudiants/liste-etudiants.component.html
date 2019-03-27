@@ -2,13 +2,12 @@
   <form (ngSubmit)="onSubmit()" #name="ngForm">
     <div class="form-group">
       <label for="name">Nom</label>
-      <input id="name" type="text" class="form-control" name="userName" required [(ngModel)]="student.nom">
+      <input id="name" type="text" placeholder="Nom de l'étudiant" class="form-control" name="userName" required [(ngModel)]="student.nom">
       <label for="prenom">Prénom</label>
-      <input id="prenom" type="text" class="form-control" name="userPrenom" required [(ngModel)]="student.prenom">
+      <input id="prenom" type="text" placeholder="Prénom de l'étudiant" class="form-control" name="userPrenom" required [(ngModel)]="student.prenom">
     </div>
-    <button class="btn btn-default">Recherche</button>
+    <button class="btn btn-primary">Recherche</button>
   </form>
-  L'étudiant recherché est {{student.nom}} {{student.prenom}}.
 </div>
 
 <div>

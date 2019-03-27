@@ -24,9 +24,14 @@ export class ListeEtudiantsComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.student.nom.length > 0  ) {
-       let nom = this.student.nom;
+    let nom = this.student.nom;
+    let prenom = this.student.prenom;
+    if ((this.student.nom.length > 0) && (this.student.prenom.length === 0)) {
        this.personnes$ = this.personneService.findNom(nom);
+    } else if ((this.student.prenom.length > 0) && (this.student.nom.length === 0)) {
+      this.personnes$ = this.personneService.findPrenom(prenom);
+    } else if ((this.student.prenom.length > 0) && (this.student.nom.length > 0)) {
+      this.personnes$ = this.personneService.findPersos(nom, prenom);
     } else {
       this.personnes$ = this.personneService.getPersonnes();
     }

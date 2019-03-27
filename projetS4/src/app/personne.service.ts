@@ -27,10 +27,20 @@ export class PersonnesServiceService {
     return of(liste);
   }
 
-  findNom(name: string): Observable<Personne[]> {
-    let liste : Personne[] = PERSONNES.filter(p => p.nom.toLocaleLowerCase().match(name.toLocaleLowerCase()));
+  findPrenom(prenom: string): Observable<Personne[]> {
+    return of(PERSONNES.filter(p => p.prenom.toLocaleLowerCase().match(prenom.toLocaleLowerCase())));
+  }
+
+  findNom(nom: string): Observable<Personne[]> {
+    return of(PERSONNES.filter(p => p.nom.toLocaleLowerCase().match(nom.toLocaleLowerCase())));
+  }
+
+  findPersos(nom: string, prenom: string): Observable<Personne[]> {
+    let liste: Personne[] = PERSONNES.filter(p => p.nom.toLocaleLowerCase().match(nom.toLocaleLowerCase()));
+    liste = liste.filter(p => p.prenom.toLocaleLowerCase().match(prenom.toLocaleLowerCase()));
     return of(liste);
   }
+
   getPersonne(id: number | string) {
     return this.getPersonnes().pipe(map(personnes => personnes.find(personne => personne.id === +id)));
   }
