@@ -22,4 +22,6 @@ export class DetailsPersonneComponent implements OnInit {
         this.service.getPersonne(params.get('id')))
     );
   }
+
+
 }
