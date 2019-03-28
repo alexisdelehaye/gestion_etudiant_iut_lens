@@ -4,6 +4,7 @@ import { filter } from 'rxjs/operators';
 import {Personne} from '../personne-model';
 import {PersonnesServiceService} from '../personne.service';
 import {ActivatedRoute} from '@angular/router';
+import {PERSONNES} from '../mock-personne';
 
 @Component({
   selector: 'app-liste-etudiants',
@@ -14,6 +15,11 @@ export class ListeEtudiantsComponent implements OnInit {
 
   personnes$: Observable<Personne[]>;
   private student = {"nom":'', "prenom":''};
+
+  prenom: string;
+
+  personnes: Personne[] = PERSONNES;
+
 
   constructor(private route: ActivatedRoute, private personneService: PersonnesServiceService) {
   }
@@ -36,6 +42,41 @@ export class ListeEtudiantsComponent implements OnInit {
       this.personnes$ = this.personneService.getPersonnes();
     }
   }
+
+
+  Search() {
+    if ((this.student.nom.length > 0) && (this.student.prenom.length === 0)) {
+      this.personnes = this.personnes.filter(res => {
+        return res.nom.toLocaleLowerCase().match(this.student.nom.toLocaleLowerCase());
+      });
+    } else if ((this.student.prenom.length > 0) && (this.student.nom.length === 0)) {
+      this.personnes = this.personnes.filter(res => {
+        return res.prenom.toLocaleLowerCase().match(this.student.prenom.toLocaleLowerCase());
+      });
+    } else if ((this.student.prenom.length > 0) && (this.student.nom.length > 0)) {
+      this.personnes = this.personnes.filter(res => {
+        return res.prenom.toLocaleLowerCase().match(this.student.prenom.toLocaleLowerCase());
+      });
+      this.personnes = this.personnes.filter(res => {
+        return res.nom.toLocaleLowerCase().match(this.student.nom.toLocaleLowerCase());
+      });
+    } else {
+      this.personnes = PERSONNES;
+    }
+    /*
+
+    let liste: Personne[] = PERSONNES.filter(p => p.nom.toLocaleLowerCase().match(nom.toLocaleLowerCase()));
+    liste = liste.filter(p => p.prenom.toLocaleLowerCase().match(prenom.toLocaleLowerCase()));
+    return of(liste);
+  }
+
+
+    this.personnes = this.personnes.filter(res => {
+      return res.prenom.toLocaleLowerCase().match(this.prenom.toLocaleLowerCase());
+    });
+    */
+  }
+
 
 }
 
