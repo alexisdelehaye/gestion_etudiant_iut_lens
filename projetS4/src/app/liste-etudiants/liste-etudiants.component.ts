@@ -25,6 +25,7 @@ export class ListeEtudiantsComponent implements OnInit {
   }
 
 
+
   ngOnInit() {
     this.personnes$ = this.personneService.getPersonnes();
   }

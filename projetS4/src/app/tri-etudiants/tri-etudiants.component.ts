@@ -28,6 +28,7 @@ export class TriEtudiantsComponent implements OnInit {
     return 0;
   });
 
+
   constructor(private route: ActivatedRoute, private personneService: PersonnesServiceService) {
   }
 
