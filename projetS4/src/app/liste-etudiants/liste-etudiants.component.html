@@ -50,7 +50,7 @@
     <thead class='thead-dark'>
     <tr class='ligne' ><th>id</th><th>Nom</th><th>Prenom</th><th>S1</th><th>S2</th><th>S3</th><th>S4</th></tr>
     </thead>
-    <tbody >
+    <tbody>
     <tr *ngFor="let personne of personnes$ | async">
       <td> {{ personne.id }}</td>
       <a [routerLink]="['/personne', personne.id]"><td>{{ personne.nom }}</td></a>

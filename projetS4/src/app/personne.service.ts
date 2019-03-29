@@ -45,4 +45,5 @@ export class PersonnesServiceService {
   getPersonne(id: number | string) {
     return this.getPersonnes().pipe(map(personnes => personnes.find(personne => personne.id === +id)));
   }
+
 }
