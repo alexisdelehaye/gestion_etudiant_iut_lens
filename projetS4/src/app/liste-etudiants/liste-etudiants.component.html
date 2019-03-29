@@ -10,7 +10,9 @@
 <div>
   <table class="col-md-12 table table-bordered table-striped">
     <thead class='thead-dark'>
-    <tr class='ligne' ><th>id</th><th>Nom</th><th>Prenom</th><th>S1</th><th>S2</th><th>S3</th><th>S4</th></tr>
+    <tr class='ligne' ><th>id</th>
+      <th><a [routerLink]="['/triEtudiants']">Nom</a></th>
+      <th>Prenom</th><th>S1</th><th>S2</th><th>S3</th><th>S4</th></tr>
     </thead>
     <tbody >
     <tr *ngFor="let personne of personnes">

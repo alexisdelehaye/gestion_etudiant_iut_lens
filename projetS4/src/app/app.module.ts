@@ -17,6 +17,7 @@ import {ListePromo1Component} from './liste-promo1/liste-promo1.component';
 import {ListePromo2Component} from './liste-promo2/liste-promo2.component';
 import { ListeEtudiantsComponent } from './liste-etudiants/liste-etudiants.component';
 import { TestFormulaireComponent } from './test-formulaire/test-formulaire.component';
+import { TriEtudiantsComponent } from './tri-etudiants/tri-etudiants.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { TestFormulaireComponent } from './test-formulaire/test-formulaire.compo
     ListePromo1Component,
     ListePromo2Component,
     ListeEtudiantsComponent,
-    TestFormulaireComponent
+    TestFormulaireComponent,
+    TriEtudiantsComponent
   ],
   imports: [
     BrowserModule,
