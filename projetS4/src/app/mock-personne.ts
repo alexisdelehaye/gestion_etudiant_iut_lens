@@ -6,6 +6,7 @@ export const PERSONNES = [
   { id: 13, nom: 'Bertin', prenom: 'Sophie', s1: 13, s2: 1, s3: 4, s4: 14 },
   { id: 14, nom: 'Varon', prenom: 'Julie', s1: 13, s2: 1, s3: 4, s4: 14 },
   { id: 15, nom: 'Tapour', prenom: 'Jean-Pierre', s1: 13, s2: 1, s3: 4, s4: 14 }
+  
 /*
   { id: 16, nom: 'Prusier', prenom: 'Serge', s1: 13, s2: 1, s3: 4, s4: 14, s5: 12, avatar: 'images/homme.jpg', numero: 20172345,
      semestre : [
