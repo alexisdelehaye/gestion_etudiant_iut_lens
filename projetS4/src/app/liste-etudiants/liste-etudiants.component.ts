@@ -18,10 +18,27 @@ export class ListeEtudiantsComponent implements OnInit {
 
   prenom: string;
 
-  personnes: Personne[] = PERSONNES.sort((n1,n2) => n1.id - n2.id);
+  personnes: Personne[] = PERSONNES;
 
 
   constructor(private route: ActivatedRoute, private personneService: PersonnesServiceService) {
+  }
+
+
+  triNom(){
+    PERSONNES.sort((n1,n2)=> {
+      if (n1.nom > n2.nom) {
+        return 1;
+      }
+      if (n1.nom < n2.nom) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+
+  triId(){
+    PERSONNES.sort((n1,n2) => n1.id - n2.id);
   }
 
 
