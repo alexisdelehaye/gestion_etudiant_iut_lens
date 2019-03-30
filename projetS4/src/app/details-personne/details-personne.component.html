@@ -27,25 +27,38 @@
     <tr class='ligne' ><th></th><th>Moyenne</th><th>Classement</th><th>Moyenne Promo</th><th>Max Promo</th><th>Min Promo</th></tr>
     </thead>
     <tbody>
-    <ng-container *ngIf="personne$ | async as personne">
-      <tr *ngFor="let sem of personne.semestre">  <!-- probleme dans la récupération du semestre "sem" -->
-        <a [routerLink]="['/semestre', personne.semestre.id]"><td>S{{personne.sem.id}}</td>
-        <td>{{ personne.sem.moyenne }}</td>
-        <td>{{ personne.sem.classement }}</td>
-        <td>{{ personne.sem.moyennePromo }}</td>
-        <td>{{ personne.sem.promoMax }}</td>
-        <td>{{ personne.sem.promoMin }}</td>
+      <tr *ngIf="personne$ | async as personne">
+        <a [routerLink]="['/personne', personne.id, personne.semestre[0].id]"><td>S1</td></a>
+        <td>{{ personne.semestre[0].moyenne }}</td>
+        <td>{{ personne.semestre[0].classement }}</td>
+        <td>{{ personne.semestre[0].moyennePromo }}</td>
+        <td>{{ personne.semestre[0].promoMax }}</td>
+        <td>{{ personne.semestre[0].promoMin }}</td>
       </tr>
-    </ng-container>
-
-    <!--    <tr *ngIf="personne$ | async as personne">
-          <td>S2</td>
-          <td>{{ personne.sm2.moyenne }}</td>
-          <td>{{ personne.sm2.classement }}</td>
-          <td>{{ personne.sm2.moyennePromo }}</td>
-          <td>{{ personne.sm2.promoMax }}</td>
-          <td>{{ personne.sm2.promoMin }}</td>
-        </tr>-->
+      <tr *ngIf="personne$ | async as personne">
+        <a [routerLink]="['/personne', personne.id, personne.semestre[1].id]"><td>S2</td></a>
+        <td>{{ personne.semestre[1].moyenne }}</td>
+        <td>{{ personne.semestre[1].classement }}</td>
+        <td>{{ personne.semestre[1].moyennePromo }}</td>
+        <td>{{ personne.semestre[1].promoMax }}</td>
+        <td>{{ personne.semestre[1].promoMin }}</td>
+      </tr>
+      <tr *ngIf="personne$ | async as personne">
+        <a [routerLink]="['/personne', personne.id, personne.semestre[2].id]"><td>S3</td></a>
+        <td>{{ personne.semestre[2].moyenne }}</td>
+        <td>{{ personne.semestre[2].classement }}</td>
+        <td>{{ personne.semestre[2].moyennePromo }}</td>
+        <td>{{ personne.semestre[2].promoMax }}</td>
+        <td>{{ personne.semestre[2].promoMin }}</td>
+      </tr>
+      <tr *ngIf="personne$ | async as personne">
+        <a [routerLink]="['/personne', personne.id, personne.semestre[3].id]"><td>S4</td></a>
+        <td>{{ personne.semestre[3].moyenne }}</td>
+        <td>{{ personne.semestre[3].classement }}</td>
+        <td>{{ personne.semestre[3].moyennePromo }}</td>
+        <td>{{ personne.semestre[3].promoMax }}</td>
+        <td>{{ personne.semestre[3].promoMin }}</td>
+      </tr>
     </tbody>
   </table>
 </div>

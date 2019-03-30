@@ -4,6 +4,7 @@ import {PERSONNES, PERSONNES2, PROMO1, PROMO2} from './mock-personne';
 import {map} from 'rxjs/operators';
 import {Personne} from './personne-model';
 
+// @ts-ignore
 @Injectable({
   providedIn: 'root'
 })
