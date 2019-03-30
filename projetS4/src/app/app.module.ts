@@ -30,7 +30,7 @@ import { DetailSemestreComponent } from './detail-semestre/detail-semestre.compo
     ListePromo2Component,
     ListeEtudiantsComponent,
     TestFormulaireComponent,
-    DetailSemestreComponent,
+    DetailSemestreComponent
   ],
   imports: [
     BrowserModule,

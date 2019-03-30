@@ -27,16 +27,14 @@
     <tr class='ligne' ><th></th><th>Moyenne</th><th>Classement</th><th>Moyenne Promo</th><th>Max Promo</th><th>Min Promo</th></tr>
     </thead>
     <tbody>
-
-
     <tr *ngIf="personne$ | async as personne">
           <td>S2</td>
-          <td>{{ personne.sm2.moyenne }}</td>
+          <td>{{ personne }}</td>
           <td>{{ personne.sm2.classement }}</td>
           <td>{{ personne.sm2.moyennePromo }}</td>
           <td>{{ personne.sm2.promoMax }}</td>
           <td>{{ personne.sm2.promoMin }}</td>
-        </tr>-->
+        </tr>
     </tbody>
   </table>
 </div>
