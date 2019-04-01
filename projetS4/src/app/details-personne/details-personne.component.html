@@ -20,6 +20,283 @@
   </div>
 </div>
 
+<div  *ngIf="personne$ | async as personne">
+  <mat-tab-group>
+    <mat-tab label="Global">
+      <table class="col-md-12 table table-bordered table-striped">
+        <thead class='thead-dark'>
+        <tr class='ligne' ><th></th><th>Moyenne</th><th>Classement</th><th>Moyenne Promo</th><th>Max Promo</th><th>Min Promo</th></tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>S1</td>
+          <td>{{ personne.semestre[0].moyenne }}</td>
+          <td>{{ personne.semestre[0].classement }}</td>
+          <td>{{ personne.semestre[0].moyennePromo }}</td>
+          <td>{{ personne.semestre[0].promoMax }}</td>
+          <td>{{ personne.semestre[0].promoMin }}</td>
+        </tr>
+        <tr>
+          <td>S2</td>
+          <td>{{ personne.semestre[1].moyenne }}</td>
+          <td>{{ personne.semestre[1].classement }}</td>
+          <td>{{ personne.semestre[1].moyennePromo }}</td>
+          <td>{{ personne.semestre[1].promoMax }}</td>
+          <td>{{ personne.semestre[1].promoMin }}</td>
+        </tr>
+        <tr>
+          <td>S3</td>
+          <td>{{ personne.semestre[2].moyenne }}</td>
+          <td>{{ personne.semestre[2].classement }}</td>
+          <td>{{ personne.semestre[2].moyennePromo }}</td>
+          <td>{{ personne.semestre[2].promoMax }}</td>
+          <td>{{ personne.semestre[2].promoMin }}</td>
+        </tr>
+        <tr>
+          <td>S4</td>
+          <td>{{ personne.semestre[3].moyenne }}</td>
+          <td>{{ personne.semestre[3].classement }}</td>
+          <td>{{ personne.semestre[3].moyennePromo }}</td>
+          <td>{{ personne.semestre[3].promoMax }}</td>
+          <td>{{ personne.semestre[3].promoMin }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </mat-tab>
+    <mat-tab label="Semestre 1">
+      <table class="col-md-12 table table-bordered table-striped">
+        <thead class='thead-dark'>
+        <tr class='ligne' ><th></th><th>Moyenne</th><th>Classement</th><th>Moyenne Promo</th><th>Max Promo</th><th>Min Promo</th></tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="color-semestre">S1</td>
+          <td class="color-semestre">{{ personne.semestre[0].moyenne }}</td>
+          <td class="color-semestre">{{ personne.semestre[0].classement }}</td>
+          <td class="color-semestre">{{ personne.semestre[0].moyennePromo }}</td>
+          <td class="color-semestre">{{ personne.semestre[0].promoMax }}</td>
+          <td class="color-semestre">{{ personne.semestre[0].promoMin }}</td>
+        </tr>
+        <tr>
+          <td>UE11</td>
+          <td>{{ personne.semestre[0].UE[0].moyenne }}</td>
+          <td>{{ personne.semestre[0].UE[0].classement }}</td>
+          <td>{{ personne.semestre[0].UE[0].moyennePromo }}</td>
+          <td>{{ personne.semestre[0].UE[0].promoMax }}</td>
+          <td>{{ personne.semestre[0].UE[0].promoMin }}</td>
+        </tr>
+        <tr>
+          <td>{{personne.semestre[0].UE[0].matieres[0].nom}}</td>
+          <td>{{ personne.semestre[0].UE[0].matieres[0].moyenne }}</td>
+          <td>{{ personne.semestre[0].UE[0].matieres[0].classement }}</td>
+          <td>{{ personne.semestre[0].UE[0].matieres[0].moyennePromo }}</td>
+          <td>{{ personne.semestre[0].UE[0].matieres[0].promoMax }}</td>
+          <td>{{ personne.semestre[0].UE[0].matieres[0].promoMin }}</td>
+        </tr>
+        <tr>
+          <td>UE12</td>
+          <td>{{ personne.semestre[0].UE[1].moyenne }}</td>
+          <td>{{ personne.semestre[0].UE[1].classement }}</td>
+          <td>{{ personne.semestre[0].UE[1].moyennePromo }}</td>
+          <td>{{ personne.semestre[0].UE[1].promoMax }}</td>
+          <td>{{ personne.semestre[0].UE[1].promoMin }}</td>
+        </tr>
+        <tr>
+          <td>{{personne.semestre[0].UE[1].matieres[0].nom}}</td>
+          <td>{{ personne.semestre[0].UE[1].matieres[0].moyenne }}</td>
+          <td>{{ personne.semestre[0].UE[1].matieres[0].classement }}</td>
+          <td>{{ personne.semestre[0].UE[1].matieres[0].moyennePromo }}</td>
+          <td>{{ personne.semestre[0].UE[1].matieres[0].promoMax }}</td>
+          <td>{{ personne.semestre[0].UE[1].matieres[0].promoMin }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </mat-tab>
+    <mat-tab label="Semestre 2">
+      <table class="col-md-12 table table-bordered table-striped">
+        <thead class='thead-dark'>
+        <tr class='ligne' ><th></th><th>Moyenne</th><th>Classement</th><th>Moyenne Promo</th><th>Max Promo</th><th>Min Promo</th></tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="color-semestre">S2</td>
+          <td class="color-semestre">{{ personne.semestre[1].moyenne }}</td>
+          <td class="color-semestre">{{ personne.semestre[1].classement }}</td>
+          <td class="color-semestre">{{ personne.semestre[1].moyennePromo }}</td>
+          <td class="color-semestre">{{ personne.semestre[1].promoMax }}</td>
+          <td class="color-semestre">{{ personne.semestre[1].promoMin }}</td>
+        </tr>
+        <tr>
+          <td>UE21</td>
+          <td>{{ personne.semestre[1].UE[0].moyenne }}</td>
+          <td>{{ personne.semestre[1].UE[0].classement }}</td>
+          <td>{{ personne.semestre[1].UE[0].moyennePromo }}</td>
+          <td>{{ personne.semestre[1].UE[0].promoMax }}</td>
+          <td>{{ personne.semestre[1].UE[0].promoMin }}</td>
+        </tr>
+        <tr>
+          <td>{{personne.semestre[1].UE[0].matieres[0].nom}}</td>
+          <td>{{ personne.semestre[1].UE[0].matieres[0].moyenne }}</td>
+          <td>{{ personne.semestre[1].UE[0].matieres[0].classement }}</td>
+          <td>{{ personne.semestre[1].UE[0].matieres[0].moyennePromo }}</td>
+          <td>{{ personne.semestre[1].UE[0].matieres[0].promoMax }}</td>
+          <td>{{ personne.semestre[1].UE[0].matieres[0].promoMin }}</td>
+        </tr>
+        <tr>
+          <td>UE22</td>
+          <td>{{ personne.semestre[1].UE[1].moyenne }}</td>
+          <td>{{ personne.semestre[1].UE[1].classement }}</td>
+          <td>{{ personne.semestre[1].UE[1].moyennePromo }}</td>
+          <td>{{ personne.semestre[1].UE[1].promoMax }}</td>
+          <td>{{ personne.semestre[1].UE[1].promoMin }}</td>
+        </tr>
+        <tr>
+          <td>{{personne.semestre[1].UE[1].matieres[0].nom}}</td>
+          <td>{{ personne.semestre[1].UE[1].matieres[0].moyenne }}</td>
+          <td>{{ personne.semestre[1].UE[1].matieres[0].classement }}</td>
+          <td>{{ personne.semestre[1].UE[1].matieres[0].moyennePromo }}</td>
+          <td>{{ personne.semestre[1].UE[1].matieres[0].promoMax }}</td>
+          <td>{{ personne.semestre[1].UE[1].matieres[0].promoMin }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </mat-tab>
+    <mat-tab label="Semestre 3">
+      <table class="col-md-12 table table-bordered table-striped">
+        <thead class='thead-dark'>
+        <tr class='ligne' ><th></th><th>Moyenne</th><th>Classement</th><th>Moyenne Promo</th><th>Max Promo</th><th>Min Promo</th></tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="color-semestre">S3</td>
+          <td class="color-semestre">{{ personne.semestre[2].moyenne }}</td>
+          <td class="color-semestre">{{ personne.semestre[2].classement }}</td>
+          <td class="color-semestre">{{ personne.semestre[2].moyennePromo }}</td>
+          <td class="color-semestre">{{ personne.semestre[2].promoMax }}</td>
+          <td class="color-semestre">{{ personne.semestre[2].promoMin }}</td>
+        </tr>
+        <tr>
+          <td>UE31</td>
+          <td>{{ personne.semestre[2].UE[0].moyenne }}</td>
+          <td>{{ personne.semestre[2].UE[0].classement }}</td>
+          <td>{{ personne.semestre[2].UE[0].moyennePromo }}</td>
+          <td>{{ personne.semestre[2].UE[0].promoMax }}</td>
+          <td>{{ personne.semestre[2].UE[0].promoMin }}</td>
+        </tr>
+        <tr>
+          <td>{{personne.semestre[2].UE[0].matieres[0].nom}}</td>
+          <td>{{ personne.semestre[2].UE[0].matieres[0].moyenne }}</td>
+          <td>{{ personne.semestre[2].UE[0].matieres[0].classement }}</td>
+          <td>{{ personne.semestre[2].UE[0].matieres[0].moyennePromo }}</td>
+          <td>{{ personne.semestre[2].UE[0].matieres[0].promoMax }}</td>
+          <td>{{ personne.semestre[2].UE[0].matieres[0].promoMin }}</td>
+        </tr>
+        <tr>
+          <td>UE32</td>
+          <td>{{ personne.semestre[2].UE[1].moyenne }}</td>
+          <td>{{ personne.semestre[2].UE[1].classement }}</td>
+          <td>{{ personne.semestre[2].UE[1].moyennePromo }}</td>
+          <td>{{ personne.semestre[2].UE[1].promoMax }}</td>
+          <td>{{ personne.semestre[2].UE[1].promoMin }}</td>
+        </tr>
+        <tr>
+          <td>{{personne.semestre[2].UE[1].matieres[0].nom}}</td>
+          <td>{{ personne.semestre[2].UE[1].matieres[0].moyenne }}</td>
+          <td>{{ personne.semestre[2].UE[1].matieres[0].classement }}</td>
+          <td>{{ personne.semestre[2].UE[1].matieres[0].moyennePromo }}</td>
+          <td>{{ personne.semestre[2].UE[1].matieres[0].promoMax }}</td>
+          <td>{{ personne.semestre[2].UE[1].matieres[0].promoMin }}</td>
+        </tr>
+        <tr>
+          <td>UE33</td>
+          <td>{{ personne.semestre[2].UE[2].moyenne }}</td>
+          <td>{{ personne.semestre[2].UE[2].classement }}</td>
+          <td>{{ personne.semestre[2].UE[2].moyennePromo }}</td>
+          <td>{{ personne.semestre[2].UE[2].promoMax }}</td>
+          <td>{{ personne.semestre[2].UE[2].promoMin }}</td>
+        </tr>
+        <tr>
+          <td>{{personne.semestre[2].UE[2].matieres[0].nom}}</td>
+          <td>{{ personne.semestre[2].UE[2].matieres[0].moyenne }}</td>
+          <td>{{ personne.semestre[2].UE[2].matieres[0].classement }}</td>
+          <td>{{ personne.semestre[2].UE[2].matieres[0].moyennePromo }}</td>
+          <td>{{ personne.semestre[2].UE[2].matieres[0].promoMax }}</td>
+          <td>{{ personne.semestre[2].UE[2].matieres[0].promoMin }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </mat-tab><mat-tab label="Semestre 4">
+
+    <table class="col-md-12 table table-bordered table-striped">
+      <thead class='thead-dark'>
+      <tr class='ligne' ><th></th><th>Moyenne</th><th>Classement</th><th>Moyenne Promo</th><th>Max Promo</th><th>Min Promo</th></tr>
+      </thead>
+      <tbody>
+      <tr >
+        <td class="color-semestre">S4</td>
+        <td class="color-semestre">{{ personne.semestre[3].moyenne }}</td>
+        <td class="color-semestre">{{ personne.semestre[3].classement }}</td>
+        <td class="color-semestre">{{ personne.semestre[3].moyennePromo }}</td>
+        <td class="color-semestre">{{ personne.semestre[3].promoMax }}</td>
+        <td class="color-semestre">{{ personne.semestre[3].promoMin }}</td>
+      </tr>
+      <tr>
+        <td>UE41</td>
+        <td>{{ personne.semestre[3].UE[0].moyenne }}</td>
+        <td>{{ personne.semestre[3].UE[0].classement }}</td>
+        <td>{{ personne.semestre[3].UE[0].moyennePromo }}</td>
+        <td>{{ personne.semestre[3].UE[0].promoMax }}</td>
+        <td>{{ personne.semestre[3].UE[0].promoMin }}</td>
+      </tr>
+      <tr>
+        <td>{{personne.semestre[3].UE[0].matieres[0].nom}}</td>
+        <td>{{ personne.semestre[3].UE[0].matieres[0].moyenne }}</td>
+        <td>{{ personne.semestre[3].UE[0].matieres[0].classement }}</td>
+        <td>{{ personne.semestre[3].UE[0].matieres[0].moyennePromo }}</td>
+        <td>{{ personne.semestre[3].UE[0].matieres[0].promoMax }}</td>
+        <td>{{ personne.semestre[3].UE[0].matieres[0].promoMin }}</td>
+      </tr>
+      <tr>
+        <td>UE42</td>
+        <td>{{ personne.semestre[3].UE[1].moyenne }}</td>
+        <td>{{ personne.semestre[3].UE[1].classement }}</td>
+        <td>{{ personne.semestre[3].UE[1].moyennePromo }}</td>
+        <td>{{ personne.semestre[3].UE[1].promoMax }}</td>
+        <td>{{ personne.semestre[3].UE[1].promoMin }}</td>
+      </tr>
+      <tr>
+        <td>{{personne.semestre[3].UE[1].matieres[0].nom}}</td>
+        <td>{{ personne.semestre[3].UE[1].matieres[0].moyenne }}</td>
+        <td>{{ personne.semestre[3].UE[1].matieres[0].classement }}</td>
+        <td>{{ personne.semestre[3].UE[1].matieres[0].moyennePromo }}</td>
+        <td>{{ personne.semestre[3].UE[1].matieres[0].promoMax }}</td>
+        <td>{{ personne.semestre[3].UE[1].matieres[0].promoMin }}</td>
+      </tr>
+      <tr>
+        <td>UE43</td>
+        <td>{{ personne.semestre[3].UE[2].moyenne }}</td>
+        <td>{{ personne.semestre[3].UE[2].classement }}</td>
+        <td>{{ personne.semestre[3].UE[2].moyennePromo }}</td>
+        <td>{{ personne.semestre[3].UE[2].promoMax }}</td>
+        <td>{{ personne.semestre[3].UE[2].promoMin }}</td>
+      </tr>
+      <tr>
+        <td>{{personne.semestre[3].UE[2].matieres[0].nom}}</td>
+        <td>{{ personne.semestre[3].UE[2].matieres[0].moyenne }}</td>
+        <td>{{ personne.semestre[3].UE[2].matieres[0].classement }}</td>
+        <td>{{ personne.semestre[3].UE[2].matieres[0].moyennePromo }}</td>
+        <td>{{ personne.semestre[3].UE[2].matieres[0].promoMax }}</td>
+        <td>{{ personne.semestre[3].UE[2].matieres[0].promoMin }}</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </mat-tab>
+  </mat-tab-group>
+</div>
+
+
+<!--
 
 <mat-tab-group>
   <mat-tab label="Global">
@@ -306,7 +583,19 @@
 
 
 
-<!--
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <div  *ngIf="personne$ | async as personne">
