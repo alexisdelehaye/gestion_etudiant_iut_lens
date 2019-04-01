@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: 'promo1', component: ListePromo1Component},
   {path: 'promo2', component: ListePromo2Component},
   {path: 'personne/:id', component: DetailsPersonneComponent},
-  {path: 'personne/:id/:id', component: DetailSemestreComponent},
+  {path: 'semestre/:id', component: DetailSemestreComponent},
   {path: 'formulaire', component:TestFormulaireComponent},
   {path: '', redirectTo: 'etudiants', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent},

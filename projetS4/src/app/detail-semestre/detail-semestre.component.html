@@ -1,0 +1,144 @@
+<div *ngIf="personne$ | async as personne" >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="../../assets/{{personne.avatar}}">
+      </div>
+      <div class="col-md-8">
+        <div class="col-md-12"></div>
+        <div class="col-md-12">
+          <h1>{{personne.nom}}</h1>
+        </div>
+        <div class="col-md-12">
+          <h1>{{personne.prenom}}</h1>
+        </div>
+        <div class="col-md-12">
+          <h4>Numéro etudiant : {{personne.numero}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div  *ngIf="personne$ | async as personne">
+  <table class="col-md-12 table table-bordered table-striped">
+    <thead class='thead-dark'>
+    <tr class='ligne' ><th></th><th>Moyenne</th><th>Classement</th><th>Moyenne Promo</th><th>Max Promo</th><th>Min Promo</th></tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>S1</td>
+      <td>{{ personne.semestre[0].moyenne }}</td>
+      <td>{{ personne.semestre[0].classement }}</td>
+      <td>{{ personne.semestre[0].moyennePromo }}</td>
+      <td>{{ personne.semestre[0].promoMax }}</td>
+      <td>{{ personne.semestre[0].promoMin }}</td>
+    </tr>
+    <tr>
+      <td>UE11</td>
+      <td>{{ personne.semestre[0].UE[0].moyenne }}</td>
+      <td>{{ personne.semestre[0].UE[0].classement }}</td>
+      <td>{{ personne.semestre[0].UE[0].moyennePromo }}</td>
+      <td>{{ personne.semestre[0].UE[0].promoMax }}</td>
+      <td>{{ personne.semestre[0].UE[0].promoMin }}</td>
+    </tr>
+    <tr>
+      <td>UE12</td>
+      <td>{{ personne.semestre[0].UE[1].moyenne }}</td>
+      <td>{{ personne.semestre[0].UE[1].classement }}</td>
+      <td>{{ personne.semestre[0].UE[1].moyennePromo }}</td>
+      <td>{{ personne.semestre[0].UE[1].promoMax }}</td>
+      <td>{{ personne.semestre[0].UE[1].promoMin }}</td>
+    </tr>
+    <tr>
+      <td>S2</td>
+      <td>{{ personne.semestre[1].moyenne }}</td>
+      <td>{{ personne.semestre[1].classement }}</td>
+      <td>{{ personne.semestre[1].moyennePromo }}</td>
+      <td>{{ personne.semestre[1].promoMax }}</td>
+      <td>{{ personne.semestre[1].promoMin }}</td>
+    </tr>
+    <tr>
+      <td>UE21</td>
+      <td>{{ personne.semestre[1].UE[0].moyenne }}</td>
+      <td>{{ personne.semestre[1].UE[0].classement }}</td>
+      <td>{{ personne.semestre[1].UE[0].moyennePromo }}</td>
+      <td>{{ personne.semestre[1].UE[0].promoMax }}</td>
+      <td>{{ personne.semestre[1].UE[0].promoMin }}</td>
+    </tr>
+    <tr>
+      <td>UE22</td>
+      <td>{{ personne.semestre[1].UE[1].moyenne }}</td>
+      <td>{{ personne.semestre[1].UE[1].classement }}</td>
+      <td>{{ personne.semestre[1].UE[1].moyennePromo }}</td>
+      <td>{{ personne.semestre[1].UE[1].promoMax }}</td>
+      <td>{{ personne.semestre[1].UE[1].promoMin }}</td>
+    </tr>
+    <tr>
+      <td>S3</td>
+      <td>{{ personne.semestre[2].moyenne }}</td>
+      <td>{{ personne.semestre[2].classement }}</td>
+      <td>{{ personne.semestre[2].moyennePromo }}</td>
+      <td>{{ personne.semestre[2].promoMax }}</td>
+      <td>{{ personne.semestre[2].promoMin }}</td>
+    </tr>
+    <tr>
+      <td>UE31</td>
+      <td>{{ personne.semestre[2].UE[0].moyenne }}</td>
+      <td>{{ personne.semestre[2].UE[0].classement }}</td>
+      <td>{{ personne.semestre[2].UE[0].moyennePromo }}</td>
+      <td>{{ personne.semestre[2].UE[0].promoMax }}</td>
+      <td>{{ personne.semestre[2].UE[0].promoMin }}</td>
+    </tr>
+    <tr>
+      <td>UE32</td>
+      <td>{{ personne.semestre[2].UE[1].moyenne }}</td>
+      <td>{{ personne.semestre[2].UE[1].classement }}</td>
+      <td>{{ personne.semestre[2].UE[1].moyennePromo }}</td>
+      <td>{{ personne.semestre[2].UE[1].promoMax }}</td>
+      <td>{{ personne.semestre[2].UE[1].promoMin }}</td>
+    </tr>
+    <tr>
+      <td>UE33</td>
+      <td>{{ personne.semestre[2].UE[2].moyenne }}</td>
+      <td>{{ personne.semestre[2].UE[2].classement }}</td>
+      <td>{{ personne.semestre[2].UE[2].moyennePromo }}</td>
+      <td>{{ personne.semestre[2].UE[2].promoMax }}</td>
+      <td>{{ personne.semestre[2].UE[2].promoMin }}</td>
+    </tr>
+    <tr>
+      <td>S4</td>
+      <td>{{ personne.semestre[3].moyenne }}</td>
+      <td>{{ personne.semestre[3].classement }}</td>
+      <td>{{ personne.semestre[3].moyennePromo }}</td>
+      <td>{{ personne.semestre[3].promoMax }}</td>
+      <td>{{ personne.semestre[3].promoMin }}</td>
+    </tr>
+    <tr>
+      <td>UE41</td>
+      <td>{{ personne.semestre[3].UE[0].moyenne }}</td>
+      <td>{{ personne.semestre[3].UE[0].classement }}</td>
+      <td>{{ personne.semestre[3].UE[0].moyennePromo }}</td>
+      <td>{{ personne.semestre[3].UE[0].promoMax }}</td>
+      <td>{{ personne.semestre[3].UE[0].promoMin }}</td>
+    </tr>
+    <tr>
+      <td>UE42</td>
+      <td>{{ personne.semestre[3].UE[1].moyenne }}</td>
+      <td>{{ personne.semestre[3].UE[1].classement }}</td>
+      <td>{{ personne.semestre[3].UE[1].moyennePromo }}</td>
+      <td>{{ personne.semestre[3].UE[1].promoMax }}</td>
+      <td>{{ personne.semestre[3].UE[1].promoMin }}</td>
+    </tr>
+    <tr>
+      <td>UE43</td>
+      <td>{{ personne.semestre[3].UE[2].moyenne }}</td>
+      <td>{{ personne.semestre[3].UE[2].classement }}</td>
+      <td>{{ personne.semestre[3].UE[2].moyennePromo }}</td>
+      <td>{{ personne.semestre[3].UE[2].promoMax }}</td>
+      <td>{{ personne.semestre[3].UE[2].promoMin }}</td>
+    </tr>
+    </tbody>
+  </table>
+  <button [routerLink]="['/personne', personne.id]" type="button" class="btn btn-secondary btn-lg btn-block">Vue globale des semestres</button>
+</div>
