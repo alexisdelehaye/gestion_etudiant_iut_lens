@@ -22,6 +22,16 @@
 
 
 <div  *ngIf="personne$ | async as personne">
+
+  <div class="row">
+    <div class="col-md-6">
+      <button [routerLink]="['/semestre', personne.id]" type="button" class="btn btn-secondary btn-lg btn-block">Détails des semestres</button>
+    </div>
+    <div class="col-md-6">
+      <button type="button" class="btn btn-secondary btn-lg btn-block color-but">Vue globale des semestres</button>
+    </div>
+  </div>
+
   <table class="col-md-12 table table-bordered table-striped">
     <thead class='thead-dark'>
     <tr class='ligne' ><th></th><th>Moyenne</th><th>Classement</th><th>Moyenne Promo</th><th>Max Promo</th><th>Min Promo</th></tr>
@@ -61,6 +71,5 @@
       </tr>
     </tbody>
   </table>
-  <button [routerLink]="['/semestre', personne.id]" type="button" class="btn btn-secondary btn-lg btn-block">Détails des semestres</button>
 </div>
 
