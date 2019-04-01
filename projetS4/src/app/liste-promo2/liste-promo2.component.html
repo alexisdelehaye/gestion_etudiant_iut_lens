@@ -6,8 +6,8 @@
       <th><a [routerLink]="['/promo2']" (click)="triNom()">Nom</a></th>
       <th>Prenom</th><th>S1</th><th>S2</th><th>S3</th><th>S4</th></tr>
     </thead>
-    <tbody >
-    <tr *ngFor="let personne of personnes$ | async">
+    <tbody *ngFor="let personne of personnes$ | async" class="dropdown2" >
+    <tr>
       <td> {{ personne.id }}</td>
       <a [routerLink]="['/personne', personne.id]"><td>{{ personne.nom }}</td></a>
       <td> {{ personne.prenom }}</td>
@@ -16,6 +16,36 @@
       <td> {{ personne.s3 }}</td>
       <td> {{ personne.s4 }}</td>
     </tr>
+
+    <div class="dropdown-child2">
+      <tr class='ligne' >
+        <th><STRONG>UE11</STRONG></th>
+        <th><STRONG>UE12</STRONG></th>
+        <th><STRONG>UE21</STRONG></th>
+        <th><STRONG>UE22</STRONG></th>
+        <th><STRONG>UE31</STRONG></th>
+        <th><STRONG>UE32</STRONG></th>
+        <th><STRONG>UE33</STRONG></th>
+        <th><STRONG>UE41</STRONG></th>
+        <th><STRONG>UE42</STRONG></th>
+        <th><STRONG>UE43</STRONG></th>
+
+      </tr>
+      <tr>
+        <td>{{ personne.semestre[0].UE[0].moyenne }}</td>
+        <td>{{ personne.semestre[0].UE[1].moyenne }}</td>
+        <td>{{ personne.semestre[1].UE[0].moyenne }}</td>
+        <td>{{ personne.semestre[1].UE[1].moyenne }}</td>
+        <td>{{ personne.semestre[2].UE[0].moyenne }}</td>
+        <td>{{ personne.semestre[2].UE[1].moyenne }}</td>
+        <td>{{ personne.semestre[2].UE[2].moyenne }}</td>
+        <td>{{ personne.semestre[3].UE[0].moyenne }}</td>
+        <td>{{ personne.semestre[3].UE[1].moyenne }}</td>
+        <td>{{ personne.semestre[3].UE[2].moyenne }}</td>
+
+      </tr>
+    </div>
+
     </tbody>
   </table>
 </div>
