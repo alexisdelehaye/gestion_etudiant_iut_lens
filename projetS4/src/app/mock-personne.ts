@@ -278,8 +278,8 @@ export const PROMO1 = [
     semestre : [
       {id : 1 ,  moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9,
         UE : [
-          {id: 11, moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9},
-          {id: 12, moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9}]
+          {id: 11, moyenne: 14, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9},
+          {id: 12, moyenne: 12, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9}]
       },
       {id : 2, moyenne: 11, classement : 27, moyennePromo: 9, promoMax: 16, promoMin: 5,
         UE : [
