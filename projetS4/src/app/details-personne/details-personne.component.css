@@ -26,4 +26,10 @@
   display:table-row;
 }
 
+a { color: black; }
+
+button {
+  background-color: #343A40;
+  margin : 25px 0px 25px 0px;
+}
 
