@@ -20,6 +20,23 @@
   </div>
 </div>
 
+
+
+<mat-tab-group>
+  <mat-tab label="First">
+    <ng-template matTabContent>
+      The First Content
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Second">
+    <ng-template matTabContent>
+      The Second Content
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>
+
+
+
 <div  *ngIf="personne$ | async as personne">
 
   <div class="row">
@@ -30,6 +47,7 @@
       <button [routerLink]="['/personne', personne.id]" type="button" class="btn btn-secondary btn-lg btn-block">Vue globale des semestres</button>
     </div>
   </div>
+
 
 
   <table class="col-md-12 table table-bordered table-striped">
