@@ -41,8 +41,6 @@ export class ListeEtudiantsComponent implements OnInit {
     PERSONNES.sort((n1,n2) => n1.id - n2.id);
   }
 
-
-
   ngOnInit() {
     this.personnes$ = this.personneService.getPersonnes();
   }

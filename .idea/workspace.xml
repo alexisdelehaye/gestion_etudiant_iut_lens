@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="913e5b53-2750-4a34-a968-80a363c90a4b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetS4/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/src/app/liste-promo1/liste-promo1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/liste-promo1/liste-promo1.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetS4/src/app/mock-personne.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projetS4/src/app/mock-personne.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,81 +20,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="-92">
+              <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/projetS4/src/app/mock-personne.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="177" column="57" selection-start-line="177" selection-start-column="57" selection-end-line="177" selection-end-column="57" />
+              <folding>
+                <element signature="e#75#3034#0" />
+                <element signature="e#3038#4568#0" />
+                <element signature="e#4572#6102#0" />
+                <element signature="e#6106#7634#0" />
+                <element signature="e#7638#9173#0" />
+                <element signature="e#9177#10707#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="92" selection-start-line="11" selection-start-column="92" selection-end-line="11" selection-end-column="92" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4/src/app/app.component.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4/src/app/details-personne/details-personne.component.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4/src/app/app-routing.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4/src/app/detail-semestre/detail-semestre.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="248" column="9" lean-forward="true" selection-start-line="137" selection-start-column="4" selection-end-line="248" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4/src/app/test-formulaire/test-formulaire.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetS4/src/app/app.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -140,10 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/projetS4bis/src/app/app.component.html" />
-        <option value="$PROJECT_DIR$/projetS4bis/src/app/etudiants/etudiants.interface.ts" />
-        <option value="$PROJECT_DIR$/projetS4bis/src/app/etudiants/etudiants.service.ts" />
-        <option value="$PROJECT_DIR$/projetS4bis/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/projetS4bis/src/app/etudiants/etudiants.component.ts" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/projetS4Test/src/app/matieres/matieres.service.ts" />
@@ -174,10 +129,8 @@
         <option value="$PROJECT_DIR$/projetS4Test/src/app/afficheEtudiants/afficheEtudiants.component.html" />
         <option value="$PROJECT_DIR$/tuto-client2/src/app/details-personne/details-personne.component.ts" />
         <option value="$PROJECT_DIR$/projetS4/angular.json" />
-        <option value="$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.ts" />
         <option value="$PROJECT_DIR$/projetS4/src/app/dashboard/dashboard.component.html" />
         <option value="$PROJECT_DIR$/projetS4/src/app/personne.service.ts" />
-        <option value="$PROJECT_DIR$/projetS4/src/app/mock-personne.ts" />
         <option value="$PROJECT_DIR$/projetS4/src/app/detail-semestre/detail-semestre.component.ts" />
         <option value="$PROJECT_DIR$/projetS4/src/app/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/projetS4/src/styles.css" />
@@ -189,8 +142,14 @@
         <option value="$PROJECT_DIR$/projetS4/src/app/details-personne/details-personne.component.css" />
         <option value="$PROJECT_DIR$/projetS4/src/app/details-personne/details-personne.component.html" />
         <option value="$PROJECT_DIR$/projetS4/src/index.html" />
+        <option value="$PROJECT_DIR$/projetS4/src/app/liste-promo2/liste-promo2.component.html" />
+        <option value="$PROJECT_DIR$/projetS4/src/app/liste-promo2/liste-promo2.component.css" />
+        <option value="$PROJECT_DIR$/projetS4/src/app/liste-promo1/liste-promo1.component.css" />
+        <option value="$PROJECT_DIR$/projetS4/src/app/liste-promo1/liste-promo1.component.html" />
+        <option value="$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.ts" />
         <option value="$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.css" />
         <option value="$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.html" />
+        <option value="$PROJECT_DIR$/projetS4/src/app/mock-personne.ts" />
       </list>
     </option>
   </component>
@@ -198,9 +157,8 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -208,6 +166,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,13 +214,28 @@
               <item name="projetS4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="liste-promo1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
+              <item name="projetS4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="liste-promo2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionEtudiants2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GestionEtudiants2018" type="462c0819:PsiDirectoryNode" />
+              <item name="projetS4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="test-formulaire" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -320,6 +294,9 @@
       <workItem from="1551952494152" duration="552000" />
       <workItem from="1552413644443" duration="1124000" />
       <workItem from="1552858380833" duration="1693000" />
+      <workItem from="1554193928845" duration="1403000" />
+      <workItem from="1554228477408" duration="2099000" />
+      <workItem from="1554233066880" duration="4715000" />
     </task>
     <task id="LOCAL-00001" summary="creation du projet s4">
       <created>1550410828265</created>
@@ -412,11 +389,25 @@
       <option name="project" value="LOCAL" />
       <updated>1554150859921</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="icon pour le trie">
+      <created>1554152363309</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1554152363309</updated>
+    </task>
+    <task id="LOCAL-00015" summary="modif affichage trie">
+      <created>1554153704256</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1554153704256</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63062000" />
+    <option name="totallyTimeSpent" value="72345000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -502,32 +493,11 @@
     <MESSAGE value="modif button" />
     <MESSAGE value="ajout des onglets pour les details semestre" />
     <MESSAGE value="optimisation des onglets" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimisation des onglets" />
+    <MESSAGE value="icon pour le trie" />
+    <MESSAGE value="modif affichage trie" />
+    <option name="LAST_COMMIT_MESSAGE" value="modif affichage trie" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affiche-groupe-promo/affiche-groupe-promo.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affiche-groupe-promo/affiche-groupe-promo.component.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/affiche-groupe-promo/affiche-groupe-promo.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projetS4Test/src/app/app.component.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -638,13 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-promo1/liste-promo1.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projetS4/angular.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -715,27 +678,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4/src/app/mock-personne.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projetS4/src/app/detail-semestre/detail-semestre.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
@@ -800,9 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetS4/src/app/app.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/tables.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -812,15 +755,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projetS4/src/app/details-personne/details-personne.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
+        <state relative-caret-position="1155">
           <caret line="77" column="36" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-promo2/liste-promo2.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/app.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/projetS4/src/app/details-personne/details-personne.component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="7" />
+          <caret line="6" selection-start-line="6" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-promo2/liste-promo2.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-promo1/liste-promo1.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-promo2/liste-promo2.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-promo1/liste-promo1.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -831,13 +815,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projetS4/src/app/liste-etudiants/liste-etudiants.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="-92">
+          <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetS4/src/app/mock-personne.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="177" column="57" selection-start-line="177" selection-start-column="57" selection-end-line="177" selection-end-column="57" />
+          <folding>
+            <element signature="e#75#3034#0" />
+            <element signature="e#3038#4568#0" />
+            <element signature="e#4572#6102#0" />
+            <element signature="e#6106#7634#0" />
+            <element signature="e#7638#9173#0" />
+            <element signature="e#9177#10707#0" />
+          </folding>
         </state>
       </provider>
     </entry>
