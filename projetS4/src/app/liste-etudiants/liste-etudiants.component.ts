@@ -24,7 +24,6 @@ export class ListeEtudiantsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private personneService: PersonnesServiceService) {
   }
 
-
   triNom(){
     PERSONNES.sort((n1,n2)=> {
       if (n1.nom > n2.nom) {
@@ -79,6 +78,11 @@ export class ListeEtudiantsComponent implements OnInit {
     } else {
       this.personnes = PERSONNES;
     }
+  }
+}
+
+
+
     /*
 
     let liste: Personne[] = PERSONNES.filter(p => p.nom.toLocaleLowerCase().match(nom.toLocaleLowerCase()));
@@ -91,8 +95,5 @@ export class ListeEtudiantsComponent implements OnInit {
       return res.prenom.toLocaleLowerCase().match(this.prenom.toLocaleLowerCase());
     });
     */
-  }
 
-
-}
 

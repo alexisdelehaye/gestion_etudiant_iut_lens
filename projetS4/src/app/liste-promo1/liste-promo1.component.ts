@@ -17,8 +17,6 @@ export class ListePromo1Component implements OnInit {
 
   constructor(private route: ActivatedRoute, private personneService: PersonnesServiceService) {
   }
-
-
   triNom(){
     PROMO1.sort((n1,n2)=> {
       if (n1.nom > n2.nom) {
@@ -30,11 +28,9 @@ export class ListePromo1Component implements OnInit {
       return 0;
     });
   }
-
   triId(){
     PROMO1.sort((n1,n2) => n1.id - n2.id);
   }
-
   ngOnInit() {
     this.personnes$ = this.personneService.getPromo1();
   }
