@@ -9,7 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import {
+  MatToolbarModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatListModule,
+  MatTab, MatTabsModule
+} from '@angular/material';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { DetailsPersonneComponent } from './details-personne/details-personne.component';
@@ -44,7 +51,8 @@ import { DetailSemestreComponent } from './detail-semestre/detail-semestre.compo
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

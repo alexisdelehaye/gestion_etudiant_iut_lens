@@ -2,8 +2,8 @@
   <table class="col-md-12 table table-bordered table-striped">
     <thead class='thead-dark'>
     <tr class='ligne' >
-      <th><a [routerLink]="['/promo2']" (click)="triId()">id</a></th>
-      <th><a [routerLink]="['/promo2']" (click)="triNom()">Nom</a></th>
+      <th>Id <a [routerLink]="['/promo2']" (click)="triId()"><span class="fa fa-bars color-lien"></span></a></th>
+      <th>Nom <a [routerLink]="['/promo2']" (click)="triNom()"> <span class="fa fa-bars color-lien"></span></a></th>
       <th>Prenom</th><th>S1</th><th>S2</th><th>S3</th><th>S4</th></tr>
     </thead>
     <tbody *ngFor="let personne of personnes$ | async" class="dropdown2" >
@@ -11,10 +11,121 @@
       <td> {{ personne.id }}</td>
       <a [routerLink]="['/personne', personne.id]"><td>{{ personne.nom }}</td></a>
       <td> {{ personne.prenom }}</td>
-      <td> {{ personne.s1 }}</td>
-      <td> {{ personne.s2 }}</td>
-      <td> {{ personne.s3 }}</td>
-      <td> {{ personne.s4 }}</td>
+      <ng-template [ngIf]="personne.s1<6" [ngIfElse]="fs1">
+        <td class="througe">
+          {{personne.s1}}
+        </td>
+      </ng-template>
+
+      <ng-template #fs1>
+        <ng-template [ngIf]="personne.s1<8" [ngIfElse]="fs11">
+          <td class="thorange">
+            {{personne.s1}}
+          </td>
+        </ng-template>
+      </ng-template>
+
+      <ng-template #fs11>
+        <ng-template [ngIf]="personne.s1<10" [ngIfElse]="fs12">
+          <td class="thjaune">
+            {{personne.s1}}
+          </td>
+        </ng-template>
+      </ng-template>
+
+      <ng-template #fs12>
+        <td>
+          {{personne.s1}}
+        </td>
+      </ng-template>
+
+      <ng-template [ngIf]="personne.s2<6" [ngIfElse]="fs2">
+        <td class="througe">
+          {{personne.s2}}
+        </td>
+      </ng-template>
+
+      <ng-template #fs2>
+        <ng-template [ngIf]="personne.s2<8" [ngIfElse]="fs21">
+          <td class="thorange">
+            {{personne.s2}}
+          </td>
+        </ng-template>
+      </ng-template>
+
+      <ng-template #fs21>
+        <ng-template [ngIf]="personne.s2<10" [ngIfElse]="fs22">
+          <td class="thjaune">
+            {{personne.s2}}
+          </td>
+        </ng-template>
+      </ng-template>
+
+      <ng-template #fs22>
+        <td>
+          {{personne.s2}}
+        </td>
+      </ng-template>
+
+
+
+
+      <ng-template [ngIf]="personne.s3<6" [ngIfElse]="fs3">
+        <td class="througe">
+          {{personne.s3}}
+        </td>
+      </ng-template>
+
+      <ng-template #fs3>
+        <ng-template [ngIf]="personne.s3<8" [ngIfElse]="fs31">
+          <td class="thorange">
+            {{personne.s3}}
+          </td>
+        </ng-template>
+      </ng-template>
+
+      <ng-template #fs31>
+        <ng-template [ngIf]="personne.s3<10" [ngIfElse]="fs32">
+          <td class="thjaune">
+            {{personne.s3}}
+          </td>
+        </ng-template>
+      </ng-template>
+
+      <ng-template #fs32>
+        <td>
+          {{personne.s3}}
+        </td>
+      </ng-template>
+
+
+      <ng-template [ngIf]="personne.s4<6" [ngIfElse]="fs4">
+        <td class="througe">
+          {{personne.s4}}
+        </td>
+      </ng-template>
+
+      <ng-template #fs4>
+        <ng-template [ngIf]="personne.s4<8" [ngIfElse]="fs41">
+          <td class="thorange">
+            {{personne.s4}}
+          </td>
+        </ng-template>
+      </ng-template>
+
+      <ng-template #fs41>
+        <ng-template [ngIf]="personne.s4<10" [ngIfElse]="fs42">
+          <td class="thjaune">
+            {{personne.s4}}
+          </td>
+        </ng-template>
+      </ng-template>
+
+      <ng-template #fs42>
+        <td>
+          {{personne.s4}}
+        </td>
+      </ng-template>
     </tr>
 
     <div class="dropdown-child2">

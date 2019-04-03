@@ -55,7 +55,7 @@ export const PERSONNES = [
               {nom:'Projet tutoré', moyenne: 13, classement: 14, moyennePromo: 14, promoMax: 16, promoMin: 6}
             ]}]
       }]},
-  { id: 12, nom: 'Audin', prenom: 'Patrick', s1: 13, s2: 1, s3: 4, s4: 14,  avatar: 'images/homme.jpg', numero: 1234567,
+  { id: 12, nom: 'Audin', prenom: 'Patrick', s1: 13, s2: 1, s3: 7, s4: 14,  avatar: 'images/homme.jpg', numero: 1234567,
     semestre : [
       {id : 1 ,  moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9,
         UE : [
@@ -79,7 +79,7 @@ export const PERSONNES = [
           {id: 42, moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9},
           {id: 43, moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9}]
       }]},
-  { id: 13, nom: 'Bertin', prenom: 'Sophie', s1: 13, s2: 1, s3: 4, s4: 14,  avatar: 'images/homme.jpg', numero: 1234567,
+  { id: 13, nom: 'Bertin', prenom: 'Sophie', s1: 13, s2: 1, s3: 3, s4: 14,  avatar: 'images/homme.jpg', numero: 1234567,
     semestre : [
       {id : 1 ,  moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9,
         UE : [
@@ -103,7 +103,7 @@ export const PERSONNES = [
           {id: 42, moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9},
           {id: 43, moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9}]
       }]},
-  { id: 14, nom: 'Varon', prenom: 'Julie', s1: 13, s2: 1, s3: 4, s4: 14,  avatar: 'images/homme.jpg', numero: 1234567,
+  { id: 14, nom: 'Varon', prenom: 'Julie', s1: 13, s2: 1, s3: 12, s4: 14,  avatar: 'images/homme.jpg', numero: 1234567,
     semestre : [
       {id : 1 ,  moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9,
         UE : [
@@ -127,7 +127,7 @@ export const PERSONNES = [
           {id: 42, moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9},
           {id: 43, moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9}]
       }]},
-  { id: 15, nom: 'Tapour', prenom: 'Jean-Pierre', s1: 13, s2: 1, s3: 4, s4: 14,  avatar: 'images/homme.jpg', numero: 1234567,
+  { id: 15, nom: 'Tapour', prenom: 'Jean-Pierre', s1: 13, s2: 7, s3: 9, s4: 14,  avatar: 'images/homme.jpg', numero: 1234567,
     semestre : [
       {id : 1 ,  moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9,
         UE : [
@@ -151,7 +151,7 @@ export const PERSONNES = [
           {id: 42, moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9},
           {id: 43, moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9}]
       }]},
-  { id: 16, nom: 'Prusier', prenom: 'Serge', s1: 13, s2: 1, s3: 4, s4: 14, avatar: 'images/homme.jpg', numero: 20172345,
+  { id: 16, nom: 'Prusier', prenom: 'Serge', s1: 13, s2: 9, s3: 6, s4: 14, avatar: 'images/homme.jpg', numero: 20172345,
     semestre : [
       {id : 1 ,  moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9,
         UE : [
@@ -175,7 +175,7 @@ export const PERSONNES = [
           {id: 42, moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9},
           {id: 43, moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9}]
       }]},
-  { id: 17, nom: 'Figier', prenom: 'Adam', s1: 13, s2: 1, s3: 4, s4: 14,  avatar: 'images/homme.jpg', numero: 1234567,
+  { id: 17, nom: 'Figier', prenom: 'Adam', s1: 13, s2: 10, s3: 4, s4: 14,  avatar: 'images/homme.jpg', numero: 1234567,
     semestre : [
       {id : 1 ,  moyenne: 15, classement : 7, moyennePromo: 11, promoMax: 19, promoMin: 9,
         UE : [
