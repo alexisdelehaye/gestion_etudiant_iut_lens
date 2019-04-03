@@ -8,15 +8,26 @@
 
 .thvert {color:#7FFF00;}
 
+.transparent {opacity: 0; border-left:0;border-right:0;}
+
+.noBordureRight {border-right:0;}
+.noBordure {border:0;}
+.noBordureLeft {border-left:0;}
+.noBordureSide {border-left:0; border-right: 0;}
 
 
+.rougeBordure {border-right-color:#c03000 ;}
+.orangeBordure {border-right-color:#FF8C00 ;}
+.jauneBordure {border-right-color:#FFD700 ;}
 
-.dropdown-child {
+.grosseBordureLeft {border-left: 2px solid;}
+
+.dropdown-child2 {
   display: none;
 }
 
-.dropdown1:hover .dropdown-child {
-  display: block;
+.dropdown2:hover .dropdown-child2 {
+  display: table-row;
 }
 
 
