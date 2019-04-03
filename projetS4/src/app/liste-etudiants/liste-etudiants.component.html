@@ -14,7 +14,12 @@
     <tr class='ligne' >
       <th>Id <a [routerLink]="['/etudiants']" (click)="triId()"><span class="fa fa-bars color-lien"></span></a></th>
       <th>Nom <a [routerLink]="['/etudiants']" (click)="triNom()"> <span class="fa fa-bars color-lien"></span></a></th>
-      <th>Prenom</th><th>S1</th><th>S2</th><th>S3</th><th>S4</th></tr>
+      <th>Prenom</th>
+      <th>S1<a [routerLink]="['/etudiants']" (click)="triS1()"><span class="fa fa-bars color-lien"></span></a></th>
+      <th>S2<a [routerLink]="['/etudiants']" (click)="triS2()"><span class="fa fa-bars color-lien"></span></a></th>
+      <th>S3<a [routerLink]="['/etudiants']" (click)="triS3()"><span class="fa fa-bars color-lien"></span></a></th>
+      <th>S4<a [routerLink]="['/etudiants']" (click)="triS4()"><span class="fa fa-bars color-lien"></span></a></th>
+    </tr>
     </thead>
     <tbody >
     <tr *ngFor="let personne of personnes">

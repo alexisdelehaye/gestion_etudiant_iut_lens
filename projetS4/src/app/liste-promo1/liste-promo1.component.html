@@ -4,7 +4,11 @@
     <tr class='ligne' >
       <th>Id <a [routerLink]="['/promo1']" (click)="triId()"><span class="fa fa-bars color-lien"></span></a></th>
       <th>Nom <a [routerLink]="['/promo1']" (click)="triNom()"> <span class="fa fa-bars color-lien"></span></a></th>
-      <th>Prenom</th><th>S1</th><th>S2</th><th>S3</th><th>S4</th>
+      <th>Prenom</th>
+      <th>S1<a [routerLink]="['/promo1']" (click)="triS1()"><span class="fa fa-bars color-lien"></span></a></th>
+      <th>S2<a [routerLink]="['/promo1']" (click)="triS2()"><span class="fa fa-bars color-lien"></span></a></th>
+      <th>S3<a [routerLink]="['/promo1']" (click)="triS3()"><span class="fa fa-bars color-lien"></span></a></th>
+      <th>S4<a [routerLink]="['/promo1']" (click)="triS4()"><span class="fa fa-bars color-lien"></span></a></th>
     </tr>
     </thead>
     <tbody *ngFor="let personne of personnes$ | async" class="dropdown1">
