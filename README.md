@@ -1,3 +1,4 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 # Projet gestion des étudiants
 
 Bienvenue dans le projet !
@@ -12,8 +13,8 @@ N'hésitez pas à poster des issues en cas de problème.
  
 Une équation : 
 
-$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$
+$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
 
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
