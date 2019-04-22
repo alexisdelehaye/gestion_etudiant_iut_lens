@@ -1,4 +1,3 @@
-
 # Projet gestion des étudiants
 
 Bienvenue dans le projet !
@@ -17,3 +16,4 @@ $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$
 
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
