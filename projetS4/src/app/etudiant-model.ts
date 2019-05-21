@@ -9,7 +9,10 @@ export class Etudiant {
   nom : string;
   prenom : string;
   avatar : string;
-  semestres : Semestre[];
+  //semestres ? : any;
+  s1 : number;
+  s2 : number;
+  s3 : number;
 
   constructor(values: Object = {}) {
     Object.assign(<Etudiant>this, values);

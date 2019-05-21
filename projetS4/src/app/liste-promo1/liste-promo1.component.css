@@ -1,3 +1,13 @@
+.insuffisant {
+  color: #c03000 !important;
+  font-weight: bold;
+}
+
+.nonValide {
+  color: #FF8C00 !important;
+  font-weight: bold;
+}
+
 .color-lien{color:#FFA500;}
 
 .througe {background-color:#c03000 ;}
