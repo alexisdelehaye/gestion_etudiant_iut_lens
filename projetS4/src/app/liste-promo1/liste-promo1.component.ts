@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Observable} from 'rxjs';
+import { trigger,state,style,transition,animate } from '@angular/animations';
 import {Etudiant} from '../etudiant-model';
 import {EtudiantService} from '../etudiant.service';
-import { trigger,state,style,transition,animate } from '@angular/animations';
 
 
 @Component({
