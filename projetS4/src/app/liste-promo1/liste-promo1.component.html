@@ -29,7 +29,6 @@
     </tr>
   </ng-template>
   <ng-template pTemplate="rowexpansion" let-etu let-columns="cols">
-    <tr>
       <td [attr.colspan]="cols.length + 1">
         <div class="ui-g ui-fluid" style="font-size:16px;padding:20px">
 
@@ -46,11 +45,15 @@
               <div class="ui-g-12">
                 <b>Prénom:</b> {{etu.prenom}}
               </div>
+              <div class="ui-g-12">
+                 <ul *ngFor="let item of etu.semestres.S1 | keyvalue">
+                   <li> {{item.key}} : {{item.value}} </li>
+                 </ul>
+              </div>
             </div>
           </div>
         </div>
       </td>
-    </tr>
   </ng-template>
 </p-table>
 

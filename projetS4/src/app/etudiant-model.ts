@@ -13,6 +13,8 @@ export class Etudiant {
   s1 : number;
   s2 : number;
   s3 : number;
+  s4 : number;
+  semestre : any;
 
   constructor(values: Object = {}) {
     Object.assign(<Etudiant>this, values);
