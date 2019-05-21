@@ -17,6 +17,9 @@ import {
   MatListModule,
   MatTab, MatTabsModule
 } from '@angular/material';
+
+import {TableModule} from 'primeng/table';
+
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { DetailsPersonneComponent } from './details-personne/details-personne.component';
@@ -44,6 +47,7 @@ import { DetailSemestreComponent } from './detail-semestre/detail-semestre.compo
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
+    TableModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from 'rxjs';
-import {Personne} from '../personne-model';
-import {PersonnesServiceService} from '../personne.service';
 import {ActivatedRoute} from '@angular/router';
-import {PERSONNES, PROMO1} from "../mock-personne";
+import {Observable} from 'rxjs';
+import {Etudiant} from '../etudiant-model';
+import {EtudiantService} from '../etudiant.service';
+
 
 @Component({
   selector: 'app-liste-promo1',
@@ -12,39 +12,29 @@ import {PERSONNES, PROMO1} from "../mock-personne";
 })
 
 export class ListePromo1Component implements OnInit {
+  private loading : boolean=false;
+  etudiants$: Etudiant[];
+  cols: any[];
 
-  personnes$: Observable<Personne[]>;
-
-  constructor(private route: ActivatedRoute, private personneService: PersonnesServiceService) {
-  }
-  triNom(){
-    PROMO1.sort((n1,n2)=> {
-      if (n1.nom > n2.nom) {
-        return 1;
-      }
-      if (n1.nom < n2.nom) {
-        return -1;
-      }
-      return 0;
-    });
-  }
-  triId(){
-    PROMO1.sort((n1,n2) => n1.id - n2.id);
+  constructor(private service: EtudiantService) {
   }
 
-  triS1(){
-    PROMO1.sort((n1,n2) => n1.s1 - n2.s1);
-  }
-  triS2(){
-    PROMO1.sort((n1,n2) => n1.s2 - n2.s2);
-  }
-  triS3(){
-    PROMO1.sort((n1,n2) => n1.s3 - n2.s3);
-  }
-  triS4(){
-    PROMO1.sort((n1,n2) => n1.s4 - n2.s4);
-  }
   ngOnInit() {
-    this.personnes$ = this.personneService.getPromo1();
+
+    this.loading = true;
+    this.service.getPromo().subscribe(etudiants => {
+      this.etudiants$ = etudiants;
+      this.loading = false;
+    });
+    console.log("Liste promo1")
+    console.log(this.etudiants$);
+    this.cols = [
+      { field: 'id', header: 'Id' },
+      { field: 'nom', header: 'Nom' },
+      { field: 'prenom', header: 'Prenom' },
+      { field: 'avatar', header: 'Avatar' }
+    ];
   }
+
+
 }
