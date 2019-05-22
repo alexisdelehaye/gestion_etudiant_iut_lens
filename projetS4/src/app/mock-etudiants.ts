@@ -19,8 +19,17 @@ export const ETUDIANTS: Etudiant[] = [
     ue21 : 11,
     ue22 : 12,
     ue11 : 13,
-    ue12 : 14,
-    semestres : {'S1': {'Algo':7,'BD':9}}
+    ue12 : 6,
+    semestres : {   's1': {
+                             'ue11' : {'Algo': 7, 'BD': 9},
+                             'ue12' : {'Anglais':10, 'Com':10.5}
+                          },
+                     's2':{
+                             'ue11': {'Archi': 17, 'POO': 10},
+                             'ue12' :{'Anglais':10, 'Com':10.5}
+                          }
+
+                }
   }),
   new Etudiant({
     id: 2,
@@ -40,8 +49,12 @@ export const ETUDIANTS: Etudiant[] = [
     ue33 : 13,
     ue21 : 10.7,
     ue22 : 15.7,
-    ue11 : 18,
+    ue11 : 8,
     ue12 : 16.5,
-    semestres : {'S1': {'Anglais':16,'Com':12}}
+    semestres : {
+      's1': {'ue11' : {'Algo': 9, 'BD': 10}, 'ue12' : {'Ang1':10.9, 'Com':12.5} },
+      's2': {'ue21': {'Archi': 6, 'POO': 9}, 'ue22' :{'Ang2':16, 'Com':10}      },
+      's3': {'ue31': {'CPA': 16, 'SE3': 10.6}, 'ue32' :{'Proba':12, 'Ang3':13.5} }
+    }
   })
 ];

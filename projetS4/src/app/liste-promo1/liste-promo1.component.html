@@ -37,33 +37,23 @@
           <div class="ui-g-12 ui-md-9">
             <div class="ui-g">
               <div class="ui-g-12">
-                <b style="text-transform: uppercase;">{{etu.nom}} </b> {{etu.prenom}}
+                <b style="text-transform: uppercase;">{{etu.nom}} </b> {{etu.prenom}}<br>
+                <b>Groupe :</b> {{etu.groupe}}
               </div>
               <div class="ui-g-12">
-                <div class="ui-g-3">
-                  <b>S1 :</b> {{etu.s1}}
-                  <ul *ngFor="let item of etu.semestres.S1 | keyvalue" [ngClass]="item.value < 8 ? 'insuffisant' : item.value < 10 ? 'nonValide' : null">
-                    <li> {{item.key}} : {{item.value}} </li>
+
+                <div class="ui-g-3" *ngFor="let item of etu.semestres | keyvalue" >
+                  <b style="text-transform: uppercase;" >{{item.key}} : {{etu[item.key]}}</b>
+                  <ul *ngFor="let ue of item.value | keyvalue">
+                     <li [ngClass]="etu[ue.key] < 8 ? 'insuffisant' : etu[ue.key] < 10 ? 'nonValide' : null" >
+                       <b style="text-transform: uppercase;" > {{ue.key}} : {{etu[ue.key]}} </b>
+                     </li>
+                     <ul *ngFor="let mat of ue.value | keyvalue" [ngClass]="mat.value < 8 ? 'insuffisant' : mat.value < 10 ? 'nonValide' : null">
+                        <li> {{mat.key}} : {{mat.value}} </li>
+                     </ul>
                   </ul>
                 </div>
-                <div class="ui-g-3">
-                  <b>S2 : </b>{{etu.s2}}
-                  <ul *ngFor="let item of etu.semestres.S1 | keyvalue">
-                    <li> {{item.key}} : {{item.value}} </li>
-                  </ul>
-                </div>
-                <div class="ui-g-3">
-                  <b>S3 : </b>{{etu.s3}}
-                  <ul *ngFor="let item of etu.semestres.S1 | keyvalue">
-                    <li> {{item.key}} : {{item.value}} </li>
-                  </ul>
-                </div>
-                <div class="ui-g-3">
-                  <b>S4 :</b> {{etu.s4}}
-                  <ul *ngFor="let item of etu.semestres.S1 | keyvalue">
-                    <li> {{item.key}} : {{item.value}} </li>
-                  </ul>
-                </div>
+
               </div>
             </div>
           </div>
