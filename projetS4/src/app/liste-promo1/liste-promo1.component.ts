@@ -43,14 +43,25 @@ export class ListePromo1Component implements OnInit {
     console.log("Liste promo1")
     console.log(this.etudiants$);
     this.cols = [
-      { field: 'id', header: 'Id' },
+    //  { field: 'id', header: 'Id' },
       { field: 'nom', header: 'Nom' },
       { field: 'prenom', header: 'Prenom' },
+      { field: 'groupe', header: 'Groupe' },
       //{ field: 'avatar', header: 'Avatar' },
-      { field: 's1', header: 'S1' },
-      { field: 's2', header: 'S2' },
+      { field: 's4', header: 'S4' },
+      { field: 'ue41', header: 'UE 41' },
+      { field: 'ue42', header: 'UE 42' },
+      { field: 'ue43', header: 'UE 43' },
       { field: 's3', header: 'S3' },
-      { field: 's4', header: 'S4' }
+      { field: 'ue31', header: 'UE 31' },
+      { field: 'ue32', header: 'UE 32' },
+      { field: 'ue33', header: 'UE 33' },
+      { field: 's2', header: 'S2' },
+      { field: 'ue21', header: 'UE 21' },
+      { field: 'ue22', header: 'UE 22' },
+      { field: 's1', header: 'S1' },
+      { field: 'ue11', header: 'UE 11' },
+      { field: 'ue12', header: 'UE 12' }
     ];
   }
 

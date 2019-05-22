@@ -31,24 +31,39 @@
   <ng-template pTemplate="rowexpansion" let-etu let-columns="cols">
       <td [attr.colspan]="cols.length + 1">
         <div class="ui-g ui-fluid" style="font-size:16px;padding:20px">
-
-
             <div class="ui-g-12 ui-md-3" style="text-align:center">
               <img [attr.alt]="etu.avatar" width="120" src="assets/images/{{etu.avatar}}">
             </div>
-
           <div class="ui-g-12 ui-md-9">
             <div class="ui-g">
               <div class="ui-g-12">
-                <b>Nom:</b> {{etu.nom}}
+                <b style="text-transform: uppercase;">{{etu.nom}} </b> {{etu.prenom}}
               </div>
               <div class="ui-g-12">
-                <b>Prénom:</b> {{etu.prenom}}
-              </div>
-              <div class="ui-g-12">
-                 <ul *ngFor="let item of etu.semestres.S1 | keyvalue">
-                   <li> {{item.key}} : {{item.value}} </li>
-                 </ul>
+                <div class="ui-g-3">
+                  <b>S1 :</b> {{etu.s1}}
+                  <ul *ngFor="let item of etu.semestres.S1 | keyvalue" [ngClass]="item.value < 8 ? 'insuffisant' : item.value < 10 ? 'nonValide' : null">
+                    <li> {{item.key}} : {{item.value}} </li>
+                  </ul>
+                </div>
+                <div class="ui-g-3">
+                  <b>S2 : </b>{{etu.s2}}
+                  <ul *ngFor="let item of etu.semestres.S1 | keyvalue">
+                    <li> {{item.key}} : {{item.value}} </li>
+                  </ul>
+                </div>
+                <div class="ui-g-3">
+                  <b>S3 : </b>{{etu.s3}}
+                  <ul *ngFor="let item of etu.semestres.S1 | keyvalue">
+                    <li> {{item.key}} : {{item.value}} </li>
+                  </ul>
+                </div>
+                <div class="ui-g-3">
+                  <b>S4 :</b> {{etu.s4}}
+                  <ul *ngFor="let item of etu.semestres.S1 | keyvalue">
+                    <li> {{item.key}} : {{item.value}} </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
