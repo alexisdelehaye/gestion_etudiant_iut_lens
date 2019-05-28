@@ -1,6 +1,6 @@
 <h3 class="first">Liste promotion 1</h3>
 
-<p-table #dt [value]="etudiants$" sortMode="multiple" dataKey="id"  [globalFilterFields]="['nom','prenom']">
+<p-table #dt [value]="etudiants$" sortMode="multiple" dataKey="id"  [globalFilterFields]="['nom','prenom', 'groupe']">
   <ng-template pTemplate="caption">
     <div style="text-align: right">
       <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
