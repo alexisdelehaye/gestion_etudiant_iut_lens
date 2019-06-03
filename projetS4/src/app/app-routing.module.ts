@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'personne/:id', component: DetailsPersonneComponent},
   {path: 'semestre/:id', component: DetailSemestreComponent},
   {path: 'formulaire', component:TestFormulaireComponent},
-  {path: '', redirectTo: 'etudiants', pathMatch: 'full'},
+  {path: '', redirectTo: 'promo1', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent},
 ];
 

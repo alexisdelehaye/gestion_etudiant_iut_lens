@@ -47,6 +47,7 @@ export class ListePromo1Component implements OnInit {
       { field: 'nom', header: 'Nom' },
       { field: 'prenom', header: 'Prenom' },
       { field: 'groupe', header: 'Groupe' },
+      { field: 'date', header: 'Date' },
       //{ field: 'avatar', header: 'Avatar' },
       { field: 's4', header: 'S4' },
       { field: 'ue41', header: 'UE 41' },
